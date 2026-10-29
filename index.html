@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sonia Derouiche</title>
+<meta name="description" content="E-portfolio de Sonia Derouiche, étudiante en L3 MITIC, en recherche d'alternance AMOA, gestion de projet SI et qualité des données.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Version 1 : le parcours de Sonia présenté comme un dossier de projet SI.
+   Fiche projet en ouverture, phases numérotées, planning de Gantt, livrables, prochaine étape. */
+:root {
+  --bg: #F2F5F4; --surface: #FFFFFF; --ink: #132A2F; --muted: #56696C; --line: #D3DCDB;
+  --accent: #0B7A63; --accent-soft: #DDEFEA; --mark: #FFE36E; --mark-ink: #132A2F; --future: #B9C6C4;
+  --f-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --f-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --s-xs: .8125rem; --s-sm: .9375rem; --s-md: 1.0625rem; --s-lg: 1.375rem;
+  --s-xl: clamp(1.75rem, 3.6vw, 2.5rem); --s-hero: clamp(2.4rem, 7vw, 4.75rem); --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0E191B; --surface: #152429; --ink: #E4EEEC; --muted: #93A8A8; --line: #263A3E;
+    --accent: #4CCFAE; --accent-soft: #173A35; --mark: #6E5A12; --mark-ink: #FFF6CF; --future: #3A4F52; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: var(--s-md); line-height: 1.6; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--accent); text-underline-offset: 3px; }
+h1, h2, h3 { font-family: var(--f-display); line-height: 1.1; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+mark { background: linear-gradient(transparent 12%, var(--mark) 12%, var(--mark) 88%, transparent 88%); color: var(--mark-ink); padding: 0 .15em; }
+.mono { font-family: var(--f-mono); font-size: var(--s-xs); letter-spacing: .04em; }
+.label { font-family: var(--f-mono); font-size: var(--s-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 20px; border-bottom: 1px solid var(--line); }
+.top nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.top nav a { color: var(--muted); text-decoration: none; font-size: var(--s-sm); }
+@media (max-width: 720px) { .top nav { display: none; } }
+.hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 48px; align-items: end; padding-block: 64px 56px; }
+@media (max-width: 860px) { .hero { grid-template-columns: 1fr; gap: 32px; padding-block: 40px; } }
+.hero h1 { font-size: var(--s-hero); font-weight: 800; letter-spacing: -.02em; }
+.hero h1 .name { display: block; font-size: var(--s-lg); font-weight: 600; letter-spacing: 0; color: var(--accent); margin-bottom: 18px; }
+.hero .lede { margin-top: 24px; max-width: 34em; font-size: var(--s-lg); line-height: 1.45; color: var(--muted); }
+.hero .lede strong { color: var(--ink); font-weight: 600; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 600 var(--s-sm) var(--f-body); padding: 12px 20px; border-radius: 999px; text-decoration: none; border: 1.5px solid var(--ink); background: var(--ink); color: var(--bg); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.ticket { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 22px 18px; }
+.ticket-head { display: flex; align-items: center; gap: 14px; padding-bottom: 16px; border-bottom: 1px dashed var(--line); }
+.avatar { width: 56px; height: 56px; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font: 800 1.25rem var(--f-display); }
+.ticket-head .mono { color: var(--muted); }
+.status { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; font-weight: 600; font-size: var(--s-sm); }
+.status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.ticket dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 16px; margin: 16px 0 0; font-size: var(--s-sm); }
+.ticket dt { color: var(--muted); font-family: var(--f-mono); font-size: var(--s-xs); padding-top: 2px; }
+.ticket dd { margin: 0; }
+section { padding-block: 72px; border-top: 1px solid var(--line); }
+.phase-head { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 24px; margin-bottom: 40px; align-items: baseline; }
+@media (max-width: 720px) { .phase-head { grid-template-columns: 1fr; gap: 8px; } }
+.phase-head .label b { color: var(--accent); font-weight: 500; }
+.phase-head h2 { font-size: var(--s-xl); font-weight: 800; }
+.phase-head p { margin-top: 12px; color: var(--muted); max-width: 40em; }
+.indent { margin-left: 164px; }
+@media (max-width: 720px) { .indent { margin-left: 0; } }
+.story { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 48px; }
+@media (max-width: 860px) { .story { grid-template-columns: 1fr; } }
+.story-text { display: grid; gap: 20px; max-width: 36em; }
+.story-text h3 { font-size: var(--s-md); font-family: var(--f-body); font-weight: 600; margin-bottom: 4px; }
+blockquote { margin: 0; font: 600 clamp(1.35rem, 2.6vw, 1.75rem)/1.3 var(--f-display); padding-left: 20px; border-left: 3px solid var(--mark); }
+blockquote footer { margin-top: 16px; font: 400 var(--s-sm) var(--f-body); color: var(--muted); }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-top: 56px; }
+@media (max-width: 760px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.kpi { background: var(--surface); padding: 20px; display: grid; gap: 6px; align-content: start; }
+.kpi .n { font: 800 2.25rem/1 var(--f-display); color: var(--accent); }
+.kpi .t { font-size: var(--s-sm); color: var(--muted); }
+.gantt-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.gantt { --cols: 9; min-width: 720px; display: grid; grid-template-columns: 200px repeat(var(--cols), minmax(0, 1fr)); font-size: var(--s-sm); }
+.gantt .yr { font-family: var(--f-mono); font-size: var(--s-xs); color: var(--muted); padding: 12px 0 10px 8px; border-left: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.gantt .corner { border-bottom: 1px solid var(--line); padding: 12px 16px 10px; }
+.gantt .lane { grid-column: 1 / -1; padding: 14px 16px 6px; font-family: var(--f-mono); font-size: var(--s-xs); text-transform: uppercase; color: var(--muted); }
+.gantt .row-label { padding: 9px 16px; line-height: 1.25; }
+.gantt .row-label small { display: block; color: var(--muted); font-size: var(--s-xs); }
+.gantt .track { grid-column: 2 / -1; display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); align-items: center; padding: 6px 0; }
+.bar { height: 26px; border-radius: 6px; margin: 0 4px; background: var(--accent); color: var(--bg); display: flex; align-items: center; padding: 0 10px; font: 500 var(--s-xs) var(--f-mono); white-space: nowrap; overflow: hidden; text-decoration: none; }
+.bar.school { background: var(--ink); }
+.bar.plan { background: transparent; color: var(--muted); border: 1.5px dashed var(--future); }
+.bar.next { background: var(--mark); color: var(--mark-ink); border: 1.5px dashed var(--ink); }
+.jobs { display: grid; gap: 16px; margin-top: 40px; }
+.job { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+@media (max-width: 720px) { .job { grid-template-columns: 1fr; gap: 12px; } }
+.job .when { font-family: var(--f-mono); font-size: var(--s-xs); color: var(--muted); }
+.job .org { font: 600 var(--s-lg)/1.2 var(--f-display); margin-top: 6px; }
+.job h3 { font-size: var(--s-md); font-family: var(--f-body); font-weight: 600; }
+.job ul { margin: 12px 0 0; padding-left: 18px; display: grid; gap: 6px; }
+.job .lesson { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); font-size: var(--s-sm); color: var(--muted); }
+.job .lesson b { font-family: var(--f-mono); font-size: var(--s-xs); font-weight: 500; text-transform: uppercase; color: var(--accent); margin-right: 8px; }
+.kit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 48px; }
+@media (max-width: 760px) { .kit { grid-template-columns: 1fr; } }
+.kit h3 { font: 600 var(--s-lg) var(--f-display); margin-bottom: 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.tags li { font-size: var(--s-sm); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+.traits { display: grid; gap: 18px; list-style: none; padding: 0; margin: 0; }
+.traits li { display: grid; gap: 4px; }
+.traits span { color: var(--muted); font-size: var(--s-sm); }
+.edu { list-style: none; padding: 0; margin: 0; }
+.edu li { display: grid; grid-template-columns: 140px minmax(0, 1fr) auto; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 720px) { .edu li { grid-template-columns: 1fr; gap: 4px; } }
+.edu .y { font-family: var(--f-mono); font-size: var(--s-xs); color: var(--muted); }
+.edu .where { color: var(--muted); font-size: var(--s-sm); }
+.edu .tag { font: 500 var(--s-xs) var(--f-mono); color: var(--accent); }
+.next-step { background: var(--ink); color: var(--bg); border-top: none; }
+.next-step h2 { font-size: var(--s-hero); font-weight: 800; margin-top: 16px; max-width: 14em; }
+.next-step .lede { margin-top: 20px; max-width: 34em; font-size: var(--s-lg); opacity: .8; }
+.contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 40px; max-width: 760px; }
+@media (max-width: 640px) { .contact { grid-template-columns: 1fr; } }
+.contact > div { border: 1px solid var(--future); border-radius: var(--radius); padding: 18px 20px; display: grid; gap: 8px; }
+.contact a { color: var(--bg); }
+.foot { padding-block: 28px; font-size: var(--s-xs); color: var(--muted); font-family: var(--f-mono); display: flex; justify-content: space-between; flex-wrap: wrap; }
+</style>
+
+<header class="wrap top">
+  <span class="mono">SD / Dossier alternance 2026-2027</span>
+  <nav><a href="#cadrage">Parcours</a><a href="#jalons">Expériences</a><a href="#livrables">Compétences</a><a href="#formations">Formations</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <h1><span class="name">Sonia Derouiche</span>Entre les personnes et les outils, je fais le lien.</h1>
+      <p class="lede">Étudiante en <strong>L3 MITIC à l'Université Gustave Eiffel</strong>, je cherche une alternance en <strong>AMOA, gestion de projet SI ou qualité des données</strong>. J'arrive avec quatre ans de terrain, à écouter des usagers et à fiabiliser leurs dossiers.</p>
+      <div class="cta"><a class="btn" href="#contact">Me proposer une alternance</a><a class="btn ghost" href="#jalons">Voir mon parcours</a></div>
+    </div>
+    <aside class="ticket">
+      <div class="ticket-head"><div class="avatar">SD</div><div><div class="mono">REF. ALT-2026-SD</div><div class="status">Ouverte aux propositions</div></div></div>
+      <dl>
+        <dt>Poste visé</dt><dd>AMOA, chef de projet SI junior, qualité des données</dd>
+        <dt>Rythme</dt><dd>1 semaine à l'école, 1 semaine en entreprise</dd>
+        <dt>Secteur</dt><dd>Île-de-France, depuis Bussy-Saint-Georges (77)</dd>
+        <dt>Mobilité</dt><dd>Permis B et véhicule</dd>
+        <dt>Langues</dt><dd>Français natif, anglais B2</dd>
+      </dl>
+    </aside>
+  </div>
+
+  <section id="cadrage"><div class="wrap">
+    <div class="phase-head"><span class="label"><b>Phase 1</b> · Cadrage</span><div><h2>Pourquoi je me dirige vers l'AMOA</h2><p>Le besoin de départ, puis le chemin qui m'a menée du social au numérique.</p></div></div>
+    <div class="story indent">
+      <div class="story-text">
+        <div><h3>Aider les gens, avec de la gestion</h3><p>J'ai choisi le BTS SP3S parce que je voulais un métier tourné vers les autres. Ce qui m'attirait, c'était d'aider à travers la gestion des dossiers et des outils informatiques, comme on le fait dans une mutuelle ou une caisse de prévoyance.</p></div>
+        <div><h3>Le terrain, toujours derrière un écran</h3><p>De l'aide à domicile à l'assurance, je n'ai jamais travaillé sans ordinateur. À chaque poste, j'ai appris un nouveau logiciel métier. J'ai aussi senti que mon diplôme limitait mes missions. J'ai donc repris mes études pour <mark>gagner en compétences et viser plus loin</mark>.</p></div>
+        <div><h3>Le numérique, du côté des utilisateurs</h3><p>Le numérique ouvre beaucoup de métiers, encore plus avec l'arrivée de l'IA. Je ne veux pas coder. Je veux comprendre ce dont les utilisateurs ont besoin et vérifier que les outils y répondent. C'est le rôle de l'AMOA, et c'est ce que je fais déjà depuis quatre ans sans en porter le nom.</p></div>
+      </div>
+      <blockquote>« Une donnée fausse dans un dossier, c'est une personne qui attend son indemnité. »<footer>Ce que m'a appris la gestion des arrêts de travail chez PRO BTP.</footer></blockquote>
+    </div>
+    <div class="kpis indent">
+      <div class="kpi"><span class="n">50</span><span class="t">dossiers d'arrêt de travail traités par jour</span></div>
+      <div class="kpi"><span class="n">75+</span><span class="t">demandes d'adhérents traitées par jour</span></div>
+      <div class="kpi"><span class="n">3</span><span class="t">nouveaux collaborateurs formés au logiciel Comète</span></div>
+      <div class="kpi"><span class="n">4</span><span class="t">structures en quatre ans, du social à l'assurance</span></div>
+    </div>
+  </div></section>
+
+  <section id="jalons"><div class="wrap">
+    <div class="phase-head"><span class="label"><b>Phase 2</b> · Planning</span><div><h2>Mon parcours en jalons</h2><p>Mes formations et mes expériences sur un même planning.</p></div></div>
+    <div class="gantt-scroll"><div class="gantt">
+      <div class="corner label">Projet</div>
+      <div class="yr">2021</div><div class="yr">2022</div><div class="yr">2023</div><div class="yr">2024</div><div class="yr">2025</div><div class="yr">2026</div><div class="yr">2027</div><div class="yr">2028</div><div class="yr">2029</div>
+      <div class="lane">Formations</div>
+      <div class="row-label">BTS SP3S<small>Reims</small></div><div class="track"><span class="bar school" style="grid-column: 1 / 4">BTS SP3S</span></div>
+      <div class="row-label">Licence 3 MITIC<small>Université Gustave Eiffel</small></div><div class="track"><span class="bar school" style="grid-column: 6 / 8">L3 MITIC</span></div>
+      <div class="row-label">Master MITIC<small>Prévu</small></div><div class="track"><span class="bar plan" style="grid-column: 7 / 10">Master MITIC</span></div>
+      <div class="lane">Expériences</div>
+      <div class="row-label">Destia<small>Assistante coordinatrice</small></div><div class="track"><a class="bar" href="#destia" style="grid-column: 2 / 3">2022</a></div>
+      <div class="row-label">CCAS de Tinqueux<small>Assistante de responsable</small></div><div class="track"><a class="bar" href="#ccas" style="grid-column: 3 / 4">2023</a></div>
+      <div class="row-label">Groupama<small>Gestionnaire production</small></div><div class="track"><a class="bar" href="#groupama" style="grid-column: 4 / 5">2024</a></div>
+      <div class="row-label">PRO BTP<small>Gestionnaire prévoyance</small></div><div class="track"><a class="bar" href="#probtp" style="grid-column: 4 / 6">2024-2025</a></div>
+      <div class="row-label"><b>Votre entreprise ?</b><small>Alternance</small></div><div class="track"><a class="bar next" href="#contact" style="grid-column: 6 / 10">Prochain jalon</a></div>
+    </div></div>
+    <div class="jobs">
+      <article class="job" id="probtp"><div><div class="when">2024-2025</div><div class="org">PRO BTP</div><div class="when">via Tessi-Owliance</div></div><div><h3>Gestionnaire assurance prévoyance</h3><ul>
+        <li>Contrôle de la conformité, de la complétude et de l'exactitude des données adhérents dans le logiciel métier Comète.</li>
+        <li>Analyse des causes de blocage administratif ou contractuel et correction des erreurs pour débloquer le paiement des indemnités.</li>
+        <li>Traitement de <mark>50 dossiers d'indemnités journalières par jour</mark> (maladie, accident du travail) et d'au moins 75 demandes d'adhérents.</li>
+        <li>Formation de 3 nouveaux collaborateurs à l'outil et transmission des bonnes pratiques.</li></ul>
+        <p class="lesson"><b>Pour l'AMOA</b>Fiabiliser des données et former des utilisateurs, c'est le quotidien d'un projet SI.</p></div></article>
+      <article class="job" id="groupama"><div><div class="when">2024</div><div class="org">Groupama</div></div><div><h3>Gestionnaire production et relation clients</h3><ul>
+        <li>Reprise d'un stock de dossiers pour contrôler la cohérence des informations saisies dans le système d'information.</li>
+        <li>Identification et mise à jour des dossiers touchés par une anomalie de calcul des prestations.</li></ul>
+        <p class="lesson"><b>Pour l'AMOA</b>Remonter à l'origine d'une anomalie avant de la corriger.</p></div></article>
+      <article class="job" id="ccas"><div><div class="when">2023</div><div class="org">CCAS, mairie de Tinqueux</div></div><div><h3>Assistante de responsable</h3><ul>
+        <li>Projet « Ville amie des aînés » avec le Conseil des seniors : recherche d'informations, structuration des idées et présentation des propositions en conseil municipal.</li>
+        <li>Écoute, recueil et qualification des attentes des usagers pour les orienter vers les bonnes réponses.</li></ul>
+        <p class="lesson"><b>Pour l'AMOA</b>Structurer des idées et les présenter à des décideurs.</p></div></article>
+      <article class="job" id="destia"><div><div class="when">2022</div><div class="org">Destia</div></div><div><h3>Assistante coordinatrice d'agence</h3><ul>
+        <li>Évaluation sur le terrain, lors de visites à domicile, des besoins des bénéficiaires.</li>
+        <li>Coordination des plannings et interface entre les usagers et les intervenants.</li></ul>
+        <p class="lesson"><b>Pour l'AMOA</b>Recueillir un besoin là où il se trouve, chez l'usager.</p></div></article>
+    </div>
+  </div></section>
+
+  <section id="livrables"><div class="wrap">
+    <div class="phase-head"><span class="label"><b>Phase 3</b> · Livrables</span><div><h2>Ce que j'apporte à votre projet</h2></div></div>
+    <div class="kit indent">
+      <div><h3>Compétences</h3><ul class="tags"><li>Recueil des besoins</li><li>Amélioration des processus</li><li>Formation des utilisateurs</li><li>Contrôle de conformité</li><li>Fiabilisation des données</li><li>Résolution d'anomalies</li><li>Audit de dossiers</li><li>Excel</li><li>Word</li><li>PowerPoint</li><li>Logiciel métier Comète</li><li>Anglais B2</li></ul></div>
+      <div><h3>Ma façon de travailler</h3><ul class="traits">
+        <li><strong>J'écoute avant de proposer.</strong><span>Au domicile d'un bénéficiaire ou au téléphone avec un adhérent, j'ai appris à poser les bonnes questions.</span></li>
+        <li><strong>Je me mets à la place de l'utilisateur.</strong><span>Avant de juger un problème, je cherche à comprendre ce que vit la personne qui le rencontre.</span></li>
+        <li><strong>Je relis jusqu'à la dernière ligne.</strong><span>Un champ mal rempli me dérange, et c'est souvent là que se cache l'anomalie.</span></li></ul></div>
+    </div>
+  </div></section>
+
+  <section id="projet"><div class="wrap">
+    <div class="phase-head"><span class="label"><b>Phase 4</b> · En cours</span><div><h2>Un projet de cours en ce moment</h2><p>Repenser la livraison instantanée, dans le cours Design de service et expérience utilisateur : choisir un problème, construire des personas, imaginer le service.</p></div></div>
+  </div></section>
+
+  <section id="formations"><div class="wrap">
+    <div class="phase-head"><span class="label"><b>Phase 5</b> · Formations</span><div><h2>Mes formations</h2></div></div>
+    <ul class="edu indent">
+      <li><span class="y">2027-2029</span><div><b>Master Management, Innovation des services et Numérique (MITIC)</b><div class="where">IFIS, Université Gustave Eiffel, Serris</div></div><span class="tag">Prévu</span></li>
+      <li><span class="y">2026-2027</span><div><b>Licence 3 Économie et gestion, parcours MITIC</b><div class="where">IFIS, Université Gustave Eiffel, Serris</div></div><span class="tag">En cours</span></li>
+      <li><span class="y">2021-2023</span><div><b>BTS SP3S, Services et prestations des secteurs sanitaire et social</b><div class="where">Lycée Hugues Libergier, Reims</div></div><span></span></li>
+      <li><span class="y">2017-2020</span><div><b>Baccalauréat littéraire, mention Bien</b><div class="where">Lycée Jean-Baptiste Colbert, Reims</div></div><span></span></li>
+    </ul>
+  </div></section>
+
+  <section id="contact" class="next-step"><div class="wrap">
+    <span class="label">Prochain jalon</span>
+    <h2>La prochaine étape, c'est votre entreprise.</h2>
+    <p class="lede">Vous cherchez une alternante en AMOA, en gestion de projet SI ou en qualité des données, sur un rythme d'une semaine sur deux ? Écrivez-moi.</p>
+    <div class="contact">
+      <div><span class="label">E-mail</span><span>soniaderouiche2902@gmail.com</span></div>
+      <div><span class="label">LinkedIn</span><span><a href="https://www.linkedin.com/in/sonia-derouiche">linkedin.com/in/sonia-derouiche</a></span></div>
+    </div>
+  </div></section>
+</main>
+<footer class="wrap foot"><span>Sonia Derouiche · 2026</span><span>Dossier relu ligne par ligne</span></footer>
+
+</html>
