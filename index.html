@@ -4,343 +4,638 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sonia Derouiche</title>
-<meta name="description" content="E-portfolio de Sonia Derouiche, étudiante en L3 MITIC, en recherche de stage ou d'alternance en AMOA, gestion de projet SI et qualité des données.">
+<meta name="description" content="E-portfolio de Sonia Derouiche, étudiante en L3 MITIC, future business analyst, en recherche de stage ou d'alternance en business analyse, AMOA, gestion de projet SI et qualité des données.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,400..500&display=swap">
 <style>
-/* Direction : sobre et rangé. Une seule grille, des lignes droites, deux polices.
-   Le jardin reste en touche discrète : la pivoine d'ouverture, quelques pétales, la palette rose et sauge. */
+/* Direction « collage » : encre, corail, jaune beurre et lilas sur fond crème.
+   Titres en DM Serif Display, texte en Plus Jakarta Sans.
+   Animations : parallaxe de l'illustration, titres lettre par lettre, histoire épinglée,
+   boutons magnétiques, anneaux de chiffres, ligne du parcours droite. */
 :root {
-  --bg: #FBF7F2;
+  --bg: #FAF7F2;
   --surface: #FFFFFF;
-  --tint: #F5EDE5;
-  --ink: #2E211D;
-  --text: #4A3A34;
-  --muted: #6F5C55;
-  --line: #E8DDD3;
-  --accent: #9A4A33;
-  --accent-soft: #F6E3DC;
-  --sage: #DCE5D5;
-  --sage-ink: #3F5A3B;
+  --tint: #F4EFE8;
+  --ink: #1B1B2F;
+  --text: #3A3A4D;
+  --muted: #55566A;
+  --faint: #C3C2CF;
+  --line: #E6E1D8;
+  --coral: #E5533F;
+  --coral-t: #B53628;
+  --butter: #FFC94D;
+  --lilac: #B9A7EE;
+  --coral-s: #FFE7E2;
+  --lilac-s: #EEE9FC;
+  --butter-s: #FFF2CF;
+  --on-ink: #FAF7F2;
 
-  --petal-deep: #D78591;
-  --petal: #EDB4B7;
-  --petal-light: #FCE7E2;
-  --stamen: #E3B75C;
-  --leaf: #9EB494;
-  --leaf-2: #7C9775;
-
-  --f-head: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --f-body: "DM Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
-
-  --radius: 14px;
+  --f-head: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --f-body: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --radius: 18px;
   --gutter: max(16px, env(safe-area-inset-left, 0px));
-  --shadow: 0 1px 2px rgba(46, 33, 29, .04), 0 8px 24px -12px rgba(46, 33, 29, .14);
+  --shadow: 0 1px 2px rgba(27, 27, 47, .05), 0 12px 30px -16px rgba(27, 27, 47, .25);
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #18120F; --surface: #221A16; --tint: #1E1714; --ink: #F5EBE3; --text: #E2D4CA; --muted: #B9A69B; --line: #3A2D27;
-    --accent: #EFA48A; --accent-soft: #3A2620; --sage: #26332A; --sage-ink: #B9D1B1;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .6);
+    --bg: #15151F; --surface: #1F1F2E; --tint: #191926; --ink: #F4F1EA; --text: #D7D5E0; --muted: #B4B3C2; --faint: #4B4A5E; --line: #302F42;
+    --coral: #FF7A68; --coral-t: #FF8E7E; --coral-s: #3A2420; --lilac-s: #2A2540; --butter-s: #3A3220; --on-ink: #15151F;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 30px -16px rgba(0, 0, 0, .7);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #18120F; --surface: #221A16; --tint: #1E1714; --ink: #F5EBE3; --text: #E2D4CA; --muted: #B9A69B; --line: #3A2D27;
-  --accent: #EFA48A; --accent-soft: #3A2620; --sage: #26332A; --sage-ink: #B9D1B1;
-  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .6);
+  --bg: #15151F; --surface: #1F1F2E; --tint: #191926; --ink: #F4F1EA; --text: #D7D5E0; --muted: #B4B3C2; --faint: #4B4A5E; --line: #302F42;
+  --coral: #FF7A68; --coral-t: #FF8E7E; --coral-s: #3A2420; --lilac-s: #2A2540; --butter-s: #3A3220; --on-ink: #15151F;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 30px -16px rgba(0, 0, 0, .7);
   color-scheme: dark;
 }
 
+/* Les panneaux foncés (méthode, citation, « Votre entreprise ? », bandeau, contact) restent foncés en mode sombre. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) :is(.story, .quote, .contact, .next, .marquee) { --ink: #0D0D16; --on-ink: #FAF7F2; }
+  :root:not([data-theme="light"]) .mail-menu { --ink: #F4F1EA; }
+}
+:root[data-theme="dark"] :is(.story, .quote, .contact, .next, .marquee) { --ink: #0D0D16; --on-ink: #FAF7F2; }
+:root[data-theme="dark"] .mail-menu { --ink: #F4F1EA; }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--f-body);
-  font-size: 1.0625rem;
-  line-height: 1.65;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-#petals { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
-header, main, footer { position: relative; z-index: 1; }
-.wrap { max-width: 1120px; margin: 0 auto; padding-left: var(--gutter); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-h1, h2, h3 { font-family: var(--f-head); color: var(--ink); font-weight: 600; line-height: 1.15; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--f-body); font-size: 1.0625rem; line-height: 1.65; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+body.lock { overflow: hidden; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: var(--gutter); padding-right: max(16px, env(safe-area-inset-right, 0px)); position: relative; }
+h1, h2 { font-family: var(--f-head); font-weight: 400; color: var(--ink); line-height: 1; letter-spacing: -.01em; margin: 0; }
+h3, h4 { font-family: var(--f-body); font-weight: 700; color: var(--ink); line-height: 1.25; margin: 0; letter-spacing: -.01em; }
 p { margin: 0; }
-strong { color: var(--ink); font-weight: 600; }
-a { color: var(--accent); text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
-.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .8125rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
-.eyebrow::before { content: ""; width: 24px; height: 2px; background: currentColor; border-radius: 2px; }
+strong { color: var(--ink); font-weight: 700; }
+a { color: var(--coral-t); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; border-radius: 8px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .8125rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--coral-t); }
+.eyebrow::before { content: ""; width: 26px; height: 2px; background: currentColor; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 
-/* ---------- Boutons ---------- */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  min-height: 46px; padding: 0 22px; border-radius: 999px;
-  font: 600 .9375rem/1 var(--f-body); text-decoration: none; cursor: pointer;
-  border: 1.5px solid var(--ink); background: var(--ink); color: var(--bg);
-  transition: background .2s ease, color .2s ease, border-color .2s ease;
-}
-.btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+/* ---------- Apparitions ---------- */
+.js .rv { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.2, .8, .2, 1), transform .7s cubic-bezier(.2, .8, .2, 1); transition-delay: calc(var(--i, 0) * 90ms); }
+.js .rv.in { opacity: 1; transform: none; }
+/* Titres lettre par lettre, avec un léger flou */
+.split .wd2 { display: inline-block; white-space: nowrap; }
+.split .ch { display: inline-block; }
+.js .split .ch { opacity: 0; transform: translateY(.45em); filter: blur(6px); transition: opacity .6s ease, transform .7s cubic-bezier(.2, .8, .2, 1), filter .6s ease; transition-delay: calc(var(--c) * 22ms); }
+.js .split.in .ch { opacity: 1; transform: none; filter: none; }
+
+/* ---------- Boutons (magnétiques, onde au clic) ---------- */
+.btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 24px; border-radius: 999px; font: 700 .9375rem/1 var(--f-body); text-decoration: none; cursor: pointer; border: 2px solid var(--ink); background: var(--ink); color: var(--on-ink); transition: transform .25s cubic-bezier(.2, .8, .2, 1), background .2s ease, color .2s ease, border-color .2s ease; white-space: nowrap; }
+.btn:hover { background: var(--coral); border-color: var(--coral); color: #fff; }
 .btn.ghost { background: transparent; color: var(--ink); }
-.btn.ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.btn.ghost:hover { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
+.btn.sm { min-height: 42px; padding: 0 18px; font-size: .875rem; }
 .btn svg { width: 18px; height: 18px; flex: none; }
+.btn .ripple { position: absolute; width: 24px; height: 24px; margin: -12px 0 0 -12px; border-radius: 50%; background: var(--butter); pointer-events: none; animation: ripple .65s ease-out forwards; }
+@keyframes ripple { from { transform: scale(0); opacity: .6; } to { transform: scale(9); opacity: 0; } }
+.avail { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 18px; border-radius: 999px; background: var(--butter); color: #1B1B2F; font-weight: 700; font-size: .9375rem; }
+.avail i { width: 8px; height: 8px; border-radius: 50%; background: #1B1B2F; animation: blink 2s ease-in-out infinite; }
+@keyframes blink { 50% { opacity: .25; } }
 
 /* ---------- En-tête ---------- */
-.topbar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s ease; padding-top: env(safe-area-inset-top, 0px); }
+.topbar { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s ease; padding-top: env(safe-area-inset-top, 0px); }
 .topbar.scrolled { border-bottom-color: var(--line); }
-.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 70px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
-.monogram { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font: 600 1rem/1 var(--f-head); letter-spacing: .02em; }
+.monogram { flex: none; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--ink); color: var(--on-ink); font: 400 1.25rem/1 var(--f-head); }
 .brand-text { display: grid; line-height: 1.2; min-width: 0; }
-.brand-text b { font-family: var(--f-head); font-weight: 600; font-size: 1.0625rem; color: var(--ink); white-space: nowrap; }
+.brand-text b { font-weight: 700; font-size: 1rem; color: var(--ink); white-space: nowrap; }
 .brand-text span { font-size: .8125rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.nav { display: flex; align-items: center; gap: 28px; }
-.nav a { color: var(--text); text-decoration: none; font-size: .9375rem; font-weight: 500; }
-.nav a:hover { color: var(--accent); }
-.nav .btn { min-height: 40px; padding: 0 18px; font-size: .875rem; color: var(--bg); }
+.nav { display: flex; align-items: center; gap: 24px; }
+.nav a { color: var(--text); text-decoration: none; font-size: .9375rem; font-weight: 600; white-space: nowrap; }
+.nav a:hover, .nav a.current { color: var(--coral-t); }
+.nav .btn { color: var(--on-ink); }
 .nav .btn:hover { color: #fff; }
-.menu-btn { display: none; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; place-items: center; }
+.menu-btn { display: none; width: 46px; height: 46px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; place-items: center; flex: none; }
 .menu-btn svg { width: 22px; height: 22px; }
-@media (max-width: 860px) {
+.progress { position: absolute; left: 0; bottom: -1px; height: 3px; width: 100%; background: linear-gradient(90deg, var(--coral), var(--butter), var(--lilac)); transform-origin: 0 50%; transform: scaleX(0); }
+@media (max-width: 1080px) {
   .menu-btn { display: grid; }
-  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 16px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 18px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
   .nav.open { display: flex; }
   .nav a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
-  .nav .btn { margin-top: 14px; min-height: 48px; border-bottom: none; color: var(--bg); }
+  .nav .btn { margin-top: 14px; min-height: 50px; border-bottom: 2px solid var(--ink); }
 }
 @media (max-width: 400px) { .brand-text span { display: none; } }
 
+/* Repère de section (grand écran) */
+.marker { position: fixed; left: max(14px, calc((100vw - 1160px) / 2 - 92px)); top: 50%; transform: translateY(-50%); z-index: 10; display: none; flex-direction: column; align-items: center; gap: 12px; pointer-events: none; opacity: 0; transition: opacity .4s ease; }
+.marker.show { opacity: 1; }
+.marker .num { font: 400 1.75rem/1 var(--f-head); color: var(--ink); }
+.marker .num small { display: block; font: 600 .8125rem var(--f-body); color: var(--muted); text-align: center; margin-top: 4px; }
+.marker .rail { width: 3px; height: 120px; border-radius: 3px; background: var(--line); overflow: hidden; position: relative; }
+.marker .rail i { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: var(--coral); transform-origin: 50% 0; transform: scaleY(0); }
+.marker .name { writing-mode: vertical-rl; transform: rotate(180deg); font-size: .75rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+@media (min-width: 1360px) { .marker { display: flex; } }
+
+/* Formes de fond */
+.deco { position: absolute; pointer-events: none; z-index: 0; }
+section, .hero-sec { position: relative; overflow: hidden; }
+section > .wrap, .hero-sec > .wrap { z-index: 1; }
+
 /* ---------- Ouverture ---------- */
-.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 48px; align-items: center; padding-block: 56px 48px; }
-.hero-text { display: grid; gap: 22px; }
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4.25rem); }
-.hero h1 span { display: block; font-size: .46em; font-weight: 500; font-style: italic; color: var(--accent); margin-top: 12px; letter-spacing: 0; }
-.hero .lede { font-size: 1.1875rem; max-width: 34em; }
-.cta { display: flex; flex-wrap: wrap; gap: 12px; }
-.status { display: inline-flex; align-items: center; gap: 10px; justify-self: start; padding: 8px 14px; border-radius: 999px; background: var(--sage); color: var(--sage-ink); font-size: .875rem; font-weight: 600; }
-.status i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px color-mix(in srgb, currentColor 18%, transparent); }
-.bloom-wrap { width: 100%; max-width: 440px; aspect-ratio: 1 / 1; justify-self: center; }
-#bloom { width: 100%; height: 100%; display: block; cursor: pointer; }
-@media (max-width: 860px) {
-  .hero { grid-template-columns: 1fr; gap: 8px; padding-block: 28px 32px; }
-  .bloom-wrap { max-width: 150px; order: -1; justify-self: start; margin-left: -14px; margin-bottom: -6px; }
-  .hero .lede { font-size: 1.0625rem; }
-  .cta .btn { flex: 1 1 200px; }
+.hero-sec { padding-block: 40px 56px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 40px; align-items: center; }
+.hero-text { display: grid; gap: 20px; }
+.hero h1 { font-size: clamp(3.75rem, 10vw, 7.5rem); line-height: .95; }
+.hero h1 .ln { display: block; overflow: hidden; padding-bottom: .06em; }
+.hero h1 .w { display: inline-block; }
+.hero h1 .ln:nth-child(2) .w { color: var(--coral); }
+.js .hero h1 .w { transform: translateY(105%); animation: rise .9s cubic-bezier(.2, .8, .2, 1) forwards; }
+.js .hero h1 .ln:nth-child(2) .w { animation-delay: .14s; }
+@keyframes rise { to { transform: none; } }
+.js .hero .fade { opacity: 0; animation: fadeup .8s .45s cubic-bezier(.2, .8, .2, 1) forwards; }
+.js .hero .fade.f2 { animation-delay: .6s; }
+@keyframes fadeup { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.hero .role { font-size: clamp(1.1875rem, 2.2vw, 1.5rem); font-weight: 700; color: var(--ink); }
+.hero .lede { font-size: 1.0625rem; max-width: 36em; color: var(--muted); }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.scene { width: 100%; max-width: 480px; justify-self: center; }
+.scene svg { width: 100%; height: auto; display: block; overflow: visible; }
+.scene .lay { will-change: transform; }
+.float { animation: float 5s ease-in-out infinite; }
+.float2 { animation: float2 6s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-6px); } }
+@keyframes float2 { 50% { transform: translateY(5px); } }
+.steam { animation: steam 3s ease-in-out infinite; }
+@keyframes steam { 0% { transform: translateY(4px); opacity: 0; } 40% { opacity: .9; } 100% { transform: translateY(-12px); opacity: 0; } }
+.caret { animation: caret 1.1s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }
+.beam { animation: beam 4s ease-in-out infinite; }
+@keyframes beam { 0%, 100% { opacity: .12; } 50% { opacity: .24; } }
+@media (max-width: 880px) {
+  .hero-sec { padding-block: 20px 36px; }
+  .hero { grid-template-columns: 1fr; gap: 20px; }
+  .scene { max-width: 360px; }
+  .cta .btn { flex: 1 1 180px; }
+  .avail { order: -1; flex: none; min-height: 34px; padding: 0 14px; font-size: .8125rem; }
 }
+
+/* Bandeau qui défile */
+.marquee { overflow: hidden; white-space: nowrap; background: var(--ink); color: var(--on-ink); position: relative; z-index: 2; }
+.marquee .track { display: inline-flex; animation: mq 38s linear infinite; padding-block: 14px; }
+.marquee span { font: 400 clamp(1.375rem, 2.6vw, 1.875rem)/1 var(--f-head); padding-inline: 18px; display: inline-flex; align-items: center; gap: 36px; }
+.marquee span::after { content: "✺"; font-size: .7em; color: var(--butter); }
+.marquee span:nth-child(3n+2)::after { color: var(--coral); }
+.marquee span:nth-child(3n)::after { color: var(--lilac); }
+@keyframes mq { to { transform: translateX(-50%); } }
 
 /* Fiche pratique */
-.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 24px; }
-.facts div { padding: 22px 24px; display: grid; gap: 4px; align-content: start; }
-.facts div + div { border-left: 1px solid var(--line); }
-.facts dt { font-size: .8125rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.facts dd { margin: 0; color: var(--ink); font-weight: 500; line-height: 1.4; }
-@media (max-width: 860px) {
-  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .facts div + div { border-left: none; }
-  .facts div:nth-child(even) { border-left: 1px solid var(--line); }
-  .facts div:nth-child(n+3) { border-top: 1px solid var(--line); }
-  .facts div { padding: 18px 16px; }
-}
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+.facts div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; display: grid; gap: 4px; align-content: start; border-top: 4px solid var(--coral); }
+.facts div:nth-child(2) { border-top-color: var(--butter); }
+.facts div:nth-child(3) { border-top-color: var(--lilac); }
+.facts div:nth-child(4) { border-top-color: var(--ink); }
+.facts dt { font-size: .8125rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--coral-t); }
+.facts dd { margin: 0; color: var(--ink); font-weight: 600; line-height: 1.4; }
+@media (max-width: 880px) { .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 28px; } .facts div { padding: 16px; } }
 
 /* ---------- Sections ---------- */
-section { padding-block: 88px; }
-.tinted { background: var(--tint); }
-@media (max-width: 760px) { section { padding-block: 60px; } }
-.sec-head { display: grid; gap: 12px; max-width: 42em; margin-bottom: 44px; }
-.sec-head h2 { font-size: clamp(1.875rem, 3.6vw, 2.625rem); }
-.sec-head p { color: var(--muted); }
-@media (max-width: 760px) { .sec-head { margin-bottom: 32px; } }
+section { padding-block: 96px; }
+.tint-lilac { background: var(--lilac-s); }
+.tint-coral { background: var(--coral-s); }
+.tint-butter { background: var(--butter-s); }
+@media (max-width: 760px) { section { padding-block: 64px; } }
+.sec-head { display: grid; gap: 14px; max-width: 46em; margin-bottom: 44px; }
+.sec-head h2 { font-size: clamp(2.5rem, 5.5vw, 4rem); }
+.sec-head h2 em { font-style: italic; color: var(--coral); }
+.sec-head p { color: var(--muted); max-width: 40em; }
+@media (max-width: 760px) { .sec-head { margin-bottom: 30px; } }
 
 /* À propos */
-.about { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.about { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 56px; align-items: start; }
 .about-text { display: grid; gap: 26px; }
-.about-text h3 { font-size: 1.25rem; margin-bottom: 6px; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-.about-side { display: grid; gap: 20px; }
-.quote { padding: 26px 28px; border-left: 3px solid var(--petal-deep); }
-.quote p { font-family: var(--f-head); font-style: italic; font-size: 1.3125rem; line-height: 1.45; color: var(--ink); }
-.quote small { display: block; margin-top: 12px; font-size: .875rem; color: var(--muted); }
-.traits { list-style: none; margin: 0; padding: 8px 28px; }
-.traits li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 14px; padding: 16px 0; }
+.about-text h3 { font-size: 1.1875rem; margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+.about-text h3 i { width: 10px; height: 10px; border-radius: 50%; background: var(--coral); flex: none; }
+.about-text > div:nth-child(2) h3 i { background: var(--butter); }
+.about-text > div:nth-child(3) h3 i { background: var(--lilac); }
+.ink { font-size: 1.1875rem; line-height: 1.6; }
+.js .ink .wd { color: var(--faint); transition: color .25s ease; }
+.js .ink .wd.on { color: var(--ink); }
+.about-side { display: grid; gap: 18px; }
+.quote { margin: 0; padding: 28px; background: var(--ink); color: var(--on-ink); border: none; position: relative; overflow: hidden; }
+.quote p { font: 400 clamp(1.5rem, 2.6vw, 1.875rem)/1.2 var(--f-head); position: relative; }
+.quote small { display: block; margin-top: 14px; padding-right: 64px; font-size: .875rem; opacity: .85; position: relative; }
+.quote svg { position: absolute; right: -36px; bottom: -42px; width: 110px; }
+.traits { list-style: none; margin: 0; padding: 6px 24px; }
+.traits li { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 14px; padding: 16px 0; }
 .traits li + li { border-top: 1px solid var(--line); }
-.traits svg { width: 36px; height: 36px; padding: 8px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
-.traits b { display: block; color: var(--ink); font-weight: 600; }
+.traits svg { width: 42px; height: 42px; padding: 10px; border-radius: 12px; background: var(--coral-s); color: var(--coral-t); }
+.traits li:nth-child(2) svg { background: var(--butter-s); color: var(--ink); }
+.traits li:nth-child(3) svg { background: var(--lilac-s); color: var(--ink); }
+.traits b { display: block; color: var(--ink); }
 .traits span { font-size: .9375rem; color: var(--muted); }
-@media (max-width: 860px) { .about { grid-template-columns: 1fr; gap: 32px; } .quote, .traits { padding-left: 20px; padding-right: 20px; } }
+@media (max-width: 880px) { .about { grid-template-columns: 1fr; gap: 32px; } .traits { padding: 4px 18px; } .quote { padding: 22px; } }
 
+/* Anneaux de chiffres */
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 48px; }
-.stats div { padding: 24px; display: grid; gap: 4px; }
-.stats .n { font-family: var(--f-head); font-size: 2.75rem; font-weight: 600; line-height: 1; color: var(--accent); font-variant-numeric: lining-nums tabular-nums; }
-.stats .t { font-size: .9375rem; color: var(--muted); }
-@media (max-width: 760px) { .stats { grid-template-columns: 1fr; gap: 12px; margin-top: 32px; } .stats div { grid-template-columns: 88px minmax(0, 1fr); align-items: center; padding: 18px 20px; } .stats .n { font-size: 2.25rem; } }
+.stat { padding: 22px; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 18px; align-items: center; }
+.ring { position: relative; width: 96px; height: 96px; }
+.ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring .trk { fill: none; stroke: var(--tint); stroke-width: 8; }
+.ring .val { fill: none; stroke: var(--coral); stroke-width: 8; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 100; transition: stroke-dashoffset 1.6s cubic-bezier(.2, .8, .2, 1); }
+.stat:nth-child(2) .val { stroke: var(--butter); }
+.stat:nth-child(3) .val { stroke: var(--lilac); }
+.ring .n { position: absolute; inset: 0; display: grid; place-items: center; font: 400 1.75rem/1 var(--f-head); color: var(--ink); }
+.stat .t { font-size: .9375rem; color: var(--muted); }
+@media (max-width: 860px) { .stats { grid-template-columns: 1fr; gap: 12px; margin-top: 32px; } .stat { padding: 16px 18px; grid-template-columns: 80px minmax(0, 1fr); } .ring { width: 80px; height: 80px; } }
+
+/* Histoire épinglée : Besoin, Analyse, Solution */
+.story { height: 300vh; padding: 0; position: relative; background: var(--ink); color: var(--on-ink); overflow: visible; }
+.story .pin { position: sticky; top: 70px; height: calc(100vh - 70px); overflow: hidden; display: flex; align-items: center; }
+.story .wrap { width: 100%; }
+.story .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+.story .eyebrow { color: var(--butter); }
+.story h2 { color: var(--on-ink); font-size: clamp(2.25rem, 5vw, 3.5rem); margin-top: 10px; }
+.story .count { font: 400 1.5rem/1 var(--f-head); color: var(--on-ink); opacity: .8; }
+.stage { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; position: relative; min-height: 340px; }
+.step { grid-area: 1 / 1 / 2 / 3; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .7s cubic-bezier(.2, .8, .2, 1); pointer-events: none; }
+.step.on { opacity: 1; transform: none; pointer-events: auto; }
+.step .big { font: 400 clamp(3.5rem, 9vw, 6.5rem)/.9 var(--f-head); }
+.step:nth-child(1) .big { color: var(--butter); }
+.step:nth-child(2) .big { color: var(--coral); }
+.step:nth-child(3) .big { color: var(--lilac); }
+.step .num { font-size: .875rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; opacity: .7; }
+.step p { margin-top: 16px; font-size: 1.125rem; max-width: 30em; opacity: .9; }
+.step .from { margin-top: 14px; font-size: .875rem; font-weight: 700; color: var(--butter); }
+.step svg { width: 100%; max-width: 340px; justify-self: center; }
+.dots { display: flex; gap: 10px; margin-top: 28px; }
+.dots i { height: 6px; flex: 1; max-width: 120px; border-radius: 6px; background: rgba(250, 247, 242, .18); overflow: hidden; position: relative; }
+.dots i b { position: absolute; inset: 0; background: var(--butter); transform-origin: 0 50%; transform: scaleX(0); }
+.dots i:nth-child(2) b { background: var(--coral); }
+.dots i:nth-child(3) b { background: var(--lilac); }
+@media (max-width: 760px) {
+  .stage, .step { grid-template-columns: 1fr; gap: 16px; }
+  .step svg { max-width: 150px; order: -1; justify-self: start; }
+  .story .pin { align-items: flex-start; padding-top: 24px; }
+  .story .head { margin-bottom: 16px; }
+  .story h2 { font-size: 2rem; }
+  .step p { margin-top: 10px; font-size: 1rem; }
+  .stage { min-height: 400px; align-items: start; }
+  .dots { margin-top: 16px; }
+}
+@media (max-width: 760px) and (max-height: 700px) {
+  .step svg { display: none; }
+  .step .big { font-size: 3rem; }
+  .stage { min-height: 300px; }
+}
+.no-pin .story { height: auto; padding-block: 72px; }
+.no-pin .story .pin { position: static; height: auto; }
+.no-pin .stage { display: grid; grid-template-columns: 1fr; gap: 40px; min-height: 0; }
+.no-pin .step { grid-area: auto; opacity: 1; transform: none; }
+.no-pin .dots { display: none; }
+/* Écran trop bas (téléphone à l'horizontale) : pas d'épinglage, les trois étapes se suivent. */
+@media (max-height: 560px) {
+  .story { height: auto; padding-block: 64px; }
+  .story .pin { position: static; height: auto; }
+  .stage { display: grid; grid-template-columns: 1fr; gap: 40px; min-height: 0; }
+  .step { grid-area: auto; opacity: 1; transform: none; }
+  .step svg { display: block; max-width: 160px; }
+  .dots, .story .count { display: none; }
+}
 
 /* Parcours */
-.path { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 48px; align-items: start; }
-.col-title { font-size: 1.25rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-.timeline { list-style: none; margin: 0; padding: 0 0 0 28px; position: relative; display: grid; gap: 16px; }
-.timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--line); border-radius: 2px; }
-.timeline::after { content: ""; position: absolute; left: 7px; top: 8px; width: 2px; height: var(--fill, 0px); background: var(--leaf-2); border-radius: 2px; }
+.path { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.col-title { font: 400 2rem/1 var(--f-head); color: var(--ink); margin-bottom: 20px; }
+.timeline { list-style: none; margin: 0; padding: 0 0 0 44px; position: relative; display: grid; gap: 18px; --x: 14px; }
+.timeline::before, .timeline::after { content: ""; position: absolute; left: calc(var(--x) - 1.5px); top: var(--t0, 0px); width: 3px; border-radius: 3px; }
+.timeline::before { height: var(--len, 0px); background: var(--line); }
+.timeline::after { height: var(--fill, 0px); background: linear-gradient(var(--butter), var(--coral), var(--lilac)); }
 .timeline > li { position: relative; }
-.timeline > li::before { content: ""; position: absolute; left: -28px; top: 26px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 2px solid var(--leaf-2); transition: background .4s ease; }
-.timeline > li.lit::before { background: var(--leaf); }
-.job { padding: 22px 24px; }
-.job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 16px; flex-wrap: wrap; }
-.job h4 { margin: 0; font-family: var(--f-head); font-size: 1.25rem; font-weight: 600; color: var(--ink); }
-.job .date { font-size: .875rem; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.job .role { margin-top: 2px; color: var(--accent); font-weight: 500; font-size: .9375rem; }
+.timeline > li::before { content: ""; position: absolute; z-index: 1; left: calc(var(--x) - 44px - 9px); top: 29px; width: 18px; height: 18px; border-radius: 50%; background: var(--bg); border: 3px solid var(--faint); transition: background .4s ease, border-color .4s ease, transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+.timeline > li.lit::before { background: var(--coral); border-color: var(--ink); transform: scale(1.15); }
+.job { padding: 22px 24px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 18px; }
+.job > * { grid-column: 2; }
+.job .logos { grid-column: 1; grid-row: 1 / span 3; display: flex; flex-direction: column; gap: 8px; }
+.logo { width: 64px; height: 64px; border-radius: 16px; background: #fff; border: 1px solid var(--line); display: grid; place-items: center; padding: 9px; overflow: hidden; }
+.logo img { width: 100%; height: 100%; object-fit: contain; filter: grayscale(1) contrast(1.05); opacity: .78; transition: filter .3s ease, opacity .3s ease; }
+.job:hover .logo img { filter: none; opacity: 1; }
+.logo.sm { width: 64px; height: 34px; border-radius: 10px; padding: 6px 8px; }
+.logo.word { font: 700 .8125rem/1 var(--f-body); color: #1B1B2F; }
+.logo.ic { color: #1B1B2F; background: #FFF2CF; }
+.logo.ic.l { background: #EEE9FC; }
+.logo.ic svg { width: 30px; height: 30px; }
+.job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 14px; flex-wrap: wrap; }
+.job h4 { font: 400 1.75rem/1.05 var(--f-head); }
+.job .date { font-size: .8125rem; font-weight: 700; letter-spacing: .04em; color: var(--muted); white-space: nowrap; }
+.job .role { color: var(--coral-t); font-weight: 600; font-size: .9375rem; }
+.job ul, .job .tags, .job .takeaway { grid-column: 1 / -1; }
 .job ul { margin: 12px 0 0; padding-left: 18px; display: grid; gap: 6px; font-size: .9375rem; }
-.job li::marker { color: var(--petal-deep); }
-.job .takeaway { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .9375rem; color: var(--muted); }
-.job .takeaway b { color: var(--ink); font-weight: 600; }
+.job li::marker { color: var(--coral); }
+.job .takeaway { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); font-size: .9375rem; color: var(--muted); }
+.job .takeaway b { color: var(--ink); }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-.tags span { font-size: .8125rem; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: var(--sage); color: var(--sage-ink); }
-.next { background: var(--accent-soft); border-color: transparent; box-shadow: none; }
-.next h4 { color: var(--ink); }
+.tags span { font-size: .8125rem; font-weight: 600; padding: 4px 11px; border-radius: 999px; background: var(--lilac-s); color: var(--ink); }
+.tags span:nth-child(3n+2) { background: var(--butter-s); }
+.tags span:nth-child(3n) { background: var(--coral-s); }
+.next { background: var(--ink); border-color: var(--ink); color: var(--on-ink); grid-template-columns: minmax(0, 1fr); }
+.next > * { grid-column: 1; }
+.next h4 { color: var(--on-ink); }
+.next .role { color: var(--butter); }
+.next .tags span { background: rgba(250, 247, 242, .1); color: var(--on-ink); border: 1px solid rgba(250, 247, 242, .22); }
 .edu { display: grid; gap: 12px; }
-.edu .item { padding: 18px 20px; display: grid; gap: 2px; }
-.edu .item .date { font-size: .8125rem; font-weight: 600; letter-spacing: .04em; color: var(--muted); }
-.edu .item b { font-family: var(--f-head); font-size: 1.0625rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.edu .item { padding: 18px 20px; display: grid; gap: 2px; border-left: 4px solid var(--lilac); }
+.edu .item:nth-child(2) { border-left-color: var(--butter); }
+.edu .item:nth-child(3) { border-left-color: var(--coral); }
+.edu .item:nth-child(4) { border-left-color: var(--ink); }
+.edu .item .date { font-size: .8125rem; font-weight: 700; letter-spacing: .04em; color: var(--coral-t); }
+.edu .item b { font-size: 1.0625rem; color: var(--ink); line-height: 1.3; }
 .edu .item span { font-size: .875rem; color: var(--muted); }
-.edu .item.current { border-color: var(--leaf); box-shadow: inset 3px 0 0 var(--leaf-2), var(--shadow); }
-.edu-side { position: sticky; top: 92px; }
-@media (max-width: 900px) { .path { grid-template-columns: 1fr; gap: 40px; } .edu-side { position: static; } }
-@media (max-width: 480px) { .timeline { padding-left: 24px; } .timeline > li::before { left: -24px; width: 14px; height: 14px; } .timeline::before, .timeline::after { left: 6px; } .job { padding: 18px 16px; } }
+.edu-side { position: sticky; top: 96px; }
+@media (max-width: 920px) { .path { grid-template-columns: 1fr; gap: 40px; } .edu-side { position: static; } }
+@media (max-width: 560px) {
+  .timeline { padding-left: 34px; --x: 11px; } .timeline > li::before { left: calc(var(--x) - 34px - 8px); width: 16px; height: 16px; top: 23px; }
+  .job { padding: 16px; column-gap: 12px; } .logo { width: 48px; height: 48px; border-radius: 12px; padding: 7px; } .logo.sm { width: 48px; height: 28px; } .logo.ic svg { width: 24px; height: 24px; } .logo.word { font-size: .6875rem; }
+  .job h4 { font-size: 1.5rem; }
+}
 
 /* Compétences */
 .skills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.skill { padding: 22px; display: grid; gap: 10px; align-content: start; }
-.skill svg { width: 40px; height: 40px; padding: 9px; border-radius: 12px; background: var(--sage); color: var(--sage-ink); }
-.skill h3 { font-size: 1.125rem; }
+.skill { padding: 22px; display: grid; gap: 10px; align-content: start; transition: transform .25s ease, border-color .25s ease; }
+.skill:hover { transform: translateY(-4px); border-color: var(--coral); }
+.skill svg { width: 48px; height: 48px; padding: 12px; border-radius: 14px; background: var(--coral-s); color: var(--coral-t); }
+.skill:nth-child(4n+2) svg { background: var(--butter-s); color: var(--ink); }
+.skill:nth-child(4n+3) svg { background: var(--lilac-s); color: var(--ink); }
+.skill:nth-child(4n) svg { background: var(--ink); color: var(--butter); }
+.skill h3 { font-size: 1.0625rem; }
 .skill p { font-size: .9375rem; color: var(--muted); }
-.skill .src { font-size: .8125rem; font-weight: 600; color: var(--accent); }
-@media (max-width: 960px) { .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .skills { grid-template-columns: 1fr; gap: 12px; } .skill { grid-template-columns: 40px minmax(0, 1fr); column-gap: 16px; padding: 18px; } .skill svg { grid-row: span 3; } }
+.skill .src { font-size: .8125rem; font-weight: 700; color: var(--coral-t); }
+@media (max-width: 980px) { .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .skills { grid-template-columns: 1fr; gap: 12px; } .skill { grid-template-columns: 48px minmax(0, 1fr); column-gap: 16px; padding: 18px; } .skill svg { grid-row: span 3; } }
+
+/* Formation */
+.ects-wrap { padding: 26px; display: grid; gap: 18px; }
+.ects-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.ects-top b { font: 400 2rem/1 var(--f-head); color: var(--ink); }
+.ects-top span { color: var(--muted); font-size: .9375rem; }
+.ects-bar { display: flex; height: 18px; border-radius: 9px; overflow: hidden; gap: 3px; }
+.ects-bar i { display: block; transform-origin: 0 50%; }
+.js .ects-bar i { transform: scaleX(0); transition: transform .9s cubic-bezier(.2, .8, .2, 1) calc(var(--i) * 120ms); }
+.js .ects-bar.in i { transform: none; }
+.blocks { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.block { padding: 18px; display: grid; gap: 8px; align-content: start; border-top: 5px solid var(--c); }
+.block .pts { font: 400 1.625rem/1 var(--f-head); color: var(--ink); }
+.block h3 { font-size: 1rem; }
+.block ul { margin: 0; padding-left: 16px; font-size: .875rem; color: var(--muted); display: grid; gap: 4px; }
+.jobs-target { display: flex; flex-wrap: wrap; gap: 8px; }
+.jobs-target span { font-size: .875rem; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: var(--ink); }
+.cal { padding: 26px; display: grid; gap: 18px; margin-top: 16px; }
+.cal-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: flex-end; }
+.cal-head h3 { font: 400 1.875rem/1.05 var(--f-head); }
+.cal-head p { color: var(--muted); font-size: .9375rem; margin-top: 6px; max-width: 36em; }
+.months { display: grid; grid-template-columns: repeat(13, minmax(0, 1fr)); gap: 8px; }
+.month { display: grid; gap: 6px; align-content: start; }
+.month b { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.month .wk { display: grid; gap: 4px; }
+.month .wk i { display: block; height: 18px; border-radius: 5px; background: var(--lilac-s); border: 1px solid var(--line); }
+.month .wk i.c { background: var(--coral); border-color: var(--coral); }
+.month .wk i.m { background: linear-gradient(90deg, var(--coral) 60%, var(--lilac-s) 60%); border-color: var(--coral); }
+.js .month .wk i { opacity: 0; transform: scaleY(.3); transition: opacity .4s ease, transform .4s ease; transition-delay: calc(var(--i) * 18ms); }
+.js .months.in .wk i { opacity: 1; transform: none; }
+.legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: .875rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.legend i { width: 14px; height: 14px; border-radius: 4px; background: var(--lilac-s); border: 1px solid var(--line); }
+.legend i.c { background: var(--coral); border-color: var(--coral); }
+.doc-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.form-grid { display: grid; gap: 16px; }
+@media (max-width: 1080px) { .blocks { grid-template-columns: repeat(3, minmax(0, 1fr)); } .months { grid-template-columns: repeat(7, minmax(0, 1fr)); row-gap: 16px; } }
+@media (max-width: 640px) { .blocks { grid-template-columns: 1fr; } .months { grid-template-columns: repeat(4, minmax(0, 1fr)); } .ects-wrap, .cal { padding: 20px 16px; } }
 
 /* Projet en cours */
 .project { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
-.pill { display: inline-block; font-size: .8125rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
-.project h3 { font-size: clamp(1.625rem, 3vw, 2.125rem); margin-top: 14px; }
+.pill { display: inline-block; font-size: .8125rem; font-weight: 700; padding: 6px 14px; border-radius: 999px; background: var(--ink); color: var(--on-ink); }
+.project h2 { font-size: clamp(2.25rem, 5vw, 3.5rem); margin-top: 16px; }
 .project p { margin-top: 14px; max-width: 34em; }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: s; }
-.steps li { counter-increment: s; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; align-items: center; padding: 18px 20px; }
-.steps li::before { content: counter(s); width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--bg); font: 600 1.0625rem var(--f-head); }
-.steps b { display: block; color: var(--ink); font-weight: 600; }
+.steps { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 10px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: center; }
+.steps li::before { content: counter(s); width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--coral); color: #fff; font: 400 1.375rem/1 var(--f-head); }
+.steps li:nth-child(2)::before { background: var(--butter); color: #1B1B2F; }
+.steps li:nth-child(3)::before { background: var(--lilac); color: #1B1B2F; }
+.steps b { display: block; color: var(--ink); }
 .steps span { font-size: .9375rem; color: var(--muted); }
-@media (max-width: 860px) { .project { grid-template-columns: 1fr; gap: 28px; } }
+.phones { display: flex; justify-content: center; align-items: flex-end; gap: 18px; }
+.phone { width: 200px; aspect-ratio: 9 / 18.5; border-radius: 30px; border: 8px solid #1B1B2F; background: #FAF7F2; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(27, 27, 47, .55); display: flex; flex-direction: column; flex: none; color: #1B1B2F; }
+.phone:nth-child(2) { transform: translateY(-28px); }
+.phone .notch { height: 18px; display: grid; place-items: center; }
+.phone .notch i { width: 54px; height: 6px; border-radius: 6px; background: #1B1B2F; }
+.scr { padding: 8px 12px 12px; display: grid; gap: 8px; font-size: 10.5px; line-height: 1.3; align-content: start; flex: 1; }
+.scr .t { font: 400 20px/1 var(--f-head); }
+.scr .search { height: 26px; border-radius: 99px; background: #EEE9FC; display: flex; align-items: center; padding: 0 10px; color: #55566A; }
+.scr .chips { display: flex; gap: 5px; }
+.scr .chips span { padding: 3px 8px; border-radius: 99px; background: #EEE9FC; font-weight: 600; }
+.scr .chips span:first-child { background: #1B1B2F; color: #FAF7F2; }
+.scr .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.scr .prod { border-radius: 10px; background: #fff; border: 1px solid #E6E1D8; padding: 6px; display: grid; gap: 3px; }
+.scr .prod i { display: block; height: 44px; border-radius: 7px; }
+.scr .prod b { font-size: 10px; }
+.scr .prod em { font-style: normal; color: #C23E2C; font-weight: 700; }
+.scr .eta { border-radius: 10px; background: #1B1B2F; color: #FAF7F2; padding: 8px 10px; display: grid; gap: 5px; }
+.scr .eta b { font: 400 16px/1 var(--f-head); }
+.scr .bar { height: 5px; border-radius: 5px; background: rgba(250, 247, 242, .25); overflow: hidden; }
+.scr .bar i { display: block; height: 100%; width: 62%; background: #FFC94D; border-radius: 5px; }
+.scr .map { border-radius: 12px; overflow: hidden; background: #EEE9FC; }
+.scr .map svg { display: block; width: 100%; height: auto; }
+.mock-note { text-align: center; font-size: .8125rem; color: var(--muted); margin-top: 18px; }
+@media (max-width: 880px) { .project { grid-template-columns: minmax(0, 1fr); gap: 36px; } }
+@media (max-width: 360px) { .phone { width: 128px; } .phones { gap: 10px; } }
+@media (max-width: 480px) { .phone { width: 150px; border-width: 6px; border-radius: 24px; } .phone:nth-child(2) { transform: translateY(-18px); } .scr { font-size: 9px; padding: 6px 9px 9px; gap: 6px; } .scr .t { font-size: 16px; } .scr .prod i { height: 32px; } .phones { gap: 12px; } }
 
-/* En dehors */
-.side { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.side article { padding: 22px; display: grid; gap: 8px; align-content: start; }
-.side svg { width: 28px; height: 28px; color: var(--accent); }
-.side h3 { font-size: 1.125rem; }
-.side p { font-size: .9375rem; color: var(--muted); }
-@media (max-width: 900px) { .side { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 480px) { .side { gap: 12px; } .side article { padding: 18px 16px; } }
+/* Centres d'intérêt */
+.likes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.like { overflow: hidden; display: grid; align-content: start; }
+.like figure { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; background: var(--tint); }
+.like img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s cubic-bezier(.2, .8, .2, 1); }
+.like:hover img { transform: scale(1.04); }
+.like .cap { padding: 18px 20px; display: grid; gap: 4px; border-top: 4px solid var(--coral); }
+.like:nth-child(2) .cap { border-top-color: var(--butter); }
+.like:nth-child(3) .cap { border-top-color: var(--lilac); }
+.like h3 { font: 400 1.75rem/1.05 var(--f-head); }
+.like p { font-size: .9375rem; color: var(--muted); }
+@media (max-width: 860px) { .likes { grid-template-columns: 1fr; gap: 14px; } .like figure { aspect-ratio: 16 / 9; } }
 
 /* Contact */
-.contact { padding: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
-.contact h2 { font-size: clamp(1.875rem, 3.6vw, 2.625rem); margin-top: 12px; }
-.contact .lede { margin-top: 14px; color: var(--muted); }
+.contact { padding: 52px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 40px; align-items: center; background: var(--ink); border: none; color: var(--on-ink); position: relative; overflow: hidden; }
+.contact > :not(.deco) { position: relative; z-index: 1; }
+.contact .eyebrow { color: var(--butter); }
+.contact h2 { font-size: clamp(2.5rem, 5.5vw, 4rem); margin-top: 12px; color: var(--on-ink); }
+.contact h2 em { font-style: italic; color: var(--coral); }
+.contact .lede { margin-top: 14px; opacity: .9; }
 .contact .cta { margin-top: 26px; }
+.contact .btn { background: var(--butter); color: #1B1B2F; border-color: var(--butter); }
+.contact .btn:hover { background: var(--coral); border-color: var(--coral); color: #fff; }
+.contact .btn.ghost { background: transparent; color: var(--on-ink); border-color: var(--on-ink); }
+.contact .btn.ghost:hover { background: var(--on-ink); color: var(--ink); }
 .links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.links a { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); text-decoration: none; color: var(--ink); transition: border-color .2s ease; }
-.links a:hover { border-color: var(--accent); }
-.links svg.ic { width: 44px; height: 44px; padding: 11px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
-.links small { display: block; font-size: .8125rem; color: var(--muted); }
-.links b { font-weight: 600; overflow-wrap: anywhere; }
-.links svg.go { width: 18px; height: 18px; color: var(--muted); }
-@media (max-width: 860px) { .contact { grid-template-columns: 1fr; padding: 28px 20px; gap: 28px; } }
-
+.links li { position: relative; }
+.links a, .links button.lk { width: 100%; font: inherit; text-align: left; cursor: pointer; display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 14px; background: rgba(250, 247, 242, .07); border: 1px solid rgba(250, 247, 242, .16); text-decoration: none; color: var(--on-ink); transition: background .2s ease, transform .2s ease; }
+.links a:hover, .links button.lk:hover { background: rgba(250, 247, 242, .14); transform: translateX(4px); }
+.links svg.ic { width: 44px; height: 44px; padding: 11px; border-radius: 12px; background: var(--butter); color: #1B1B2F; }
+.links li:nth-child(2) svg.ic { background: var(--coral); color: #fff; }
+.links li:nth-child(3) svg.ic { background: var(--lilac); }
+.links small { display: block; font-size: .8125rem; opacity: .8; }
+.links b { font-weight: 700; overflow-wrap: anywhere; }
+.links svg.go { width: 18px; height: 18px; opacity: .7; }
+.mail-menu { position: absolute; z-index: 5; right: 12px; top: calc(100% + 8px); min-width: 240px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 20px 40px -16px rgba(0, 0, 0, .45); padding: 6px; display: none; }
+.mail-menu.open { display: grid; }
+.mail-menu a, .mail-menu button { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 10px; border: none; background: none; color: var(--ink); font: 600 .9375rem var(--f-body); text-decoration: none; cursor: pointer; text-align: left; }
+.mail-menu a:hover, .mail-menu button:hover { background: var(--tint); }
+.mail-menu svg { width: 18px; height: 18px; flex: none; color: var(--coral-t); }
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px); background: var(--ink); color: var(--on-ink); padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: .9375rem; opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease; z-index: 70; box-shadow: var(--shadow); }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.contact .deco { opacity: .9; }
+@media (max-width: 880px) { .contact { grid-template-columns: 1fr; padding: 30px 20px; gap: 28px; } .mail-menu { left: 0; right: 0; } }
 .foot { padding-block: 28px calc(28px + env(safe-area-inset-bottom, 0px)); font-size: .875rem; color: var(--muted); display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; }
+
+/* Lecteur de PDF */
+.viewer { position: fixed; inset: 0; z-index: 60; display: none; background: rgba(21, 21, 31, .72); padding: max(16px, env(safe-area-inset-top, 0px)) 16px 16px; }
+.viewer.open { display: flex; align-items: center; justify-content: center; }
+.viewer .panel { width: min(860px, 100%); height: 100%; max-height: 100%; background: var(--bg); border-radius: 18px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .5); }
+.viewer .vbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px 12px 20px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.viewer .vbar b { font: 400 1.375rem/1 var(--f-head); color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.viewer .vbar .acts { display: flex; gap: 8px; flex: none; }
+.viewer .close { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+.viewer .close svg { width: 20px; height: 20px; }
+.viewer .pages { flex: 1; overflow: auto; padding: 18px; display: grid; gap: 16px; justify-items: center; align-content: start; -webkit-overflow-scrolling: touch; }
+.viewer canvas { width: 100%; max-width: 800px; height: auto; background: #fff; border-radius: 6px; box-shadow: 0 6px 24px -10px rgba(0, 0, 0, .35); }
+.viewer .msg { color: var(--muted); padding: 40px 16px; text-align: center; }
+@media (max-width: 560px) { .viewer { padding: 0; } .viewer .panel { border-radius: 0; } .viewer .vbar .dl-label { display: none; } .viewer .pages { padding: 10px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; }
+  .marquee .track { animation: none; }
+}
 </style>
 </head>
 <body>
-
-<canvas id="petals" aria-hidden="true"></canvas>
 
 <header class="topbar" id="topbar">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Sonia Derouiche, retour en haut">
       <span class="monogram" aria-hidden="true">SD</span>
-      <span class="brand-text"><b>Sonia Derouiche</b><span>AMOA · Gestion de projet SI · Qualité des données</span></span>
+      <span class="brand-text"><b>Sonia Derouiche</b><span>Business analyse · AMOA · Qualité des données</span></span>
     </a>
     <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav class="nav" id="nav" aria-label="Sections">
       <a href="#apropos">À propos</a>
+      <a href="#methode">Méthode</a>
       <a href="#parcours">Parcours</a>
       <a href="#competences">Compétences</a>
+      <a href="#formation">Formation</a>
       <a href="#contact">Contact</a>
-      <a class="btn" href="CV_Sonia_Derouiche.pdf" target="_blank" rel="noopener">Mon CV</a>
+      <a class="btn sm mag" href="CV_stage_Sonia_Derouiche.pdf" data-pdf="CV_stage_Sonia_Derouiche.pdf" data-title="CV de Sonia Derouiche">Mon CV</a>
     </nav>
   </div>
+  <span class="progress" id="progress" aria-hidden="true"></span>
 </header>
 
+<div class="marker" id="marker" aria-hidden="true">
+  <span class="num"><span id="mk-num">01</span><small id="mk-tot">/ 08</small></span>
+  <span class="rail"><i id="mk-rail"></i></span>
+  <span class="name" id="mk-name">À propos</span>
+</div>
+
 <main id="top">
-  <div class="wrap hero">
-    <div class="hero-text">
-      <span class="status"><i aria-hidden="true"></i>Disponible dès le 9 novembre 2026</span>
-      <h1>Sonia Derouiche<span>Future AMOA, entre les utilisateurs et les outils</span></h1>
-      <p class="lede">Étudiante en <strong>L3 MITIC</strong> à l'Université Gustave Eiffel, je cherche un <strong>stage ou une alternance de 4 à 6 mois</strong> en AMOA, gestion de projet SI ou qualité des données.</p>
-      <div class="cta">
-        <a class="btn" href="CV_Sonia_Derouiche.pdf" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
-          Voir mon CV
-        </a>
-        <a class="btn ghost" href="#contact">Me contacter</a>
+  <div class="hero-sec">
+    <div class="wrap">
+      <div class="hero">
+        <div class="hero-text">
+          <span class="eyebrow fade">Étudiante en L3 MITIC · Stage ou alternance</span>
+          <h1 aria-label="Sonia Derouiche"><span class="ln" aria-hidden="true"><span class="w">Sonia</span></span> <span class="ln" aria-hidden="true"><span class="w">Derouiche</span></span></h1>
+          <p class="role fade">Future business analyst</p>
+          <p class="lede fade f2">Je cherche un <strong>stage ou une alternance de 4 à 6 mois</strong> en business analyse, AMOA, gestion de projet SI ou qualité des données. Je suis en L3 MITIC (Management, Ingénierie des services et Numérique) à l'Université Gustave Eiffel.</p>
+          <div class="cta fade f2">
+            <a class="btn mag" href="CV_stage_Sonia_Derouiche.pdf" data-pdf="CV_stage_Sonia_Derouiche.pdf" data-title="CV de Sonia Derouiche">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+              Voir mon CV
+            </a>
+            <a class="btn ghost mag" href="#contact">Me contacter</a>
+            <span class="avail"><i aria-hidden="true"></i>Disponible</span>
+          </div>
+        </div>
+
+        <div class="scene" id="scene" role="img" aria-label="Illustration : un bureau le soir, avec un ordinateur qui affiche un tableau de bord, une lampe allumée et une tasse de thé.">
+          <svg viewBox="0 0 300 260" aria-hidden="true">
+            <g class="lay" data-depth="-0.06"><circle cx="165" cy="118" r="104" fill="var(--lilac-s)"/></g>
+            <g class="lay" data-depth="-0.14"><circle cx="236" cy="50" r="18" fill="var(--butter)"/><circle cx="236" cy="50" r="28" fill="none" stroke="var(--butter)" stroke-width="1.5" opacity=".55"/></g>
+            <g class="lay" data-depth="0">
+              <rect x="20" y="196" width="262" height="12" rx="6" fill="var(--ink)"/><rect x="40" y="208" width="10" height="44" fill="var(--ink)"/><rect x="252" y="208" width="10" height="44" fill="var(--ink)"/>
+              <path class="beam" d="M70 120 L128 192 H40Z" fill="var(--butter)"/>
+              <path d="M36 196 V130 l28 -26" stroke="var(--ink)" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <circle cx="67" cy="107" r="6" fill="var(--butter)"/><path d="M52 92 l30 -4 -4 30z" fill="var(--coral)"/>
+              <path d="M84 196 l12 -22 h134 l12 22z" fill="var(--lilac)"/>
+              <rect x="248" y="168" width="24" height="28" rx="4" fill="var(--coral)"/><path d="M272 174 c8 0 8 14 0 14" fill="none" stroke="var(--coral)" stroke-width="3"/>
+              <path class="steam" d="M256 160 c-4 -6 4 -9 0 -15" stroke="var(--muted)" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path class="steam" style="animation-delay:1s" d="M264 160 c-4 -6 4 -9 0 -15" stroke="var(--muted)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </g>
+            <g class="lay" data-depth="0.05"><g class="float">
+              <rect x="96" y="80" width="134" height="92" rx="10" fill="#1B1B2F"/><rect x="104" y="88" width="118" height="72" rx="5" fill="#FFFFFF"/>
+              <rect x="112" y="96" width="42" height="7" rx="3" fill="#E5533F"/><rect x="112" y="110" width="60" height="5" rx="2.5" fill="#EEE9FC"/><rect x="112" y="120" width="48" height="5" rx="2.5" fill="#EEE9FC"/>
+              <rect x="180" y="122" width="9" height="30" rx="2" fill="#B9A7EE"/><rect x="193" y="110" width="9" height="42" rx="2" fill="#FFC94D"/><rect x="206" y="100" width="9" height="52" rx="2" fill="#E5533F"/>
+              <circle cx="128" cy="142" r="11" fill="none" stroke="#FFC94D" stroke-width="5"/><path d="M128 131 A11 11 0 0 1 139 142" fill="none" stroke="#E5533F" stroke-width="5"/>
+              <rect class="caret" x="152" y="141" width="2" height="9" fill="#1B1B2F"/>
+            </g></g>
+            <g class="lay" data-depth="0.12"><g class="float2">
+              <rect x="96" y="14" width="56" height="40" rx="6" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/>
+              <path d="M106 28 h34 M106 38 h22" stroke="var(--lilac)" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="144" cy="18" r="8" fill="var(--coral)"/><path d="M140 18 l3 3 5 -6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </g></g>
+          </svg>
+        </div>
       </div>
-    </div>
-    <div class="bloom-wrap">
-      <canvas id="bloom" role="img" aria-label="Illustration : une pivoine qui s'ouvre."></canvas>
+
+      <dl class="facts" aria-label="En bref">
+        <div class="rv" style="--i:0"><dt>Format</dt><dd>Stage ou alternance</dd></div>
+        <div class="rv" style="--i:1"><dt>Durée</dt><dd>4 à 6 mois</dd></div>
+        <div class="rv" style="--i:2"><dt>Rythme</dt><dd>1 semaine en entreprise, 1 semaine à l'université</dd></div>
+        <div class="rv" style="--i:3"><dt>Lieu</dt><dd>Île-de-France · Permis B et véhicule</dd></div>
+      </dl>
     </div>
   </div>
 
-  <div class="wrap">
-    <dl class="facts" aria-label="En bref">
-      <div><dt>Début</dt><dd>9 novembre 2026</dd></div>
-      <div><dt>Durée</dt><dd>4 à 6 mois</dd></div>
-      <div><dt>Rythme</dt><dd>1 semaine entreprise, 1 semaine école</dd></div>
-      <div><dt>Lieu</dt><dd>Île-de-France · Permis B et véhicule</dd></div>
-    </dl>
+  <div class="marquee" aria-hidden="true">
+    <div class="track"><span>Business analyse</span><span>AMOA</span><span>Qualité des données</span><span>Recueil des besoins</span><span>Gestion de projet SI</span><span>Formation des utilisateurs</span><span>Business analyse</span><span>AMOA</span><span>Qualité des données</span><span>Recueil des besoins</span><span>Gestion de projet SI</span><span>Formation des utilisateurs</span></div>
   </div>
 
-  <section id="apropos">
+  <section id="apropos" data-name="À propos">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">À propos</span>
-        <h2>Pourquoi le numérique, et pourquoi l'AMOA</h2>
+        <span class="eyebrow rv">À propos</span>
+        <h2 class="split">Pourquoi la <em>business analyse</em></h2>
       </div>
       <div class="about">
         <div class="about-text">
-          <div>
-            <h3>Aider les gens, avec de la gestion</h3>
-            <p>J'ai choisi le BTS SP3S parce que je voulais un métier tourné vers les autres. Ce qui m'attirait, c'était d'aider à travers <strong>la gestion des dossiers et les outils informatiques</strong>, comme dans une mutuelle ou une caisse de prévoyance.</p>
+          <div class="rv" style="--i:0">
+            <h3><i aria-hidden="true"></i>Un métier tourné vers les autres</h3>
+            <p>J'ai choisi le BTS SP3S parce que je voulais aider les autres. Ce qui m'attirait déjà, c'était d'aider à travers <strong>la gestion des dossiers et les outils informatiques</strong>.</p>
           </div>
-          <div>
-            <h3>Toujours derrière un écran</h3>
-            <p>En stage puis en entreprise, j'ai toujours travaillé sur ordinateur et appris un nouveau logiciel métier à chaque poste. Mon diplôme limitait mes missions : j'ai repris mes études pour <strong>gagner en compétences et viser plus loin</strong>.</p>
+          <div class="rv" style="--i:1">
+            <h3><i aria-hidden="true"></i>Toujours derrière un écran</h3>
+            <p>En stage puis en entreprise, j'ai toujours travaillé sur ordinateur. À chaque poste, j'ai appris un nouveau logiciel métier. Mon diplôme limitait mes missions : j'ai donc repris mes études pour <strong>gagner en compétences</strong>.</p>
           </div>
-          <div>
-            <h3>Du côté des utilisateurs</h3>
-            <p>Je ne veux pas coder. Je veux <strong>comprendre ce dont les utilisateurs ont besoin et vérifier que les outils y répondent</strong>. C'est le rôle de l'AMOA, et c'est déjà ce que je faisais sur le terrain sans en porter le nom.</p>
+          <div class="rv" style="--i:2">
+            <h3><i aria-hidden="true"></i>Le lien entre le métier et la technique</h3>
+            <p class="ink" id="ink">Ce qui me plaît, c'est d'être le lien entre les équipes métier et les équipes techniques : comprendre les besoins des utilisateurs, les traduire clairement puis vérifier que les outils livrés y répondent vraiment. Mes expériences en gestion m'ont montré combien un outil bien pensé simplifie le travail de chacun. C'est ce que je veux construire.</p>
           </div>
         </div>
         <div class="about-side">
-          <blockquote class="card quote" style="margin:0">
+          <blockquote class="card quote rv">
             <p>« Une donnée fausse dans un dossier, c'est une personne qui attend son indemnité. »</p>
             <small>Ce que m'a appris la gestion des arrêts de travail chez PRO BTP.</small>
+            <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="60" cy="60" r="40" fill="#E5533F"/><path d="M20 60 a40 40 0 0 1 80 0z" fill="#FFC94D"/></svg>
           </blockquote>
-          <ul class="card traits">
+          <ul class="card traits rv" style="--i:1">
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
-              <div><b>J'écoute avant de proposer</b><span>Au domicile d'un bénéficiaire ou au téléphone avec un adhérent, je pose les bonnes questions.</span></div>
+              <div><b>J'écoute avant de proposer</b><span>Au domicile d'un bénéficiaire ou au téléphone avec un adhérent, j'ai appris à poser les bonnes questions.</span></div>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a5.5 5.5 0 0 1 3.5 6"/></svg>
@@ -348,186 +643,324 @@ section { padding-block: 88px; }
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11l2 2 4-4"/></svg>
-              <div><b>Je relis jusqu'à la dernière ligne</b><span>Un champ mal rempli me dérange, et c'est souvent là que se cache l'anomalie.</span></div>
+              <div><b>Je relis jusqu'à la dernière ligne</b><span>Chez PRO BTP, un seul champ mal rempli pouvait bloquer un paiement. J'ai appris à chercher l'anomalie là où elle se cache.</span></div>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="stats" aria-label="Quelques chiffres chez PRO BTP">
-        <div class="card"><span class="n">50</span><span class="t">dossiers d'arrêt de travail traités chaque jour</span></div>
-        <div class="card"><span class="n">75+</span><span class="t">demandes d'adhérents traitées chaque jour</span></div>
-        <div class="card"><span class="n">3</span><span class="t">nouveaux collaborateurs formés à l'outil</span></div>
+        <div class="card stat rv" style="--i:0"><div class="ring" data-ring="83"><svg viewBox="0 0 40 40" aria-hidden="true"><circle class="trk" cx="20" cy="20" r="16"/><circle class="val" cx="20" cy="20" r="16" pathLength="100"/></svg><span class="n" data-count="50">50</span></div><span class="t">dossiers d'arrêt de travail traités chaque jour chez PRO BTP</span></div>
+        <div class="card stat rv" style="--i:1"><div class="ring" data-ring="94"><svg viewBox="0 0 40 40" aria-hidden="true"><circle class="trk" cx="20" cy="20" r="16"/><circle class="val" cx="20" cy="20" r="16" pathLength="100"/></svg><span class="n" data-count="75" data-suffix="+">75+</span></div><span class="t">demandes d'adhérents traitées chaque jour</span></div>
+        <div class="card stat rv" style="--i:2"><div class="ring" data-ring="60"><svg viewBox="0 0 40 40" aria-hidden="true"><circle class="trk" cx="20" cy="20" r="16"/><circle class="val" cx="20" cy="20" r="16" pathLength="100"/></svg><span class="n" data-count="3">3</span></div><span class="t">nouveaux collaborateurs formés à l'outil métier</span></div>
       </div>
     </div>
   </section>
 
-  <section id="parcours" class="tinted">
+  <section class="story" id="methode" data-name="Méthode">
+    <div class="pin">
+      <div class="wrap">
+        <div class="head">
+          <div><span class="eyebrow">Ma méthode</span><h2>Du besoin à la solution</h2></div>
+          <span class="count" id="st-count" aria-hidden="true">01 / 03</span>
+        </div>
+        <div class="stage" id="stage">
+          <div class="step on">
+            <div>
+              <span class="num">Étape 1</span>
+              <div class="big">Besoin</div>
+              <p>Écouter les utilisateurs, observer leur quotidien, poser les bonnes questions avant de proposer quoi que ce soit.</p>
+              <p class="from">Appris chez Destia et au CCAS de Tinqueux</p>
+            </div>
+            <svg viewBox="0 0 200 160" aria-hidden="true"><circle cx="100" cy="80" r="70" fill="rgba(250,247,242,.06)"/><circle cx="70" cy="70" r="20" fill="#FFC94D"/><path d="M40 130 c0 -20 14 -32 30 -32 s30 12 30 32z" fill="#FFC94D"/><path d="M110 40 h60 a8 8 0 0 1 8 8 v30 a8 8 0 0 1 -8 8 h-34 l-14 12 v-12 h-12 a8 8 0 0 1 -8 -8 v-30 a8 8 0 0 1 8 -8z" fill="#FAF7F2"/><path d="M122 56 h40 M122 68 h26" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="step">
+            <div>
+              <span class="num">Étape 2</span>
+              <div class="big">Analyse</div>
+              <p>Comprendre l'origine du problème, vérifier les données, formaliser le besoin pour qu'il soit clair pour tout le monde.</p>
+              <p class="from">Appris chez Groupama et PRO BTP</p>
+            </div>
+            <svg viewBox="0 0 200 160" aria-hidden="true"><circle cx="100" cy="80" r="70" fill="rgba(250,247,242,.06)"/><rect x="40" y="96" width="22" height="40" rx="4" fill="#B9A7EE"/><rect x="70" y="76" width="22" height="60" rx="4" fill="#FFC94D"/><rect x="100" y="56" width="22" height="80" rx="4" fill="#E5533F"/><circle cx="138" cy="62" r="26" fill="rgba(250,247,242,.15)" stroke="#FAF7F2" stroke-width="7"/><path d="M157 81 l22 22" stroke="#FAF7F2" stroke-width="10" stroke-linecap="round"/></svg>
+          </div>
+          <div class="step">
+            <div>
+              <span class="num">Étape 3</span>
+              <div class="big">Solution</div>
+              <p>Proposer, accompagner le changement, former les utilisateurs puis vérifier que l'outil répond vraiment au besoin.</p>
+              <p class="from">Appris chez PRO BTP en formant 3 collaborateurs</p>
+            </div>
+            <svg viewBox="0 0 200 160" aria-hidden="true"><circle cx="100" cy="80" r="70" fill="rgba(250,247,242,.06)"/><rect x="36" y="36" width="128" height="88" rx="10" fill="#FAF7F2"/><rect x="36" y="36" width="128" height="18" rx="9" fill="#B9A7EE"/><rect x="50" y="68" width="52" height="8" rx="4" fill="#1B1B2F"/><rect x="50" y="84" width="40" height="8" rx="4" fill="#EEE9FC"/><circle cx="136" cy="94" r="20" fill="#E5533F"/><path d="M126 94 l7 7 13 -14" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="dots" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="parcours" class="tint-lilac" data-name="Parcours">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Parcours</span>
-        <h2>Expériences et formation</h2>
-        <p>Du plus récent au plus ancien. Chaque poste m'a appris quelque chose d'utile pour un projet SI.</p>
+        <span class="eyebrow rv">Parcours</span>
+        <h2 class="split">Expériences <em>et diplômes</em></h2>
+        <p class="rv">Du plus ancien au plus récent. Chaque poste m'a appris quelque chose d'utile pour un projet SI.</p>
       </div>
 
       <div class="path">
         <div>
           <h3 class="col-title">Expériences</h3>
           <ol class="timeline" id="timeline">
-            <li>
-              <article class="card job next">
-                <div class="job-top"><h4>Votre entreprise ?</h4><span class="date">Dès nov. 2026</span></div>
-                <p class="role">Stage ou alternance · 4 à 6 mois · 1 semaine sur 2</p>
-                <p class="takeaway">AMOA, assistante chef de projet, business analyst junior ou qualité des données.</p>
-              </article>
-            </li>
-            <li>
+            <li class="rv">
               <article class="card job">
-                <div class="job-top"><h4>PRO BTP</h4><span class="date">Avr. 2024 – avr. 2025</span></div>
-                <p class="role">Gestionnaire assurance prévoyance, via Tessi-Owliance</p>
+                <div class="logos"><span class="logo word" role="img" aria-label="Destia">destia</span></div>
+                <div class="job-top"><h4>Destia</h4><span class="date">Mai – juil. 2022</span></div>
+                <p class="role">Stage de BTS · Assistante coordinatrice d'agence, Reims</p>
                 <ul>
-                  <li>Traitement de 50 dossiers d'indemnités journalières par jour (maladie, accident du travail), dans le respect du contrat et de la loi.</li>
-                  <li>Contrôle de la conformité et de l'exactitude des données adhérents dans le logiciel Comète.</li>
-                  <li>Analyse des blocages et correction des erreurs pour débloquer le paiement des indemnités.</li>
-                  <li>Formation de 3 nouveaux collaborateurs à l'outil et aux prestations.</li>
+                  <li>J'ai évalué sur le terrain, lors de visites à domicile, les besoins des bénéficiaires.</li>
+                  <li>J'ai coordonné les plannings, en lien entre bénéficiaires, intervenants et agence.</li>
                 </ul>
-                <div class="tags"><span>Qualité des données</span><span>Comète</span><span>Formation</span></div>
-                <p class="takeaway"><b>Ce que j'en retiens :</b> fiabiliser des données et former des utilisateurs, c'est le quotidien d'un projet SI.</p>
+                <p class="takeaway"><b>Ce que j'en retiens :</b> recueillir un besoin là où il se trouve, chez l'usager.</p>
               </article>
             </li>
-            <li>
+            <li class="rv">
               <article class="card job">
+                <div class="logos"><span class="logo ic" role="img" aria-label="CCAS de Tinqueux"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21v-6h6v6M2 10l10-6 10 6"/></svg></span></div>
+                <div class="job-top"><h4>CCAS de Tinqueux</h4><span class="date">Janv. – mars 2023</span></div>
+                <p class="role">Stage de BTS · Assistante de responsable</p>
+                <ul>
+                  <li>J'ai mené le projet « Ville amie des aînés » avec le Conseil des seniors : analyse des besoins, recherches puis propositions.</li>
+                  <li>J'ai présenté le projet au maire et au conseil municipal.</li>
+                  <li>J'ai accueilli les usagers, créé puis suivi des dossiers administratifs.</li>
+                </ul>
+                <p class="takeaway"><b>Ce que j'en retiens :</b> structurer des idées puis les défendre devant des décideurs.</p>
+              </article>
+            </li>
+            <li class="rv">
+              <article class="card job">
+                <div class="logos"><span class="logo ic l" role="img" aria-label="École Anquetil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="7" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M2.5 20a5.5 5.5 0 0 1 11 0M12.5 20a4 4 0 0 1 8 0"/></svg></span></div>
+                <div class="job-top"><h4>Animation périscolaire</h4><span class="date">Déc. 2023 – janv. 2024</span></div>
+                <p class="role">Animatrice · École Anquetil, Reims</p>
+                <ul>
+                  <li>J'ai encadré puis animé des groupes d'enfants sur les temps périscolaires.</li>
+                </ul>
+                <p class="takeaway"><b>Ce que j'en retiens :</b> garder patience et attention avec tous les publics.</p>
+              </article>
+            </li>
+            <li class="rv">
+              <article class="card job">
+                <div class="logos"><span class="logo"><img src="logos/groupama.svg" alt="Logo Groupama" width="64" height="64"></span></div>
                 <div class="job-top"><h4>Groupama</h4><span class="date">Janv. – mars 2024</span></div>
                 <p class="role">Gestionnaire production et relation clients, Reims</p>
                 <ul>
-                  <li>Reprise d'un stock de dossiers touchés par une anomalie de calcul des prestations.</li>
-                  <li>Contrôle de la cohérence des données saisies dans le système d'information.</li>
-                  <li>Recensement des données géographiques et des coordonnées de différents sites.</li>
+                  <li>J'ai repris un stock de dossiers touchés par une anomalie de calcul des prestations.</li>
+                  <li>J'ai contrôlé la cohérence des données saisies dans le système d'information.</li>
+                  <li>J'ai recensé les données géographiques et les coordonnées de différents sites.</li>
                 </ul>
                 <div class="tags"><span>Audit de données</span><span>Traitement d'incident</span></div>
                 <p class="takeaway"><b>Ce que j'en retiens :</b> remonter à l'origine d'une anomalie avant de la corriger.</p>
               </article>
             </li>
-            <li>
+            <li class="rv">
               <article class="card job">
-                <div class="job-top"><h4>CCAS de Tinqueux</h4><span class="date">Janv. – mars 2023</span></div>
-                <p class="role">Stage de BTS · Assistante de responsable</p>
+                <div class="logos"><span class="logo"><img src="logos/probtp.svg" alt="Logo PRO BTP" width="64" height="64"></span><span class="logo sm"><img src="logos/tessi.svg" alt="Logo Tessi" width="64" height="34"></span></div>
+                <div class="job-top"><h4>PRO BTP</h4><span class="date">Avr. 2024 – avr. 2025</span></div>
+                <p class="role">Gestionnaire assurance prévoyance · via Tessi-Owliance</p>
                 <ul>
-                  <li>Projet « Ville amie des aînés » avec le Conseil des seniors : analyse des besoins, recherches et propositions.</li>
-                  <li>Présentation de mes propositions au conseil des élus de la ville.</li>
-                  <li>Accueil des usagers, création et suivi de dossiers administratifs.</li>
+                  <li>J'ai traité 50 dossiers d'indemnités journalières par jour (maladie, accident du travail) dans le respect du contrat et de la loi.</li>
+                  <li>J'ai contrôlé la conformité, la complétude et l'exactitude des données adhérents dans le logiciel Comète.</li>
+                  <li>J'ai analysé les blocages puis corrigé les erreurs pour débloquer le paiement des indemnités.</li>
+                  <li>J'ai formé 3 nouveaux collaborateurs à l'outil et aux prestations.</li>
                 </ul>
-                <p class="takeaway"><b>Ce que j'en retiens :</b> structurer des idées et les défendre devant des décideurs.</p>
+                <div class="tags"><span>Qualité des données</span><span>Comète</span><span>Formation</span></div>
+                <p class="takeaway"><b>Ce que j'en retiens :</b> fiabiliser des données et former des utilisateurs, c'est le quotidien d'un projet SI.</p>
               </article>
             </li>
-            <li>
-              <article class="card job">
-                <div class="job-top"><h4>Destia</h4><span class="date">Mai – juil. 2022</span></div>
-                <p class="role">Stage de BTS · Assistante coordinatrice d'agence, Reims</p>
-                <ul>
-                  <li>Visites à domicile pour évaluer les besoins des bénéficiaires.</li>
-                  <li>Gestion et mise à jour des plannings ; lien entre bénéficiaires, intervenants et agence.</li>
-                </ul>
-                <p class="takeaway"><b>Ce que j'en retiens :</b> recueillir un besoin là où il se trouve, chez l'usager.</p>
+            <li class="rv">
+              <article class="card job next">
+                <div class="job-top"><h4>Votre entreprise ?</h4></div>
+                <p class="role">Stage ou alternance · 4 à 6 mois · 1 semaine sur 2</p>
+                <div class="tags"><span>Assistante business analyst</span><span>Assistante AMOA</span><span>Assistante product owner</span><span>Assistante chef de projet digital</span><span>Chargée de qualité des données</span><span>Assistante qualité et back-office</span></div>
               </article>
             </li>
           </ol>
         </div>
 
         <aside class="edu-side">
-          <h3 class="col-title">Formation</h3>
+          <h3 class="col-title">Diplômes</h3>
           <div class="edu">
-            <div class="card item current"><span class="date">2026 – 2027 · En cours</span><b>Licence 3 MITIC</b><span>Économie et gestion, Management, Ingénierie des services et Numérique · IFIS, Université Gustave Eiffel, Serris</span></div>
-            <div class="card item"><span class="date">2027 – 2029 · Prévu</span><b>Master MITIC</b><span>IFIS, Université Gustave Eiffel, Serris</span></div>
-            <div class="card item"><span class="date">2021 – 2023</span><b>BTS SP3S</b><span>Services et prestations des secteurs sanitaire et social · Lycée Hugues Libergier, Reims</span></div>
-            <div class="card item"><span class="date">2017 – 2020</span><b>Baccalauréat littéraire, mention Bien</b><span>Lycée Jean-Baptiste Colbert, Reims</span></div>
-            <div class="card item"><span class="date">Déc. 2023 – janv. 2024</span><b>Animation périscolaire</b><span>École Anquetil, Reims · patience et attention avec tous les publics</span></div>
+            <div class="card item rv" style="--i:0"><span class="date">2017 – 2020</span><b>Baccalauréat littéraire, mention Bien</b><span>Lycée Jean-Baptiste Colbert, Reims</span></div>
+            <div class="card item rv" style="--i:1"><span class="date">2021 – 2023</span><b>BTS SP3S</b><span>Services et prestations des secteurs sanitaire et social · Lycée Hugues Libergier, Reims</span></div>
+            <div class="card item rv" style="--i:2"><span class="date">2026 – 2027 · En cours</span><b>Licence 3 MITIC</b><span>Économie et gestion, parcours Management, Ingénierie des services et Numérique · IFIS, Université Gustave Eiffel, Serris</span></div>
+            <div class="card item rv" style="--i:3"><span class="date">2027 – 2029 · Prévu</span><b>Master MITIC</b><span>IFIS, Université Gustave Eiffel, Serris</span></div>
           </div>
         </aside>
       </div>
     </div>
   </section>
 
-  <section id="competences">
+  <section id="competences" data-name="Compétences">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Compétences</span>
-        <h2>Ce que je sais faire, et où je l'ai appris</h2>
+        <span class="eyebrow rv">Compétences</span>
+        <h2 class="split">Ce que je sais faire <em>et où je l'ai appris</em></h2>
       </div>
       <div class="skills" id="skills"></div>
     </div>
   </section>
 
-  <section id="projet" class="tinted">
-    <div class="wrap project">
-      <div>
-        <span class="pill">Projet en cours · L3 MITIC</span>
-        <h3>Repenser la livraison instantanée</h3>
-        <p>Dans le cours Design de service et expérience utilisateur, nous partons d'un problème réel pour imaginer un nouveau service. Mon groupe travaille sur la livraison en quelques minutes : la rapidité d'une appli de livraison de repas, avec le catalogue d'un grand site de vente en ligne.</p>
-      </div>
-      <ol class="steps" aria-label="Étapes du projet">
-        <li class="card"><div><b>Choisir un problème</b><span>Partir d'un besoin du quotidien.</span></div></li>
-        <li class="card"><div><b>Construire des personas</b><span>Donner un visage aux utilisateurs.</span></div></li>
-        <li class="card"><div><b>Imaginer le service</b><span>Proposer une solution qui leur répond.</span></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="perso">
+  <section id="formation" class="tint-butter" data-name="Formation">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">En dehors du travail</span>
-        <h2>Quand je ferme l'ordinateur</h2>
-        <p>Ma saison préférée, c'est l'automne : les arbres qui virent à l'orange, Halloween, et un pumpkin spice bien chaud.</p>
+        <span class="eyebrow rv">Formation</span>
+        <h2 class="split">La licence <em>MITIC</em></h2>
+        <p class="rv">Licence Économie et gestion, parcours Management, Ingénierie des services et Numérique, à l'IFIS (Université Gustave Eiffel, Serris). Elle prépare aux métiers du pilotage des systèmes d'information et de la transformation numérique.</p>
       </div>
-      <div class="side">
-        <article class="card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v2a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z"/><path d="M2 12h20M9.5 8.5c0-1.8 1.8-1.8 1.8-3.6M13.5 8.5c0-1.8 1.8-1.8 1.8-3.6"/></svg>
-          <h3>Cuisine</h3>
-          <p>Suivre une recette, ajuster, goûter : une affaire de détails.</p>
+      <div class="form-grid">
+        <div class="card ects-wrap rv">
+          <div class="ects-top"><b>Le programme en 60 crédits ECTS</b><span>5 blocs de compétences</span></div>
+          <div class="ects-bar" id="ects-bar" aria-hidden="true">
+            <i style="flex:10;--i:0;background:#E5533F"></i><i style="flex:5;--i:1;background:#FFC94D"></i><i style="flex:15;--i:2;background:#B9A7EE"></i><i style="flex:11;--i:3;background:#1B1B2F"></i><i style="flex:19;--i:4;background:#F2937F"></i>
+          </div>
+          <div class="blocks">
+            <div class="card block" style="--c:#E5533F"><span class="pts">10 ECTS</span><h3>Concevoir des projets et services numériques</h3><ul><li>Cadrer un projet numérique</li><li>Innover et designer des services</li><li>Veille et prospective</li><li>Design de services et expérience utilisateur</li></ul></div>
+            <div class="card block" style="--c:#FFC94D"><span class="pts">5 ECTS</span><h3>Piloter des projets numériques</h3><ul><li>Pilotage économique et contrôle de gestion</li><li>Data science appliquée</li></ul></div>
+            <div class="card block" style="--c:#B9A7EE"><span class="pts">15 ECTS</span><h3>Construire la coopération</h3><ul><li>Conduite du changement</li><li>Communication professionnelle et digitale</li><li>Référencement (SEO)</li><li>Business English</li></ul></div>
+            <div class="card block" style="--c:#1B1B2F"><span class="pts">11 ECTS</span><h3>Expertises numériques et managériales</h3><ul><li>Systèmes d'information et gouvernance IT</li><li>Comptabilité et finance</li><li>Bases de données</li><li>Réseaux, cybersécurité, interopérabilité</li></ul></div>
+            <div class="card block" style="--c:#F2937F"><span class="pts">19 ECTS</span><h3>Agir en situation professionnelle</h3><ul><li>Projet DIGIBAT</li><li>Mémoire universitaire et professionnel</li><li>E-portfolio</li></ul></div>
+          </div>
+          <div>
+            <p style="font-weight:700;color:var(--ink);margin-bottom:10px">Les métiers visés</p>
+            <div class="jobs-target"><span>Assistante business analyst</span><span>Assistante AMOA</span><span>Assistante product owner</span><span>Assistante chef de projet digital</span><span>Assistante qualité et back-office</span></div>
+          </div>
+        </div>
+
+        <div class="card cal rv">
+          <div class="cal-head">
+            <div>
+              <h3>Calendrier d'alternance 2026 – 2027</h3>
+              <p>Une semaine en entreprise, une semaine à l'université, puis l'entreprise à temps plein de juin à septembre 2027.</p>
+            </div>
+            <div class="doc-btns">
+              <a class="btn sm ghost mag" href="Calendrier_alternance_L3_MITIC.pdf" data-pdf="Calendrier_alternance_L3_MITIC.pdf" data-title="Calendrier d'alternance">Voir le calendrier</a>
+              <a class="btn sm ghost mag" href="Fiche_formation_MITIC.pdf" data-pdf="Fiche_formation_MITIC.pdf" data-title="Fiche de la formation MITIC">Voir la fiche formation</a>
+            </div>
+          </div>
+          <div class="months" id="months" role="img" aria-label="Calendrier semaine par semaine, de septembre 2026 à septembre 2027, alternant cours et entreprise"></div>
+          <div class="legend"><span><i class="c"></i>À l'université</span><span><i></i>En entreprise</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projet" data-name="Projet">
+    <div class="wrap project">
+      <div class="rv">
+        <span class="pill">Projet en cours · L3 MITIC</span>
+        <h2 class="split">Repenser la livraison instantanée</h2>
+        <p>Dans le cours Design de service et expérience utilisateur, nous partons d'un problème réel pour imaginer un nouveau service. Mon groupe travaille sur la livraison en quelques minutes : la rapidité d'une appli de livraison de repas avec le catalogue d'un grand site de vente en ligne.</p>
+        <ol class="steps" aria-label="Étapes du projet">
+          <li><div><b>Choisir un problème</b><span>Partir d'un besoin du quotidien.</span></div></li>
+          <li><div><b>Construire des personas</b><span>Donner un visage aux utilisateurs.</span></div></li>
+          <li><div><b>Imaginer le service</b><span>Proposer une solution qui leur répond.</span></div></li>
+        </ol>
+      </div>
+      <div class="rv" style="--i:1">
+        <div class="phones" role="img" aria-label="Maquettes de principe de l'application de livraison">
+          <div class="phone" aria-hidden="true">
+            <div class="notch"><i></i></div>
+            <div class="scr">
+              <span class="t">Livré en 15 min</span>
+              <div class="search">Chargeur, crème, jouet…</div>
+              <div class="chips"><span>Tout</span><span>Maison</span><span>Tech</span></div>
+              <div class="grid">
+                <div class="prod"><i style="background:#E5533F"></i><b>Chargeur USB-C</b><em>12 min</em></div>
+                <div class="prod"><i style="background:#FFC94D"></i><b>Bougie</b><em>9 min</em></div>
+                <div class="prod"><i style="background:#B9A7EE"></i><b>Piles AA</b><em>14 min</em></div>
+                <div class="prod"><i style="background:#1B1B2F"></i><b>Plante</b><em>11 min</em></div>
+              </div>
+            </div>
+          </div>
+          <div class="phone" aria-hidden="true">
+            <div class="notch"><i></i></div>
+            <div class="scr">
+              <span class="t">Suivi</span>
+              <div class="map">
+                <svg viewBox="0 0 160 150" id="map">
+                  <path d="M0 40 H160 M0 100 H160 M50 0 V150 M115 0 V150" stroke="#fff" stroke-width="7"/>
+                  <rect x="62" y="52" width="40" height="36" rx="4" fill="#DDD3F8"/>
+                  <path id="route" d="M20 135 C30 100 50 100 50 70 S100 40 130 22" fill="none" stroke="#E5533F" stroke-width="3.5" stroke-dasharray="6 5" stroke-linecap="round"/>
+                  <circle cx="130" cy="22" r="7" fill="#1B1B2F"/><circle cx="130" cy="22" r="3" fill="#FAF7F2"/>
+                  <g><circle r="8" fill="#FFC94D" stroke="#1B1B2F" stroke-width="2"/><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#route"/></animateMotion></g>
+                </svg>
+              </div>
+              <div class="eta"><span>Arrivée estimée</span><b>Dans 8 minutes</b><div class="bar"><i></i></div></div>
+            </div>
+          </div>
+        </div>
+        <p class="mock-note">Maquettes de principe, pour illustrer l'idée du service.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="interets" class="tint-coral" data-name="Centres d'intérêt">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow rv">Centres d'intérêt</span>
+        <h2 class="split">En dehors <em>du travail</em></h2>
+      </div>
+      <div class="likes">
+        <article class="card like rv" style="--i:0">
+          <figure><img src="loisir-cinema.jpg" alt="Rangées de fauteuils rouges dans une salle de cinéma" width="612" height="344" loading="lazy"></figure>
+          <div class="cap"><h3>Cinéma</h3><p>Une salle obscure, une bonne histoire : je suis ailleurs pour deux heures.</p></div>
         </article>
-        <article class="card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="m3 7 3-4M9 7l3-4M15 7l3-4M10 11l5 2.5-5 2.5z"/></svg>
-          <h3>Cinéma</h3>
-          <p>Une salle obscure, une bonne histoire, et je suis ailleurs pour deux heures.</p>
+        <article class="card like rv" style="--i:1">
+          <figure><img src="loisir-cuisine.jpg" alt="Table vue de dessus avec des plats colorés à partager" width="612" height="406" loading="lazy"></figure>
+          <div class="cap"><h3>Cuisine</h3><p>Suivre une recette, ajuster, goûter : une affaire de détails.</p></div>
         </article>
-        <article class="card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 15h10l-1.5 6h-7z"/><path d="M12 15V8M12 10.5c-3 0-5-2-5-5 3 0 5 2 5 5zM12 8.5c0-3 2-5 5-5 0 3-2 5-5 5z"/></svg>
-          <h3>Potager</h3>
-          <p>Au printemps, des aromates et des tomates cerises sur mon balcon.</p>
-        </article>
-        <article class="card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 4 3 4.5M19 4l-3 4.5"/><path d="M5 4v8a7 7 0 0 0 14 0V4"/><circle cx="9.5" cy="12.5" r=".8" fill="currentColor"/><circle cx="14.5" cy="12.5" r=".8" fill="currentColor"/><path d="m11 15.5 1 .8 1-.8"/></svg>
-          <h3>Nala</h3>
-          <p>Ma chatte, et la preuve que j'aime les animaux.</p>
+        <article class="card like rv" style="--i:2">
+          <figure><img src="loisir-potager.jpg" alt="Bacs de plants de tomates sur un balcon ensoleillé" width="612" height="403" loading="lazy"></figure>
+          <div class="cap"><h3>Potager sur le balcon</h3><p>Aromates et tomates cerises : je regarde tout pousser au fil des saisons.</p></div>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="contact" style="padding-top:0">
+  <section id="contact" data-name="Contact">
     <div class="wrap">
-      <div class="card contact">
+      <div class="card contact rv">
+        <svg class="deco" viewBox="0 0 300 300" style="width:340px;right:-110px;bottom:-130px" aria-hidden="true"><circle cx="150" cy="150" r="150" fill="#E5533F"/><path d="M0 150 a150 150 0 0 1 300 0z" fill="#B9A7EE"/></svg>
         <div>
           <span class="eyebrow">Contact</span>
-          <h2>Construisons la suite ensemble.</h2>
-          <p class="lede">Vous cherchez une stagiaire ou une alternante en AMOA, en gestion de projet SI ou en qualité des données, à partir du 9 novembre ? Je serai ravie d'en parler.</p>
+          <h2 class="split">Construisons <em>la suite ensemble</em></h2>
+          <p class="lede">Vous cherchez une stagiaire ou une alternante en business analyse, en AMOA ou en qualité des données ? Je serai ravie d'en parler.</p>
           <div class="cta">
-            <a class="btn" href="CV_Sonia_Derouiche.pdf" target="_blank" rel="noopener">Voir mon CV</a>
-            <a class="btn ghost" id="cv-download" href="CV_Sonia_Derouiche.pdf" download="CV_Sonia_Derouiche.pdf">Télécharger (PDF)</a>
+            <a class="btn mag" href="CV_stage_Sonia_Derouiche.pdf" data-pdf="CV_stage_Sonia_Derouiche.pdf" data-title="CV de Sonia Derouiche">Voir mon CV</a>
+            <a class="btn ghost mag" href="CV_stage_Sonia_Derouiche.pdf" data-dl="CV_stage_Sonia_Derouiche.pdf" download>Télécharger le CV</a>
           </div>
         </div>
         <ul class="links">
-          <li><a href="tel:+33769333761">
-            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
-            <span><small>Téléphone</small><b>07 69 33 37 61</b></span>
-            <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-          </a></li>
-          <li><a href="mailto:soniaderouiche2902@gmail.com">
-            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            <span><small>E-mail</small><b>soniaderouiche2902@gmail.com</b></span>
-            <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-          </a></li>
+          <li>
+            <button class="lk ct-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="tel-menu">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              <span><small>Téléphone · appuyez pour copier ou appeler</small><b>07 69 33 37 61</b></span>
+              <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="mail-menu" id="tel-menu" role="menu">
+              <button role="menuitem" type="button" data-copy="07 69 33 37 61" data-done="Numéro copié"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copier le numéro</button>
+              <a role="menuitem" href="tel:+33769333761"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+            </div>
+          </li>
+          <li>
+            <button class="lk ct-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="mail-menu">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span><small>E-mail · appuyez pour copier ou écrire</small><b>soniaderouiche2902@gmail.com</b></span>
+              <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="mail-menu" id="mail-menu" role="menu">
+              <button role="menuitem" type="button" data-copy="soniaderouiche2902@gmail.com" data-done="Adresse copiée"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copier l'adresse</button>
+              <a role="menuitem" href="mailto:soniaderouiche2902@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>Ouvrir ma messagerie</a>
+            </div>
+          </li>
           <li><a href="https://www.linkedin.com/in/sonia-derouiche" target="_blank" rel="noopener">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2.5 2.5 0 0 1 5 0v4M12 10v7"/></svg>
             <span><small>LinkedIn</small><b>sonia-derouiche</b></span>
@@ -544,16 +977,33 @@ section { padding-block: 88px; }
   <span>Bussy-Saint-Georges, Seine-et-Marne</span>
 </footer>
 
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="v-title">
+  <div class="panel">
+    <div class="vbar">
+      <b id="v-title">Document</b>
+      <div class="acts">
+        <a class="btn sm" id="v-dl" href="#" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span class="dl-label">Télécharger</span></a>
+        <button class="close" id="v-close" type="button" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+    </div>
+    <div class="pages" id="v-pages"></div>
+  </div>
+</div>
+
 <script>
 (function () {
   var root = document.documentElement;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function css(name) { return getComputedStyle(root).getPropertyValue(name).trim(); }
+  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
-  function easeOutBack(x) { var c1 = 1.5, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); }
+  function $(id) { return document.getElementById(id); }
+  root.classList.add('js');
+  if (reduce) root.classList.add('no-pin');
 
-  /* ---------- Menu mobile et en-tête ---------- */
-  var nav = document.getElementById('nav'), menuBtn = document.getElementById('menu-btn'), topbar = document.getElementById('topbar');
+  /* ---------- Menu mobile ---------- */
+  var nav = $('nav'), menuBtn = $('menu-btn'), topbar = $('topbar');
   function setMenu(open) {
     nav.classList.toggle('open', open);
     menuBtn.setAttribute('aria-expanded', String(open));
@@ -561,27 +1011,148 @@ section { padding-block: 88px; }
   }
   menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
   nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
-  /* ---------- Téléchargement du CV ---------- */
+  /* ---------- Message éphémère ---------- */
+  var toast = $('toast'), toastT = null;
+  function say(msg) {
+    toast.textContent = msg; toast.classList.add('show');
+    clearTimeout(toastT); toastT = setTimeout(function () { toast.classList.remove('show'); }, 2400);
+  }
+
+  /* ---------- Boutons magnétiques et onde au clic ---------- */
+  document.querySelectorAll('.btn').forEach(function (b) {
+    b.addEventListener('pointerdown', function (e) {
+      if (reduce) return;
+      var r = b.getBoundingClientRect(), s = document.createElement('i');
+      s.className = 'ripple'; s.style.left = (e.clientX - r.left) + 'px'; s.style.top = (e.clientY - r.top) + 'px';
+      b.appendChild(s); setTimeout(function () { s.remove(); }, 700);
+    });
+  });
+  if (finePointer && !reduce) {
+    document.querySelectorAll('.mag').forEach(function (b) {
+      b.addEventListener('pointermove', function (e) {
+        var r = b.getBoundingClientRect();
+        b.style.transform = 'translate(' + ((e.clientX - r.left - r.width / 2) * .22).toFixed(1) + 'px,' + ((e.clientY - r.top - r.height / 2) * .3).toFixed(1) + 'px)';
+      });
+      b.addEventListener('pointerleave', function () { b.style.transform = ''; });
+    });
+  }
+
+  /* ---------- Téléchargement ---------- */
   // Dans la visionneuse claude.ai, un lien « download » ne fait rien : on passe par la capacité downloads.
   // Ailleurs (site hébergé normalement), le lien classique prend le relais.
-  var dl = null, dlBtn = document.getElementById('cv-download');
+  var dl = null;
   if (window.claude && typeof window.claude.use === 'function') {
     window.claude.use('downloads').then(function (ns) { dl = ns; }, function () {});
   }
-  dlBtn.addEventListener('click', function (e) {
-    if (!dl) return;
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-dl]');
+    if (!a || !dl) return;
     e.preventDefault();
-    var label = dlBtn.textContent;
-    fetch(dlBtn.getAttribute('href'))
+    var url = a.getAttribute('data-dl');
+    fetch(url)
       .then(function (r) { if (!r.ok) throw new Error('fetch'); return r.blob(); })
-      .then(function (blob) { return dl.save({ filename: 'CV_Sonia_Derouiche.pdf', data: blob }); })
-      .catch(function (err) {
-        if (err && err.code === 'declined') return;
-        dlBtn.textContent = 'Ouvrez le CV pour l’enregistrer';
-        setTimeout(function () { dlBtn.textContent = label; }, 3000);
-      });
+      .then(function (blob) { return dl.save({ filename: url.split('/').pop(), data: blob }); })
+      .catch(function (err) { if (!err || err.code !== 'declined') say('Téléchargement indisponible ici'); });
+  });
+
+  /* ---------- Téléphone et e-mail : copier en priorité, ouvrir l'application en second ---------- */
+  // Copier fonctionne partout ; appeler ou écrire dépend de l'endroit où la page est affichée.
+  var ctBtns = Array.prototype.slice.call(document.querySelectorAll('.ct-btn'));
+  function setMail(open, btn) {
+    ctBtns.forEach(function (b) {
+      var m = $(b.getAttribute('aria-controls')), on = open && b === btn;
+      m.classList.toggle('open', on); b.setAttribute('aria-expanded', String(on));
+    });
+  }
+  ctBtns.forEach(function (b) {
+    b.addEventListener('click', function (e) { e.stopPropagation(); setMail(b.getAttribute('aria-expanded') !== 'true', b); });
+  });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.mail-menu')) setMail(false); });
+  // Dans la visionneuse claude.ai, la page est dans un cadre protégé : un lien mailto: ou tel: classique n'y fait rien.
+  // On l'ouvre dans une nouvelle fenêtre, que le système confie à l'application de messagerie ou de téléphone.
+  document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var w = null;
+      try { w = window.open(a.href, '_blank', 'noopener'); } catch (err) {}
+      if (!w) { try { window.location.href = a.href; } catch (err) {} }
+      setMail(false);
+    });
+  });
+  document.querySelectorAll('[data-copy]').forEach(function (cb) { cb.addEventListener('click', function () {
+    var addr = cb.getAttribute('data-copy');
+    function done() { say(cb.getAttribute('data-done')); setMail(false); }
+    function fallback() {
+      var t = document.createElement('textarea'); t.value = addr; t.setAttribute('readonly', ''); t.style.position = 'absolute'; t.style.left = '-9999px';
+      document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (err) { say(addr); }
+      t.remove();
+    }
+    try { navigator.clipboard.writeText(addr).then(done, fallback); } catch (err) { fallback(); }
+  }); });
+
+  /* ---------- Lecteur de PDF (pdf.js) ---------- */
+  // Le PDF est dessiné page par page dans la page elle-même : ça marche partout, y compris dans la visionneuse claude.ai.
+  var viewer = $('viewer'), vPages = $('v-pages'), vTitle = $('v-title'), vDl = $('v-dl'), lastFocus = null, pdfjsReady = null;
+  var PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
+  function loadPdfjs() {
+    if (pdfjsReady) return pdfjsReady;
+    pdfjsReady = new Promise(function (res, rej) {
+      var s = document.createElement('script');
+      s.src = PDFJS + 'pdf.min.js';
+      s.onload = function () { window.pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS + 'pdf.worker.min.js'; res(window.pdfjsLib); };
+      s.onerror = rej;
+      document.head.appendChild(s);
+    });
+    return pdfjsReady;
+  }
+  function openPdf(url, title) {
+    lastFocus = document.activeElement;
+    vTitle.textContent = title;
+    vDl.setAttribute('href', url); vDl.setAttribute('data-dl', url);
+    vPages.innerHTML = '<p class="msg">Chargement du document…</p>';
+    viewer.classList.add('open'); document.body.classList.add('lock');
+    $('v-close').focus();
+    loadPdfjs()
+      .then(function (lib) { return lib.getDocument(url).promise; })
+      .then(function (doc) {
+        vPages.innerHTML = '';
+        var chain = Promise.resolve();
+        for (var n = 1; n <= doc.numPages; n++) {
+          (function (n) {
+            chain = chain.then(function () { return doc.getPage(n); }).then(function (page) {
+              var w = Math.min(vPages.clientWidth - 20, 800);
+              var base = page.getViewport({ scale: 1 });
+              var vp = page.getViewport({ scale: (w / base.width) * Math.min(window.devicePixelRatio || 1, 2) });
+              var c = document.createElement('canvas');
+              c.width = vp.width; c.height = vp.height;
+              c.setAttribute('aria-label', title + ', page ' + n); c.setAttribute('role', 'img');
+              vPages.appendChild(c);
+              return page.render({ canvasContext: c.getContext('2d'), viewport: vp }).promise;
+            });
+          })(n);
+        }
+        return chain;
+      })
+      .catch(function () { vPages.innerHTML = '<p class="msg">Le document ne peut pas s’afficher ici. Utilisez le bouton Télécharger.</p>'; });
+  }
+  function closePdf() {
+    viewer.classList.remove('open'); document.body.classList.remove('lock');
+    vPages.innerHTML = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-pdf]');
+    if (!a) return;
+    e.preventDefault(); setMenu(false);
+    openPdf(a.getAttribute('data-pdf'), a.getAttribute('data-title') || 'Document');
+  });
+  $('v-close').addEventListener('click', closePdf);
+  viewer.addEventListener('click', function (e) { if (e.target === viewer) closePdf(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (viewer.classList.contains('open')) closePdf(); else { setMenu(false); setMail(false); }
   });
 
   /* ---------- Compétences ---------- */
@@ -596,203 +1167,193 @@ section { padding-block: 88px; }
     lang: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>'
   };
   var skills = [
-    ['ear', 'Recueil des besoins', 'Destia, CCAS de Tinqueux', 'Visites à domicile, écoute et qualification des attentes des usagers.'],
+    ['ear', 'Recueil des besoins', 'Destia, CCAS de Tinqueux', 'Visites à domicile, écoute puis qualification des attentes des usagers.'],
     ['data', 'Qualité des données', 'PRO BTP, Groupama', 'Contrôle de conformité, de complétude et de cohérence des dossiers.'],
-    ['bug', 'Résolution d’anomalies', 'PRO BTP, Groupama', 'Recherche des causes de blocage et correction des erreurs de calcul.'],
+    ['bug', 'Résolution d’anomalies', 'PRO BTP, Groupama', 'Recherche des causes de blocage puis correction des erreurs de calcul.'],
     ['teach', 'Formation des utilisateurs', 'PRO BTP', 'Trois nouveaux collaborateurs formés à l’outil et aux prestations.'],
-    ['plan', 'Gestion de projet', 'CCAS de Tinqueux, L3 MITIC', 'Projet Conseil des seniors, puis méthodes de projet en licence.'],
-    ['talk', 'Communication', 'CCAS, PRO BTP', 'Accueil des usagers, réponses aux adhérents, présentation aux élus.'],
+    ['plan', 'Gestion de projet', 'CCAS de Tinqueux, L3 MITIC', 'Projet du Conseil des seniors, puis méthodes de projet en licence.'],
+    ['talk', 'Communication', 'CCAS, PRO BTP', 'Accueil des usagers, réponses aux adhérents, présentation au maire.'],
     ['tool', 'Outils', 'Tous mes postes', 'Microsoft 365 (Excel, Word, PowerPoint, Outlook, Teams) et le logiciel métier Comète.'],
-    ['lang', 'Langues', 'Au quotidien', 'Français langue maternelle, anglais niveau B2.']
+    ['lang', 'Langues', 'Au quotidien', 'Français langue maternelle, anglais avancé.']
   ];
-  var grid = document.getElementById('skills');
-  skills.forEach(function (s) {
-    var a = document.createElement('article'); a.className = 'card skill';
+  var grid = $('skills');
+  skills.forEach(function (s, i) {
+    var a = document.createElement('article'); a.className = 'card skill rv'; a.style.setProperty('--i', i % 4);
     a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + icons[s[0]] + '</svg>' +
       '<h3>' + s[1] + '</h3><span class="src">' + s[2] + '</span><p>' + s[3] + '</p>';
     grid.appendChild(a);
   });
 
-  /* ---------- Ligne du parcours qui se remplit ---------- */
-  var tl = document.getElementById('timeline');
-  var items = Array.prototype.slice.call(tl.querySelectorAll(':scope > li'));
-  function updateTimeline() {
-    var r = tl.getBoundingClientRect();
-    var reach = reduce ? r.height : window.innerHeight * 0.7 - r.top;
-    tl.style.setProperty('--fill', clamp(reach - 8, 0, r.height - 16) + 'px');
-    items.forEach(function (li) { li.classList.toggle('lit', li.offsetTop + 26 < reach); });
-    topbar.classList.toggle('scrolled', window.scrollY > 8);
-  }
-  window.addEventListener('scroll', updateTimeline, { passive: true });
-  window.addEventListener('resize', updateTimeline);
-  updateTimeline();
-
-  /* ---------- La pivoine ---------- */
-  var bloom = document.getElementById('bloom');
-  var bctx = bloom.getContext('2d');
-  var bt0 = performance.now(), bsize = 0, dpr = 1, mx = 0, my = 0;
-  var layers = [
-    { n: 9, r: 1.00, w: .62, d: 0.15, off: 0.00 },
-    { n: 9, r: 0.86, w: .62, d: 0.45, off: 0.35 },
-    { n: 8, r: 0.70, w: .66, d: 0.75, off: 0.10 },
-    { n: 7, r: 0.55, w: .70, d: 1.05, off: 0.50 },
-    { n: 6, r: 0.41, w: .76, d: 1.30, off: 0.20 },
-    { n: 5, r: 0.28, w: .85, d: 1.55, off: 0.70 },
-    { n: 4, r: 0.17, w: .95, d: 1.75, off: 0.30 }
-  ];
-  function sizeBloom() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    bsize = bloom.clientWidth;
-    bloom.width = bsize * dpr; bloom.height = bsize * dpr;
-    bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  function petalPath(c, len, w, ruffle) {
-    c.beginPath();
-    c.moveTo(0, 0);
-    c.bezierCurveTo(-w * 0.95, -len * 0.18, -w * 1.08, -len * 0.78, -w * 0.5, -len * 0.96);
-    c.quadraticCurveTo(-w * 0.25, -len * (1.04 + ruffle), 0, -len * 0.94);
-    c.quadraticCurveTo(w * 0.25, -len * (1.04 - ruffle), w * 0.5, -len * 0.96);
-    c.bezierCurveTo(w * 1.08, -len * 0.78, w * 0.95, -len * 0.18, 0, 0);
-    c.closePath();
-  }
-  function leaf(c, x, y, len, ang, prog, col) {
-    if (prog <= 0) return;
-    c.save(); c.translate(x, y); c.rotate(ang); c.scale(prog, prog);
-    c.beginPath(); c.moveTo(0, 0);
-    c.quadraticCurveTo(len * 0.35, -len * 0.28, len, 0);
-    c.quadraticCurveTo(len * 0.35, len * 0.28, 0, 0);
-    c.fillStyle = col; c.fill();
-    c.strokeStyle = 'rgba(0,0,0,.08)'; c.lineWidth = 1; c.beginPath(); c.moveTo(0, 0); c.lineTo(len * .9, 0); c.stroke();
-    c.restore();
-  }
-  function drawBloom(now) {
-    var t = reduce ? 10 : (now - bt0) / 1000;
-    var S = bsize; if (!S) return;
-    var cx = S / 2, cy = S * 0.5, R = S * 0.36;
-    var cDeep = css('--petal-deep'), cMid = css('--petal'), cLight = css('--petal-light'), cStamen = css('--stamen'), cLeaf = css('--leaf'), cLeaf2 = css('--leaf-2');
-    bctx.clearRect(0, 0, S, S);
-    var sway = reduce ? 0 : Math.sin(t * 0.8) * 0.025 + mx * 0.05;
-    var lp = clamp(t / 1.2, 0, 1);
-    leaf(bctx, cx, cy, R * 1.25, Math.PI * 0.78 + sway, easeOutBack(lp), cLeaf2);
-    leaf(bctx, cx, cy, R * 1.15, Math.PI * 0.18 + sway, easeOutBack(clamp((t - 0.2) / 1.2, 0, 1)), cLeaf);
-    leaf(bctx, cx, cy, R * 0.95, -Math.PI * 0.62 + sway, easeOutBack(clamp((t - 0.35) / 1.2, 0, 1)), cLeaf);
-    for (var li = 0; li < layers.length; li++) {
-      var L = layers[li];
-      var prog = clamp((t - L.d) / 1.5, 0, 1);
-      if (prog <= 0) continue;
-      var e = easeOutBack(prog);
-      var breath = reduce ? 1 : 1 + Math.sin(t * 1.3 + li) * 0.012;
-      for (var k = 0; k < L.n; k++) {
-        var ang = (k / L.n) * Math.PI * 2 + L.off + sway * (1 + li * 0.3) + (1 - e) * 0.9;
-        var len = R * L.r * e * breath * (0.94 + ((k * 37) % 10) / 100);
-        var w = len * L.w;
-        bctx.save();
-        bctx.translate(cx + mx * 6 * (li / layers.length), cy + my * 6 * (li / layers.length));
-        bctx.rotate(ang);
-        var g = bctx.createLinearGradient(0, 0, 0, -len);
-        g.addColorStop(0, cDeep); g.addColorStop(0.55, cMid); g.addColorStop(1, cLight);
-        bctx.fillStyle = g;
-        bctx.globalAlpha = 0.93;
-        petalPath(bctx, len, w, ((k % 3) - 1) * 0.04);
-        bctx.fill();
-        bctx.globalAlpha = 1;
-        bctx.strokeStyle = 'rgba(80, 30, 30, .10)'; bctx.lineWidth = 1;
-        bctx.stroke();
-        bctx.restore();
-      }
-    }
-    var sp = clamp((t - 2.0) / 0.8, 0, 1);
-    if (sp > 0) {
-      bctx.fillStyle = cStamen;
-      for (var s = 0; s < 22; s++) {
-        var a = s * 2.399, rr = Math.sqrt(s / 22) * R * 0.1 * sp;
-        bctx.beginPath(); bctx.arc(cx + Math.cos(a) * rr + mx * 6, cy + Math.sin(a) * rr + my * 6, 1.6 + sp, 0, Math.PI * 2); bctx.fill();
-      }
-    }
-  }
-  bloom.addEventListener('pointermove', function (e) {
-    var r = bloom.getBoundingClientRect();
-    mx = ((e.clientX - r.left) / r.width - .5) * 2; my = ((e.clientY - r.top) / r.height - .5) * 2;
+  /* ---------- Calendrier d'alternance ---------- */
+  // Une lettre par semaine, du lundi 28 septembre 2026 au 30 septembre 2027 (C = cours, E = entreprise, M = semaine mixte).
+  var weeks = 'CECEMCECECECEECECECECECECEEECEEECECEEEEEEEEEEEEEEEEEE';
+  var mNames = ['Janv.', 'Févr.', 'Mars', 'Avr.', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'];
+  var months = $('months'), groups = [], start = new Date(2026, 8, 28);
+  weeks.split('').forEach(function (t, i) {
+    var d = new Date(start.getTime() + i * 7 * 864e5), key = d.getFullYear() * 12 + d.getMonth();
+    if (!groups.length || groups[groups.length - 1].key !== key) groups.push({ key: key, label: mNames[d.getMonth()] + (d.getMonth() === 0 || i === 0 ? ' ' + String(d.getFullYear()).slice(2) : ''), w: [] });
+    groups[groups.length - 1].w.push(t);
   });
-  bloom.addEventListener('pointerleave', function () { mx = 0; my = 0; });
-  bloom.addEventListener('click', function (e) {
-    if (reduce) return;
-    bt0 = performance.now();
-    burst(e.clientX, e.clientY, 28);
+  var wi = 0;
+  groups.forEach(function (g) {
+    var m = document.createElement('div'); m.className = 'month';
+    m.innerHTML = '<b>' + g.label + '</b><div class="wk">' + g.w.map(function (t) {
+      return '<i class="' + (t === 'C' ? 'c' : t === 'M' ? 'm' : '') + '" style="--i:' + (wi++) + '"></i>';
+    }).join('') + '</div>';
+    months.appendChild(m);
   });
 
-  /* ---------- Quelques pétales, discrets ---------- */
-  var pc = document.getElementById('petals');
-  var pctx = pc.getContext('2d');
-  var parts = [], W = 0, H = 0;
-  function sizePetals() {
-    W = window.innerWidth; H = window.innerHeight;
-    pc.width = W * dpr; pc.height = H * dpr; pctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  function palette() { return [css('--petal'), css('--petal-light'), css('--petal-deep')]; }
-  function makePart(x, y, vx, vy, burstFlag) {
-    return {
-      x: x, y: y, vx: vx || 0, vy: vy || (0.25 + Math.random() * 0.35),
-      rot: Math.random() * Math.PI * 2, vr: (Math.random() - .5) * 0.03,
-      size: 5 + Math.random() * 6, ph: Math.random() * 10, ci: Math.floor(Math.random() * 3), burst: !!burstFlag
-    };
-  }
-  function seed() {
-    var n = W < 600 ? 5 : 9;
-    parts = [];
-    for (var i = 0; i < n; i++) parts.push(makePart(Math.random() * W, Math.random() * H));
-  }
-  function burst(x, y, n) {
-    for (var i = 0; i < n; i++) {
-      var a = Math.random() * Math.PI * 2, sp = 2 + Math.random() * 5;
-      parts.push(makePart(x, y, Math.cos(a) * sp, Math.sin(a) * sp - 2, true));
+  /* ---------- Titres lettre par lettre ---------- */
+  document.querySelectorAll('.split').forEach(function (h) {
+    var n = 0, label = h.textContent.replace(/\s+/g, ' ').trim();
+    function build(node) {
+      var frag = document.createDocumentFragment();
+      Array.prototype.slice.call(node.childNodes).forEach(function (c) {
+        if (c.nodeType === 3) {
+          c.textContent.split(/(\s+)/).forEach(function (part) {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+            var w = document.createElement('span'); w.className = 'wd2';
+            part.split('').forEach(function (ch) {
+              var s = document.createElement('span'); s.className = 'ch'; s.textContent = ch; s.style.setProperty('--c', n++);
+              w.appendChild(s);
+            });
+            frag.appendChild(w);
+          });
+        } else if (c.nodeType === 1) {
+          var el = c.cloneNode(false); el.appendChild(build(c)); frag.appendChild(el);
+        }
+      });
+      return frag;
     }
-    if (parts.length > 80) parts.splice(0, parts.length - 80);
-  }
-  function drawPart(p, cols) {
-    pctx.save(); pctx.translate(p.x, p.y); pctx.rotate(p.rot);
-    pctx.fillStyle = cols[p.ci]; pctx.globalAlpha = p.burst ? 0.85 : 0.4;
-    var s = p.size;
-    pctx.beginPath();
-    pctx.moveTo(0, -s);
-    pctx.bezierCurveTo(s * 0.9, -s * 0.6, s * 0.7, s * 0.7, 0, s);
-    pctx.bezierCurveTo(-s * 0.7, s * 0.7, -s * 0.9, -s * 0.6, 0, -s);
-    pctx.fill();
-    pctx.restore();
-  }
-  var cols = palette(), colTick = 0;
-  function stepPetals(now) {
-    pctx.clearRect(0, 0, W, H);
-    if (++colTick % 60 === 0) cols = palette();
-    var t = now / 1000;
-    for (var i = parts.length - 1; i >= 0; i--) {
-      var p = parts[i];
-      if (p.burst) { p.vx *= 0.96; p.vy = p.vy * 0.96 + 0.06; }
-      p.x += p.vx + Math.sin(t * 0.9 + p.ph) * 0.4;
-      p.y += p.vy;
-      p.rot += p.vr + Math.sin(t + p.ph) * 0.01;
-      if (p.y > H + 20) {
-        if (p.burst) { parts.splice(i, 1); continue; }
-        p.y = -20; p.x = Math.random() * W;
-      }
-      if (p.x < -30) p.x = W + 20; else if (p.x > W + 30) p.x = -20;
-      drawPart(p, cols);
-    }
+    var built = build(h);
+    h.innerHTML = ''; h.appendChild(built);
+    h.setAttribute('aria-label', label);
+    Array.prototype.slice.call(h.children).forEach(function (c) { c.setAttribute('aria-hidden', 'true'); });
+  });
+
+  /* ---------- Texte qui s'encre ---------- */
+  var ink = $('ink'), words = [];
+  ink.innerHTML = ink.textContent.split(/(\s+)/).map(function (w) { return /\s+/.test(w) ? w : '<span class="wd">' + w + '</span>'; }).join('');
+  words = Array.prototype.slice.call(ink.querySelectorAll('.wd'));
+  function updateInk() {
+    if (reduce) { words.forEach(function (w) { w.classList.add('on'); }); return; }
+    var r = ink.getBoundingClientRect(), vh = window.innerHeight;
+    var n = Math.round(clamp((vh * 0.85 - r.top) / (vh * 0.5 + r.height * 0.5), 0, 1) * words.length);
+    words.forEach(function (w, i) { w.classList.toggle('on', i < n); });
   }
 
-  /* ---------- Boucle ---------- */
-  function resizeAll() { sizeBloom(); sizePetals(); }
-  window.addEventListener('resize', resizeAll);
-  resizeAll();
-  if (reduce) {
-    drawBloom(performance.now());
+  /* ---------- Anneaux de chiffres ---------- */
+  function countUp(el) {
+    var to = +el.dataset.count, suf = el.dataset.suffix || '';
+    if (reduce) { el.textContent = to + suf; return; }
+    var t0 = null;
+    function step(ts) {
+      if (!t0) t0 = ts;
+      var k = Math.min((ts - t0) / 1500, 1);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))) + suf;
+      if (k < 1) requestAnimationFrame(step);
+    }
+    el.textContent = '0' + suf;
+    requestAnimationFrame(step);
+  }
+  function fillRing(stat) {
+    var ring = stat.querySelector('.ring');
+    ring.querySelector('.val').style.strokeDashoffset = '0';
+    countUp(ring.querySelector('.n'));
+  }
+
+  /* ---------- Apparitions au défilement ---------- */
+  var watched = document.querySelectorAll('.rv, .split, .ects-bar, .months');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target;
+        el.classList.add('in');
+        if (el.classList.contains('stat')) fillRing(el);
+        io.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    watched.forEach(function (el) { io.observe(el); });
   } else {
-    seed();
-    (function loop(now) {
-      if (!document.hidden) { drawBloom(now); stepPetals(now); }
-      requestAnimationFrame(loop);
-    })(performance.now());
+    watched.forEach(function (el) { el.classList.add('in'); if (el.classList.contains('stat')) fillRing(el); });
   }
+
+  /* ---------- Histoire épinglée : Besoin, Analyse, Solution ---------- */
+  var story = $('methode'), steps = Array.prototype.slice.call(story.querySelectorAll('.step')), bars = story.querySelectorAll('.dots b'), stCount = $('st-count'), curStep = 0;
+  function updateStory() {
+    if (reduce) return;
+    var r = story.getBoundingClientRect(), span = r.height - window.innerHeight;
+    var p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
+    var idx = Math.min(steps.length - 1, Math.floor(p * steps.length));
+    if (idx !== curStep) {
+      steps[curStep].classList.remove('on'); steps[idx].classList.add('on'); curStep = idx;
+      stCount.textContent = '0' + (idx + 1) + ' / 03';
+    }
+    Array.prototype.forEach.call(bars, function (b, i) { b.style.transform = 'scaleX(' + clamp(p * steps.length - i, 0, 1) + ')'; });
+  }
+
+  /* ---------- Ligne du parcours : droite, par le centre des points ---------- */
+  var tl = $('timeline'), items = Array.prototype.slice.call(tl.querySelectorAll(':scope > li'));
+  function dotCenter(li) { var b = parseFloat(getComputedStyle(li, '::before').top) || 29; var h = parseFloat(getComputedStyle(li, '::before').height) || 18; return li.offsetTop + b + h / 2; }
+  function layoutTrail() {
+    var a = dotCenter(items[0]), z = dotCenter(items[items.length - 1]);
+    tl.style.setProperty('--t0', a + 'px'); tl.style.setProperty('--len', (z - a) + 'px');
+  }
+  function updateTrail() {
+    var r = tl.getBoundingClientRect(), reach = reduce ? 1e6 : window.innerHeight * 0.62 - r.top;
+    var a = parseFloat(tl.style.getPropertyValue('--t0')) || 0, len = parseFloat(tl.style.getPropertyValue('--len')) || 0;
+    tl.style.setProperty('--fill', clamp(reach - a, 0, len) + 'px');
+    items.forEach(function (li) { li.classList.toggle('lit', dotCenter(li) <= reach + 1); });
+  }
+
+  /* ---------- Parallaxe de l'illustration ---------- */
+  var scene = $('scene'), layers = Array.prototype.slice.call(scene.querySelectorAll('.lay'));
+  function updateParallax() {
+    if (reduce) return;
+    var r = scene.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > window.innerHeight) return;
+    var off = (r.top + r.height / 2 - window.innerHeight / 2);
+    layers.forEach(function (l) { l.style.transform = 'translateY(' + (off * +l.dataset.depth).toFixed(1) + 'px)'; });
+  }
+
+  /* ---------- Repère de section et progression ---------- */
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[data-name]'));
+  var marker = $('marker'), mkNum = $('mk-num'), mkName = $('mk-name'), mkRail = $('mk-rail'), prog = $('progress');
+  var navLinks = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+  $('mk-tot').textContent = '/ ' + String(sections.length).padStart(2, '0');
+  function updateMarker() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.transform = 'scaleX(' + (max > 0 ? clamp(window.scrollY / max, 0, 1) : 0) + ')';
+    var mid = window.innerHeight * 0.4, cur = -1;
+    sections.forEach(function (s, i) { if (s.getBoundingClientRect().top <= mid) cur = i; });
+    marker.classList.toggle('show', cur >= 0 && sections[cur].id !== 'methode');
+    if (cur < 0) return;
+    var s = sections[cur], r = s.getBoundingClientRect();
+    mkNum.textContent = String(cur + 1).padStart(2, '0');
+    mkName.textContent = s.dataset.name;
+    mkRail.style.transform = 'scaleY(' + clamp((mid - r.top) / r.height, 0, 1) + ')';
+    navLinks.forEach(function (a) { a.classList.toggle('current', a.getAttribute('href') === '#' + s.id); });
+  }
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () {
+      ticking = false;
+      topbar.classList.toggle('scrolled', window.scrollY > 8);
+      updateParallax(); updateInk(); updateStory(); updateTrail(); updateMarker();
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', function () { layoutTrail(); onScroll(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { layoutTrail(); onScroll(); });
+  window.addEventListener('load', function () { layoutTrail(); onScroll(); });
+  layoutTrail(); onScroll();
+
+  var map = $('map');
+  if (reduce && map.pauseAnimations) map.pauseAnimations();
 })();
 </script>
 </body>
