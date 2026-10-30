@@ -1071,8 +1071,10 @@ section { padding-block: 96px; }
   document.addEventListener('click', function (e) { if (!e.target.closest('.mail-menu')) setMail(false); });
   // Dans la visionneuse claude.ai, la page est dans un cadre protégé : un lien mailto: ou tel: classique n'y fait rien.
   // On l'ouvre dans une nouvelle fenêtre, que le système confie à l'application de messagerie ou de téléphone.
+  // Sur un site normal (GitHub Pages), on laisse le lien faire son travail.
   document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
+      if (window.self === window.top) { setMail(false); return; }
       e.preventDefault();
       var w = null;
       try { w = window.open(a.href, '_blank', 'noopener'); } catch (err) {}
