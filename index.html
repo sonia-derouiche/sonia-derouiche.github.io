@@ -4,30 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sonia Derouiche</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="E-portfolio de Sonia Derouiche, étudiante en L3 MITIC, en recherche de stage ou d'alternance en AMOA, gestion de projet SI et qualité des données.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Italiana&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Jost:wght@300..600&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
 <style>
-/* Concept : un jardin méditerranéen. Le parcours de Sonia pousse de la graine à la fleur.
-   Ouverture : une pivoine qui éclot. Puis un sachet de graines, une tige qui grandit au fil du parcours,
-   un herbier de compétences, et des pétales qui tombent doucement. */
+/* Direction : sobre et rangé. Une seule grille, des lignes droites, deux polices.
+   Le jardin reste en touche discrète : la pivoine d'ouverture, quelques pétales, la palette rose et sauge. */
 :root {
-  --bg: #FBF5EE;
-  --paper: #F4E8DC;
-  --card: #FFFAF4;
-  --ink: #3A2520;
-  --muted: #7A6158;
-  --line: #E6D6C8;
-  --accent: #A9573D;
-  --sage-deep: #5D7858;
-  --on-pastel: #3A2520;
+  --bg: #FBF7F2;
+  --surface: #FFFFFF;
+  --tint: #F5EDE5;
+  --ink: #2E211D;
+  --text: #4A3A34;
+  --muted: #6F5C55;
+  --line: #E8DDD3;
+  --accent: #9A4A33;
+  --accent-soft: #F6E3DC;
+  --sage: #DCE5D5;
+  --sage-ink: #3F5A3B;
 
-  /* décor, ambiance « Rose et sauge » */
-  --rose: #F2D2CD;
-  --mauve: #D9C7E3;
-  --sage: #CBD8C1;
   --petal-deep: #D78591;
   --petal: #EDB4B7;
   --petal-light: #FCE7E2;
@@ -35,647 +31,518 @@
   --leaf: #9EB494;
   --leaf-2: #7C9775;
 
-  --f-display: "Cormorant Garamond", "Garamond", "Times New Roman", serif;
-  --f-body: "Jost", "Century Gothic", "Avenir Next", system-ui, sans-serif;
-  --f-script: "Pinyon Script", "Brush Script MT", cursive;
-  --display-weight: 500;
-  --display-track: -.01em;
+  --f-head: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body: "DM Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
 
-  --s-xs: .8125rem;
-  --s-sm: .9375rem;
-  --s-md: 1.0625rem;
-  --s-lg: 1.3125rem;
-  --s-xl: clamp(2.1rem, 4.6vw, 3.4rem);
-  --s-hero: clamp(3.1rem, 9vw, 6.6rem);
-  --radius: 18px;
+  --radius: 14px;
+  --gutter: max(16px, env(safe-area-inset-left, 0px));
+  --shadow: 0 1px 2px rgba(46, 33, 29, .04), 0 8px 24px -12px rgba(46, 33, 29, .14);
+  color-scheme: light;
 }
-:root[data-mood="automne"] {
-  --rose: #F4D6C2;
-  --mauve: #EBCDB2;
-  --sage: #E2C49E;
-  --petal-deep: #C2603C;
-  --petal: #E69B68;
-  --petal-light: #F8DDBE;
-  --stamen: #8A4A2B;
-  --leaf: #C98A3B;
-  --leaf-2: #A4502E;
-}
-:root[data-font="italiana"] { --f-display: "Italiana", "Didot", serif; --display-weight: 400; --display-track: .02em; }
-:root[data-font="fraunces"] { --f-display: "Fraunces", "Georgia", serif; --display-weight: 380; --display-track: -.02em; }
-:root[data-font="playfair"] { --f-display: "Playfair Display", "Didot", "Georgia", serif; --display-weight: 500; --display-track: -.01em; }
-
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #1C1412; --paper: #261B18; --card: #2C201C; --ink: #F3E7DC; --muted: #BDA79B; --line: #3E2E29;
-    --accent: #EC9E80; --sage-deep: #AFC8A7;
+    --bg: #18120F; --surface: #221A16; --tint: #1E1714; --ink: #F5EBE3; --text: #E2D4CA; --muted: #B9A69B; --line: #3A2D27;
+    --accent: #EFA48A; --accent-soft: #3A2620; --sage: #26332A; --sage-ink: #B9D1B1;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .6);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #1C1412; --paper: #261B18; --card: #2C201C; --ink: #F3E7DC; --muted: #BDA79B; --line: #3E2E29;
-  --accent: #EC9E80; --sage-deep: #AFC8A7;
+  --bg: #18120F; --surface: #221A16; --tint: #1E1714; --ink: #F5EBE3; --text: #E2D4CA; --muted: #B9A69B; --line: #3A2D27;
+  --accent: #EFA48A; --accent-soft: #3A2620; --sage: #26332A; --sage-ink: #B9D1B1;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .6);
   color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
+  margin: 0;
   background: var(--bg);
-  color: var(--ink);
+  color: var(--text);
   font-family: var(--f-body);
-  font-weight: 350;
-  font-size: var(--s-md);
+  font-size: 1.0625rem;
   line-height: 1.65;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 #petals { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
-main, header, footer { position: relative; z-index: 1; }
-.wrap {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-a { color: var(--accent); text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-h1, h2, h3 { font-family: var(--f-display); font-weight: var(--display-weight); letter-spacing: var(--display-track); line-height: 1.05; text-wrap: balance; margin: 0; }
+header, main, footer { position: relative; z-index: 1; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: var(--gutter); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--f-head); color: var(--ink); font-weight: 600; line-height: 1.15; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
 p { margin: 0; }
-strong { font-weight: 500; }
-.script { font-family: var(--f-script); font-weight: 400; color: var(--accent); letter-spacing: 0; }
-.eyebrow { font-size: var(--s-xs); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 450; }
+strong { color: var(--ink); font-weight: 600; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .8125rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.eyebrow::before { content: ""; width: 24px; height: 2px; background: currentColor; border-radius: 2px; }
+
+/* ---------- Boutons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 46px; padding: 0 22px; border-radius: 999px;
+  font: 600 .9375rem/1 var(--f-body); text-decoration: none; cursor: pointer;
+  border: 1.5px solid var(--ink); background: var(--ink); color: var(--bg);
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.btn svg { width: 18px; height: 18px; flex: none; }
 
 /* ---------- En-tête ---------- */
-.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 22px; }
-.top .mark { font-family: var(--f-script); font-size: 1.9rem; color: var(--ink); text-decoration: none; line-height: 1; }
-.top nav { display: flex; gap: 26px; flex-wrap: wrap; }
-.top nav a { color: var(--muted); text-decoration: none; font-size: var(--s-sm); letter-spacing: .04em; }
-.top nav a:hover { color: var(--ink); }
-@media (max-width: 760px) { .top nav { display: none; } }
+.topbar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s ease; padding-top: env(safe-area-inset-top, 0px); }
+.topbar.scrolled { border-bottom-color: var(--line); }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+.monogram { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font: 600 1rem/1 var(--f-head); letter-spacing: .02em; }
+.brand-text { display: grid; line-height: 1.2; min-width: 0; }
+.brand-text b { font-family: var(--f-head); font-weight: 600; font-size: 1.0625rem; color: var(--ink); white-space: nowrap; }
+.brand-text span { font-size: .8125rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav a { color: var(--text); text-decoration: none; font-size: .9375rem; font-weight: 500; }
+.nav a:hover { color: var(--accent); }
+.nav .btn { min-height: 40px; padding: 0 18px; font-size: .875rem; color: var(--bg); }
+.nav .btn:hover { color: #fff; }
+.menu-btn { display: none; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; place-items: center; }
+.menu-btn svg { width: 22px; height: 22px; }
+@media (max-width: 860px) {
+  .menu-btn { display: grid; }
+  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 16px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+  .nav.open { display: flex; }
+  .nav a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
+  .nav .btn { margin-top: 14px; min-height: 48px; border-bottom: none; color: var(--bg); }
+}
+@media (max-width: 400px) { .brand-text span { display: none; } }
 
 /* ---------- Ouverture ---------- */
-.hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 32px; align-items: center; padding-block: 24px 72px; }
-@media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding-block: 0 48px; gap: 8px; } }
-.hero-text { display: grid; gap: 22px; align-content: center; }
-.hero .script { font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1; }
-.hero h1 { font-size: var(--s-hero); }
-.hero h1 em { font-style: italic; color: var(--accent); }
-.hero .lede { max-width: 31em; font-size: var(--s-lg); line-height: 1.5; color: var(--muted); }
-.hero .lede strong { color: var(--ink); }
-.cta { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  font: 450 var(--s-sm) var(--f-body); letter-spacing: .04em;
-  padding: 13px 24px; border-radius: 999px; text-decoration: none; cursor: pointer;
-  border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
-  transition: transform .25s ease, background .25s ease;
-}
-.btn:hover { transform: translateY(-2px); }
-.btn.ghost { background: transparent; color: var(--ink); }
-.bloom-wrap { position: relative; aspect-ratio: 1 / 1; width: 100%; max-width: 560px; justify-self: center; }
-@media (max-width: 860px) { .bloom-wrap { max-width: 340px; order: -1; } }
+.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 48px; align-items: center; padding-block: 56px 48px; }
+.hero-text { display: grid; gap: 22px; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.25rem); }
+.hero h1 span { display: block; font-size: .46em; font-weight: 500; font-style: italic; color: var(--accent); margin-top: 12px; letter-spacing: 0; }
+.hero .lede { font-size: 1.1875rem; max-width: 34em; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.status { display: inline-flex; align-items: center; gap: 10px; justify-self: start; padding: 8px 14px; border-radius: 999px; background: var(--sage); color: var(--sage-ink); font-size: .875rem; font-weight: 600; }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px color-mix(in srgb, currentColor 18%, transparent); }
+.bloom-wrap { width: 100%; max-width: 440px; aspect-ratio: 1 / 1; justify-self: center; }
 #bloom { width: 100%; height: 100%; display: block; cursor: pointer; }
-.bloom-hint { position: absolute; bottom: 4%; right: 4%; font-family: var(--f-script); font-size: 1.35rem; color: var(--muted); transform: rotate(-6deg); pointer-events: none; }
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; gap: 8px; padding-block: 28px 32px; }
+  .bloom-wrap { max-width: 150px; order: -1; justify-self: start; margin-left: -14px; margin-bottom: -6px; }
+  .hero .lede { font-size: 1.0625rem; }
+  .cta .btn { flex: 1 1 200px; }
+}
 
-/* Sachet de graines */
-.packet-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 48px; align-items: center; padding-block: 24px 88px; }
-@media (max-width: 860px) { .packet-row { grid-template-columns: 1fr; gap: 32px; padding-block: 8px 64px; } }
-.packet-intro h2 { font-size: var(--s-xl); }
-.packet-intro p { margin-top: 16px; color: var(--muted); max-width: 30em; }
-.packet {
-  position: relative; background: var(--paper); color: var(--ink);
-  border-radius: 6px 6px var(--radius) var(--radius);
-  padding: 44px 32px 28px;
-  box-shadow: 0 24px 50px -28px rgba(58, 37, 32, .45);
-  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) rotate(-1.2deg);
-  transition: transform .4s ease;
-  -webkit-mask: radial-gradient(circle 7px at 50% 0, transparent 98%, #000) 0 0 / 22px 100% repeat-x;
-          mask: radial-gradient(circle 7px at 50% 0, transparent 98%, #000) 0 0 / 22px 100% repeat-x;
+/* Fiche pratique */
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 24px; }
+.facts div { padding: 22px 24px; display: grid; gap: 4px; align-content: start; }
+.facts div + div { border-left: 1px solid var(--line); }
+.facts dt { font-size: .8125rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 0; color: var(--ink); font-weight: 500; line-height: 1.4; }
+@media (max-width: 860px) {
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facts div + div { border-left: none; }
+  .facts div:nth-child(even) { border-left: 1px solid var(--line); }
+  .facts div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .facts div { padding: 18px 16px; }
 }
-.packet::before { content: ""; position: absolute; inset: 18px 14px auto; border-top: 1px dashed var(--line); }
-.packet-head { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
-.packet-head h3 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
-.packet-head .eyebrow { display: block; margin-bottom: 6px; }
-.packet .stamp {
-  flex: none; width: 76px; height: 76px; border-radius: 50%;
-  border: 1.5px solid var(--accent); color: var(--accent);
-  display: grid; place-items: center; text-align: center;
-  font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; line-height: 1.25; transform: rotate(10deg);
-}
-.packet dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px 22px; margin: 26px 0 0; }
-.packet dt { font-size: var(--s-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
-.packet dd { margin: 0; }
-@media (max-width: 480px) { .packet { padding: 40px 20px 24px; } .packet dl { grid-template-columns: 1fr; gap: 2px; } .packet dd { margin-bottom: 10px; } }
 
 /* ---------- Sections ---------- */
-section { padding-block: 96px; }
-@media (max-width: 760px) { section { padding-block: 64px; } }
-.sec-head { display: grid; gap: 14px; max-width: 40em; margin-bottom: 56px; }
-.sec-head.center { margin-inline: auto; text-align: center; justify-items: center; }
-.sec-head h2 { font-size: var(--s-xl); }
-.sec-head h2 .script { font-size: 1.15em; }
+section { padding-block: 88px; }
+.tinted { background: var(--tint); }
+@media (max-width: 760px) { section { padding-block: 60px; } }
+.sec-head { display: grid; gap: 12px; max-width: 42em; margin-bottom: 44px; }
+.sec-head h2 { font-size: clamp(1.875rem, 3.6vw, 2.625rem); }
 .sec-head p { color: var(--muted); }
-.band { background: var(--paper); }
+@media (max-width: 760px) { .sec-head { margin-bottom: 32px; } }
 
-/* Racines */
-.roots { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 64px; align-items: start; }
-@media (max-width: 860px) { .roots { grid-template-columns: 1fr; gap: 40px; } }
-.roots-text { display: grid; gap: 30px; max-width: 36em; }
-.roots-text h3 { font-size: 1.6rem; margin-bottom: 8px; }
-.roots-text p { color: var(--muted); }
-.roots-text p strong { color: var(--ink); }
-.quote { font-family: var(--f-display); font-style: italic; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.25; position: relative; padding-top: 30px; }
-.quote::before { content: "“"; position: absolute; top: -26px; left: -6px; font-size: 6rem; line-height: 1; color: var(--petal); font-style: normal; }
-.quote small { display: block; margin-top: 18px; font: 350 var(--s-sm) var(--f-body); font-style: normal; color: var(--muted); }
-.traits { display: grid; gap: 14px; margin-top: 40px; list-style: none; padding: 0; }
-.traits li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; align-items: start; }
-.traits .dot { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-family: var(--f-display); font-size: 1.3rem; color: var(--on-pastel); }
-.traits li:nth-child(1) .dot { background: var(--rose); }
-.traits li:nth-child(2) .dot { background: var(--sage); }
-.traits li:nth-child(3) .dot { background: var(--mauve); }
-.traits b { display: block; font-weight: 500; }
-.traits span { color: var(--muted); font-size: var(--s-sm); }
+/* À propos */
+.about { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.about-text { display: grid; gap: 26px; }
+.about-text h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.about-side { display: grid; gap: 20px; }
+.quote { padding: 26px 28px; border-left: 3px solid var(--petal-deep); }
+.quote p { font-family: var(--f-head); font-style: italic; font-size: 1.3125rem; line-height: 1.45; color: var(--ink); }
+.quote small { display: block; margin-top: 12px; font-size: .875rem; color: var(--muted); }
+.traits { list-style: none; margin: 0; padding: 8px 28px; }
+.traits li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 14px; padding: 16px 0; }
+.traits li + li { border-top: 1px solid var(--line); }
+.traits svg { width: 36px; height: 36px; padding: 8px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+.traits b { display: block; color: var(--ink); font-weight: 600; }
+.traits span { font-size: .9375rem; color: var(--muted); }
+@media (max-width: 860px) { .about { grid-template-columns: 1fr; gap: 32px; } .quote, .traits { padding-left: 20px; padding-right: 20px; } }
 
-/* Récolte */
-.harvest { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 72px; }
-@media (max-width: 760px) { .harvest { grid-template-columns: 1fr; } }
-.harvest div { border-radius: 999px 999px var(--radius) var(--radius); padding: 40px 24px 28px; text-align: center; display: grid; gap: 8px; color: var(--on-pastel); }
-.harvest div:nth-child(1) { background: var(--rose); }
-.harvest div:nth-child(2) { background: var(--sage); }
-.harvest div:nth-child(3) { background: var(--mauve); }
-.harvest .n { font-family: var(--f-display); font-size: 4rem; line-height: 1; font-variant-numeric: lining-nums tabular-nums; }
-.harvest .t { font-size: var(--s-sm); max-width: 18em; margin: 0 auto; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 48px; }
+.stats div { padding: 24px; display: grid; gap: 4px; }
+.stats .n { font-family: var(--f-head); font-size: 2.75rem; font-weight: 600; line-height: 1; color: var(--accent); font-variant-numeric: lining-nums tabular-nums; }
+.stats .t { font-size: .9375rem; color: var(--muted); }
+@media (max-width: 760px) { .stats { grid-template-columns: 1fr; gap: 12px; margin-top: 32px; } .stats div { grid-template-columns: 88px minmax(0, 1fr); align-items: center; padding: 18px 20px; } .stats .n { font-size: 2.25rem; } }
 
-/* Tige du parcours */
-.garden-line { position: relative; display: grid; gap: 28px; }
-.garden-line::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; margin-left: -1px; background: var(--leaf); opacity: .6; }
-.has-stem .garden-line::before { display: none; }
-.stem { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
-.stem path { fill: none; stroke: var(--leaf-2); stroke-width: 2.5; stroke-linecap: round; }
-.grow { display: grid; grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr); align-items: start; position: relative; }
-.grow .bud { grid-column: 2; grid-row: 1; justify-self: center; width: 46px; height: 46px; margin-top: 18px; }
-.grow .entry { grid-row: 1; }
-.grow:nth-child(odd) .entry { grid-column: 1; text-align: right; }
-.grow:nth-child(even) .entry { grid-column: 3; }
-.grow:nth-child(odd) .entry .tags { justify-content: flex-end; }
-@media (max-width: 760px) {
-  .garden-line::before { left: 23px; }
-  .grow { grid-template-columns: 46px minmax(0, 1fr); gap: 12px; }
-  .grow .bud { grid-column: 1; }
-  .grow .entry, .grow:nth-child(odd) .entry, .grow:nth-child(even) .entry { grid-column: 2; text-align: left; }
-  .grow:nth-child(odd) .entry .tags { justify-content: flex-start; }
-}
-.bud svg { width: 100%; height: 100%; overflow: visible; }
-.bud .pt { fill: var(--petal); }
-.bud .pt2 { fill: var(--petal-light); }
-.bud .core { fill: var(--stamen); }
-.bud g { transform-origin: 23px 23px; transition: transform .9s cubic-bezier(.3, 1.6, .5, 1); }
-.js-garden .grow:not(.open) .bud g { transform: scale(.32) rotate(-70deg); }
-.grow.is-edu .bud .pt { fill: var(--leaf); }
-.grow.is-edu .bud .pt2 { fill: var(--sage); }
-.grow.is-next .bud { width: 64px; height: 64px; margin-top: 10px; }
-.entry { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; min-width: 0; }
-.grow.is-edu .entry { background: transparent; border-style: dashed; }
-.grow.is-next .entry { background: var(--rose); color: var(--on-pastel); border-color: transparent; }
-.grow.is-next .entry .when, .grow.is-next .entry .lesson, .grow.is-next .entry .where { color: var(--on-pastel); opacity: .8; }
-.entry .when { font-size: var(--s-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.entry .season { display: inline-block; margin-left: 8px; padding: 1px 10px; border-radius: 999px; font-size: .6875rem; letter-spacing: .1em; background: var(--sage); color: var(--on-pastel); }
-.entry .season.hiver { background: var(--mauve); }
-.entry .season.ete { background: var(--rose); }
-.entry .season.automne { background: var(--petal); }
-.entry h3 { font-size: 1.75rem; margin-top: 8px; }
-.entry .where { color: var(--muted); font-size: var(--s-sm); margin-top: 2px; }
-.entry ul { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; font-size: var(--s-sm); }
-.entry li::before { content: "✿ "; color: var(--petal-deep); }
-.grow:nth-child(odd) .entry li::before { content: ""; }
-.grow:nth-child(odd) .entry li::after { content: " ✿"; color: var(--petal-deep); }
-@media (max-width: 760px) {
-  .grow:nth-child(odd) .entry li::before { content: "✿ "; }
-  .grow:nth-child(odd) .entry li::after { content: ""; }
-}
-.entry .lesson { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line); font-family: var(--f-display); font-style: italic; font-size: 1.15rem; color: var(--muted); }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; list-style: none; padding: 0; }
-.tags span { font-size: var(--s-xs); padding: 3px 11px; border-radius: 999px; border: 1px solid var(--line); }
+/* Parcours */
+.path { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.col-title { font-size: 1.25rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+.timeline { list-style: none; margin: 0; padding: 0 0 0 28px; position: relative; display: grid; gap: 16px; }
+.timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--line); border-radius: 2px; }
+.timeline::after { content: ""; position: absolute; left: 7px; top: 8px; width: 2px; height: var(--fill, 0px); background: var(--leaf-2); border-radius: 2px; }
+.timeline > li { position: relative; }
+.timeline > li::before { content: ""; position: absolute; left: -28px; top: 26px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 2px solid var(--leaf-2); transition: background .4s ease; }
+.timeline > li.lit::before { background: var(--leaf); }
+.job { padding: 22px 24px; }
+.job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 16px; flex-wrap: wrap; }
+.job h4 { margin: 0; font-family: var(--f-head); font-size: 1.25rem; font-weight: 600; color: var(--ink); }
+.job .date { font-size: .875rem; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.job .role { margin-top: 2px; color: var(--accent); font-weight: 500; font-size: .9375rem; }
+.job ul { margin: 12px 0 0; padding-left: 18px; display: grid; gap: 6px; font-size: .9375rem; }
+.job li::marker { color: var(--petal-deep); }
+.job .takeaway { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .9375rem; color: var(--muted); }
+.job .takeaway b { color: var(--ink); font-weight: 600; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.tags span { font-size: .8125rem; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: var(--sage); color: var(--sage-ink); }
+.next { background: var(--accent-soft); border-color: transparent; box-shadow: none; }
+.next h4 { color: var(--ink); }
+.edu { display: grid; gap: 12px; }
+.edu .item { padding: 18px 20px; display: grid; gap: 2px; }
+.edu .item .date { font-size: .8125rem; font-weight: 600; letter-spacing: .04em; color: var(--muted); }
+.edu .item b { font-family: var(--f-head); font-size: 1.0625rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.edu .item span { font-size: .875rem; color: var(--muted); }
+.edu .item.current { border-color: var(--leaf); box-shadow: inset 3px 0 0 var(--leaf-2), var(--shadow); }
+.edu-side { position: sticky; top: 92px; }
+@media (max-width: 900px) { .path { grid-template-columns: 1fr; gap: 40px; } .edu-side { position: static; } }
+@media (max-width: 480px) { .timeline { padding-left: 24px; } .timeline > li::before { left: -24px; width: 14px; height: 14px; } .timeline::before, .timeline::after { left: 6px; } .job { padding: 18px 16px; } }
 
-/* Herbier */
-.herbier { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
-@media (max-width: 960px) { .herbier { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .herbier { grid-template-columns: 1fr; } }
-.specimen {
-  background: var(--card); border-radius: 4px; padding: 22px 20px 18px; position: relative;
-  box-shadow: 0 1px 0 var(--line), 0 18px 34px -26px rgba(58, 37, 32, .5);
-  display: grid; gap: 10px; align-content: start;
-  transition: transform .35s ease;
-}
-.specimen:nth-child(3n+1) { transform: rotate(-.8deg); }
-.specimen:nth-child(3n+2) { transform: rotate(.6deg); }
-.specimen:hover { transform: rotate(0) translateY(-4px); }
-.specimen::before { content: ""; position: absolute; top: -8px; left: 50%; width: 56px; height: 18px; margin-left: -28px; background: var(--sage); opacity: .7; transform: rotate(-3deg); }
-.specimen svg { width: 100%; height: 110px; }
-.specimen .num { font-size: .6875rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
-.specimen h3 { font-size: 1.45rem; }
-.specimen p { font-size: var(--s-sm); color: var(--muted); }
-.specimen p i { font-family: var(--f-display); font-size: 1.05rem; color: var(--ink); }
+/* Compétences */
+.skills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.skill { padding: 22px; display: grid; gap: 10px; align-content: start; }
+.skill svg { width: 40px; height: 40px; padding: 9px; border-radius: 12px; background: var(--sage); color: var(--sage-ink); }
+.skill h3 { font-size: 1.125rem; }
+.skill p { font-size: .9375rem; color: var(--muted); }
+.skill .src { font-size: .8125rem; font-weight: 600; color: var(--accent); }
+@media (max-width: 960px) { .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .skills { grid-template-columns: 1fr; gap: 12px; } .skill { grid-template-columns: 40px minmax(0, 1fr); column-gap: 16px; padding: 18px; } .skill svg { grid-row: span 3; } }
 
-/* Pépinière */
-.nursery { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
-@media (max-width: 860px) { .nursery { grid-template-columns: 1fr; gap: 32px; } }
-.nursery .pill { display: inline-block; font-size: var(--s-xs); letter-spacing: .12em; text-transform: uppercase; padding: 4px 14px; border-radius: 999px; background: var(--mauve); color: var(--on-pastel); }
-.nursery h3 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); margin-top: 16px; }
-.nursery p { margin-top: 14px; color: var(--muted); max-width: 32em; }
-.seedlings { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: end; }
-.seedlings li { display: grid; gap: 10px; justify-items: center; text-align: center; }
-.seedlings svg { width: 72px; height: 110px; }
-.seedlings b { font-weight: 500; font-size: var(--s-sm); }
-.seedlings span { font-size: var(--s-xs); color: var(--muted); }
-.pot { fill: var(--accent); opacity: .85; }
-.sprout { fill: none; stroke: var(--leaf-2); stroke-width: 2.2; stroke-linecap: round; }
-.sprout-leaf { fill: var(--leaf); }
+/* Projet en cours */
+.project { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.pill { display: inline-block; font-size: .8125rem; font-weight: 600; padding: 5px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.project h3 { font-size: clamp(1.625rem, 3vw, 2.125rem); margin-top: 14px; }
+.project p { margin-top: 14px; max-width: 34em; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; align-items: center; padding: 18px 20px; }
+.steps li::before { content: counter(s); width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--bg); font: 600 1.0625rem var(--f-head); }
+.steps b { display: block; color: var(--ink); font-weight: 600; }
+.steps span { font-size: .9375rem; color: var(--muted); }
+@media (max-width: 860px) { .project { grid-template-columns: 1fr; gap: 28px; } }
 
-/* Hors du jardin */
-.side { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+/* En dehors */
+.side { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.side article { padding: 22px; display: grid; gap: 8px; align-content: start; }
+.side svg { width: 28px; height: 28px; color: var(--accent); }
+.side h3 { font-size: 1.125rem; }
+.side p { font-size: .9375rem; color: var(--muted); }
 @media (max-width: 900px) { .side { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .side { grid-template-columns: 1fr; } }
-.side article { border-radius: 999px 999px var(--radius) var(--radius); padding: 44px 22px 26px; display: grid; gap: 10px; justify-items: center; text-align: center; background: var(--card); border: 1px solid var(--line); }
-.side svg { width: 46px; height: 46px; color: var(--accent); }
-.side h3 { font-size: 1.5rem; }
-.side p { font-size: var(--s-sm); color: var(--muted); }
+@media (max-width: 480px) { .side { gap: 12px; } .side article { padding: 18px 16px; } }
 
 /* Contact */
-.contact-sec { text-align: center; overflow: hidden; }
-.contact-sec h2 { font-size: var(--s-hero); }
-.contact-sec .lede { margin: 22px auto 0; max-width: 32em; font-size: var(--s-lg); color: var(--muted); }
-.contact-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 48px auto 0; max-width: 940px; text-align: left; }
-@media (max-width: 760px) { .contact-cards { grid-template-columns: 1fr; } }
-.contact-cards > div { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; display: grid; gap: 8px; min-width: 0; align-content: start; }
-.contact-cards .v { font-size: var(--s-md); font-weight: 450; overflow-wrap: anywhere; user-select: all; }
-.copy { justify-self: start; font: 450 var(--s-xs) var(--f-body); letter-spacing: .06em; padding: 6px 14px; border-radius: 999px; cursor: pointer; background: var(--rose); color: var(--on-pastel); border: none; }
-.foot { padding-block: 32px 120px; font-size: var(--s-xs); color: var(--muted); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; letter-spacing: .06em; }
+.contact { padding: 48px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.contact h2 { font-size: clamp(1.875rem, 3.6vw, 2.625rem); margin-top: 12px; }
+.contact .lede { margin-top: 14px; color: var(--muted); }
+.contact .cta { margin-top: 26px; }
+.links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.links a { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); text-decoration: none; color: var(--ink); transition: border-color .2s ease; }
+.links a:hover { border-color: var(--accent); }
+.links svg.ic { width: 44px; height: 44px; padding: 11px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+.links small { display: block; font-size: .8125rem; color: var(--muted); }
+.links b { font-weight: 600; overflow-wrap: anywhere; }
+.links svg.go { width: 18px; height: 18px; color: var(--muted); }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr; padding: 28px 20px; gap: 28px; } }
 
-/* Sélecteur d'aperçu (temporaire) */
-.tuner {
-  position: fixed; z-index: 20;
-  right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-  width: min(330px, calc(100vw - 32px));
-  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-  box-shadow: 0 20px 50px -20px rgba(58, 37, 32, .45);
-  padding: 16px 16px 14px; font-size: var(--s-sm);
-}
-.tuner[data-collapsed="true"] .tuner-body { display: none; }
-.tuner-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-.tuner-top b { font-weight: 500; }
-.tuner-top button { background: none; border: none; color: var(--muted); cursor: pointer; font: inherit; font-size: var(--s-xs); text-decoration: underline; }
-.tuner-body { display: grid; gap: 12px; margin-top: 10px; }
-.tuner .lbl { font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-top: 6px; }
-.chips button { border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 10px; padding: 8px 10px; cursor: pointer; text-align: left; line-height: 1.15; }
-.chips button[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
-.chips button .big { display: block; font-size: 1.35rem; }
-.chips button small { color: var(--muted); font-size: .6875rem; }
-.tuner .note { font-size: .6875rem; color: var(--muted); }
+.foot { padding-block: 28px calc(28px + env(safe-area-inset-bottom, 0px)); font-size: .875rem; color: var(--muted); display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; }
 </style>
+</head>
+<body>
 
 <canvas id="petals" aria-hidden="true"></canvas>
 
-<header class="wrap top">
-  <a class="mark" href="#">Sonia</a>
-  <nav aria-label="Sections">
-    <a href="#racines">Mon histoire</a>
-    <a href="#parcours">Parcours</a>
-    <a href="#herbier">Compétences</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header class="topbar" id="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sonia Derouiche, retour en haut">
+      <span class="monogram" aria-hidden="true">SD</span>
+      <span class="brand-text"><b>Sonia Derouiche</b><span>AMOA · Gestion de projet SI · Qualité des données</span></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#apropos">À propos</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#competences">Compétences</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="CV_Sonia_Derouiche.pdf" target="_blank" rel="noopener">Mon CV</a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<main id="top">
   <div class="wrap hero">
     <div class="hero-text">
-      <span class="script">Bonjour, je suis</span>
-      <h1>Sonia <em>Derouiche</em></h1>
-      <p class="lede">Je cultive le lien entre <strong>les personnes et les outils numériques</strong>. Étudiante en L3 MITIC à l'Université Gustave Eiffel, je cherche un <strong>stage ou une alternance de 4 à 6 mois</strong> en AMOA, gestion de projet SI ou qualité des données.</p>
+      <span class="status"><i aria-hidden="true"></i>Disponible dès le 9 novembre 2026</span>
+      <h1>Sonia Derouiche<span>Future AMOA, entre les utilisateurs et les outils</span></h1>
+      <p class="lede">Étudiante en <strong>L3 MITIC</strong> à l'Université Gustave Eiffel, je cherche un <strong>stage ou une alternance de 4 à 6 mois</strong> en AMOA, gestion de projet SI ou qualité des données.</p>
       <div class="cta">
-        <a class="btn" href="#contact">Me contacter</a>
-        <a class="btn ghost" href="#parcours">Voir mon parcours</a>
+        <a class="btn" href="CV_Sonia_Derouiche.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+          Voir mon CV
+        </a>
+        <a class="btn ghost" href="#contact">Me contacter</a>
       </div>
     </div>
     <div class="bloom-wrap">
-      <canvas id="bloom" aria-label="Une pivoine qui éclot. Touchez-la pour la faire refleurir." role="img"></canvas>
-      <span class="bloom-hint">touchez la fleur</span>
+      <canvas id="bloom" role="img" aria-label="Illustration : une pivoine qui s'ouvre."></canvas>
     </div>
   </div>
 
-  <div class="wrap packet-row">
-    <div class="packet-intro">
-      <span class="eyebrow">À planter dès le 9 novembre 2026</span>
-      <h2>Le mode d'emploi, <span class="script">en bref</span></h2>
-      <p>Tout ce qu'il faut savoir avant de m'accueillir dans votre équipe, comme au dos d'un sachet de graines.</p>
-    </div>
-    <article class="packet" id="packet" aria-label="Fiche de disponibilité">
-      <div class="packet-head">
-        <div>
-          <span class="eyebrow">Variété</span>
-          <h3>Sonia Derouiche</h3>
-        </div>
-        <span class="stamp">Stage ou alternance</span>
-      </div>
-      <dl>
-        <dt>Espèce</dt><dd>AMOA, assistante chef de projet, business analyst junior, qualité des données</dd>
-        <dt>Plantation</dt><dd>À partir du 9 novembre 2026</dd>
-        <dt>Durée</dt><dd>De 4 à 6 mois</dd>
-        <dt>Rythme</dt><dd>1 semaine en entreprise, 1 semaine à l'école</dd>
-        <dt>Exposition</dt><dd>Île-de-France, depuis Bussy-Saint-Georges (77)</dd>
-        <dt>Mobilité</dt><dd>Permis B et véhicule</dd>
-        <dt>Langues</dt><dd>Français natif, anglais avancé</dd>
-      </dl>
-    </article>
+  <div class="wrap">
+    <dl class="facts" aria-label="En bref">
+      <div><dt>Début</dt><dd>9 novembre 2026</dd></div>
+      <div><dt>Durée</dt><dd>4 à 6 mois</dd></div>
+      <div><dt>Rythme</dt><dd>1 semaine entreprise, 1 semaine école</dd></div>
+      <div><dt>Lieu</dt><dd>Île-de-France · Permis B et véhicule</dd></div>
+    </dl>
   </div>
 
-  <section id="racines" class="band">
+  <section id="apropos">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">Les racines</span>
-        <h2>Pourquoi le numérique, <span class="script">et pourquoi l'AMOA</span></h2>
+        <span class="eyebrow">À propos</span>
+        <h2>Pourquoi le numérique, et pourquoi l'AMOA</h2>
       </div>
-      <div class="roots">
-        <div class="roots-text">
+      <div class="about">
+        <div class="about-text">
           <div>
             <h3>Aider les gens, avec de la gestion</h3>
-            <p>J'ai choisi le BTS SP3S parce que je voulais un métier tourné vers les autres. Ce qui m'attirait, c'était d'aider à travers <strong>la gestion des dossiers et les outils informatiques</strong>, comme on le fait dans une mutuelle ou une caisse de prévoyance.</p>
+            <p>J'ai choisi le BTS SP3S parce que je voulais un métier tourné vers les autres. Ce qui m'attirait, c'était d'aider à travers <strong>la gestion des dossiers et les outils informatiques</strong>, comme dans une mutuelle ou une caisse de prévoyance.</p>
           </div>
           <div>
             <h3>Toujours derrière un écran</h3>
-            <p>En stage puis en entreprise, je n'ai jamais travaillé sans ordinateur. À chaque poste, j'ai appris un nouveau logiciel métier. J'ai aussi senti que mon diplôme limitait mes missions. J'ai donc repris mes études pour <strong>gagner en compétences et viser plus loin</strong>.</p>
+            <p>En stage puis en entreprise, j'ai toujours travaillé sur ordinateur et appris un nouveau logiciel métier à chaque poste. Mon diplôme limitait mes missions : j'ai repris mes études pour <strong>gagner en compétences et viser plus loin</strong>.</p>
           </div>
           <div>
             <h3>Du côté des utilisateurs</h3>
-            <p>Le numérique ouvre beaucoup de métiers, encore plus avec l'arrivée de l'IA. Je ne veux pas coder. Je veux <strong>comprendre ce dont les utilisateurs ont besoin et vérifier que les outils y répondent</strong>. C'est le rôle de l'AMOA, et c'est déjà ce que je faisais sur le terrain sans en porter le nom.</p>
+            <p>Je ne veux pas coder. Je veux <strong>comprendre ce dont les utilisateurs ont besoin et vérifier que les outils y répondent</strong>. C'est le rôle de l'AMOA, et c'est déjà ce que je faisais sur le terrain sans en porter le nom.</p>
           </div>
         </div>
-        <div>
-          <p class="quote">Une donnée fausse dans un dossier, c'est une personne qui attend son indemnité.<small>Ce que m'a appris la gestion des arrêts de travail chez PRO BTP.</small></p>
-          <ul class="traits">
-            <li><span class="dot">É</span><div><b>J'écoute avant de proposer.</b><span>Au domicile d'un bénéficiaire ou au téléphone avec un adhérent, j'ai appris à poser les bonnes questions.</span></div></li>
-            <li><span class="dot">C</span><div><b>Je me mets à la place de l'autre.</b><span>Avant de juger un problème, je cherche à comprendre ce que vit la personne qui le rencontre.</span></div></li>
-            <li><span class="dot">M</span><div><b>Je relis jusqu'à la dernière ligne.</b><span>Un champ mal rempli me dérange, et c'est souvent là que se cache l'anomalie.</span></div></li>
+        <div class="about-side">
+          <blockquote class="card quote" style="margin:0">
+            <p>« Une donnée fausse dans un dossier, c'est une personne qui attend son indemnité. »</p>
+            <small>Ce que m'a appris la gestion des arrêts de travail chez PRO BTP.</small>
+          </blockquote>
+          <ul class="card traits">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+              <div><b>J'écoute avant de proposer</b><span>Au domicile d'un bénéficiaire ou au téléphone avec un adhérent, je pose les bonnes questions.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a5.5 5.5 0 0 1 3.5 6"/></svg>
+              <div><b>Je me mets à la place de l'autre</b><span>Avant de juger un problème, je cherche à comprendre ce que vit la personne qui le rencontre.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11l2 2 4-4"/></svg>
+              <div><b>Je relis jusqu'à la dernière ligne</b><span>Un champ mal rempli me dérange, et c'est souvent là que se cache l'anomalie.</span></div>
+            </li>
           </ul>
         </div>
       </div>
 
-      <div class="harvest" aria-label="Quelques chiffres chez PRO BTP">
-        <div><span class="n">50</span><span class="t">dossiers d'arrêt de travail traités chaque jour</span></div>
-        <div><span class="n">75+</span><span class="t">demandes d'adhérents traitées chaque jour</span></div>
-        <div><span class="n">3</span><span class="t">nouveaux collaborateurs formés à l'outil et aux prestations</span></div>
+      <div class="stats" aria-label="Quelques chiffres chez PRO BTP">
+        <div class="card"><span class="n">50</span><span class="t">dossiers d'arrêt de travail traités chaque jour</span></div>
+        <div class="card"><span class="n">75+</span><span class="t">demandes d'adhérents traitées chaque jour</span></div>
+        <div class="card"><span class="n">3</span><span class="t">nouveaux collaborateurs formés à l'outil</span></div>
       </div>
     </div>
   </section>
 
-  <section id="parcours">
-    <div class="wrap">
-      <div class="sec-head center">
-        <span class="eyebrow">La croissance</span>
-        <h2>De la graine <span class="script">à la fleur</span></h2>
-        <p>Mes formations et mes expériences, saison après saison. La tige pousse à mesure que vous descendez.</p>
-      </div>
-
-      <div class="garden-line" id="garden">
-        <svg class="stem" aria-hidden="true"><path id="stem-path" d=""></path></svg>
-
-        <div class="grow is-edu">
-          <span class="bud" aria-hidden="true"></span>
-          <div class="entry">
-            <span class="when">2017-2020</span>
-            <h3>Baccalauréat littéraire</h3>
-            <p class="where">Mention Bien · Lycée Jean-Baptiste Colbert, Reims</p>
-          </div>
-        </div>
-
-        <div class="grow is-edu">
-          <span class="bud" aria-hidden="true"></span>
-          <div class="entry">
-            <span class="when">2021-2023</span>
-            <h3>BTS SP3S</h3>
-            <p class="where">Services et prestations des secteurs sanitaire et social · Lycée Hugues Libergier, Reims</p>
-          </div>
-        </div>
-
-        <div class="grow">
-          <span class="bud" aria-hidden="true"></span>
-          <div class="entry">
-            <span class="when">Mai-juillet 2022<span class="season ete">Été</span></span>
-            <h3>Destia</h3>
-            <p class="where">Stage de BTS · Assistante coordinatrice d'agence, Reims</p>
-            <ul>
-              <li>Visites à domicile pour évaluer les besoins des bénéficiaires.</li>
-              <li>Gestion et mise à jour des plannings.</li>
-              <li>Lien entre les bénéficiaires, les intervenants et l'agence.</li>
-            </ul>
-            <p class="lesson">Recueillir un besoin là où il se trouve, chez l'usager.</p>
-          </div>
-        </div>
-
-        <div class="grow">
-          <span class="bud" aria-hidden="true"></span>
-          <div class="entry">
-            <span class="when">Janvier-mars 2023<span class="season hiver">Hiver</span></span>
-            <h3>CCAS de Tinqueux</h3>
-            <p class="where">Stage de BTS · Assistante de responsable</p>
-            <ul>
-              <li>Projet « Ville amie des aînés » avec le Conseil des seniors : analyse des besoins, recherches et propositions.</li>
-              <li>Présentation de mes propositions au conseil des élus de la ville.</li>
-              <li>Accueil des usagers, création et suivi de dossiers administratifs.</li>
-            </ul>
-            <p class="lesson">Structurer des idées et les défendre devant des décideurs.</p>
-          </div>
-        </div>
-
-        <div class="grow">
-          <span class="bud" aria-hidden="true"></span>
-          <div class="entry">
-            <span class="when">Décembre 2023-janvier 2024<span class="season hiver">Hiver</span></span>
-            <h3>Animation périscolaire</h3>
-            <p class="where">École Anquetil, Reims</p>
-            <ul>
-              <li>Encadrement et animation des enfants sur les temps périscolaires.</li>
-            </ul>
-            <p class="lesson">Garder patience et attention avec tous les publics.</p>
-          </div>
-        </div>
-
-        <div class="grow">
-          <span class="bud" aria-hidden="true"></span>
-          <div class="entry">
-            <span class="when">Janvier-mars 2024<span class="season hiver">Hiver</span></span>
-            <h3>Groupama</h3>
-            <p class="where">Gestionnaire production et relation clients, Reims</p>
-            <ul>
-              <li>Reprise d'un stock de dossiers touchés par une anomalie de calcul des prestations.</li>
-              <li>Contrôle de la cohérence des données saisies dans le système d'information.</li>
-              <li>Missions annexes : recensement des données géographiques et des coordonnées de différents sites.</li>
-            </ul>
-            <div class="tags"><span>Audit de données</span><span>Traitement d'incident</span></div>
-            <p class="lesson">Remonter à l'origine d'une anomalie avant de la corriger.</p>
-          </div>
-        </div>
-
-        <div class="grow">
-          <span class="bud" aria-hidden="true"></span>
-          <div class="entry">
-            <span class="when">Avril 2024-avril 2025<span class="season">Printemps</span></span>
-            <h3>PRO BTP</h3>
-            <p class="where">Gestionnaire assurance prévoyance, via Tessi-Owliance</p>
-            <ul>
-              <li>Traitement de 50 dossiers d'indemnités journalières par jour (maladie, accident du travail), dans le respect du contrat et de la loi.</li>
-              <li>Contrôle de la conformité et de l'exactitude des données adhérents dans le logiciel Comète.</li>
-              <li>Analyse des blocages et correction des erreurs pour débloquer le paiement des indemnités.</li>
-              <li>Formation de 3 nouveaux collaborateurs à l'outil et aux prestations que je gérais.</li>
-            </ul>
-            <div class="tags"><span>Qualité des données</span><span>Comète</span><span>Formation</span></div>
-            <p class="lesson">Fiabiliser des données et former des utilisateurs, c'est le quotidien d'un projet SI.</p>
-          </div>
-        </div>
-
-        <div class="grow is-edu">
-          <span class="bud" aria-hidden="true"></span>
-          <div class="entry">
-            <span class="when">2026-2027<span class="season automne">Automne</span></span>
-            <h3>Licence 3 MITIC</h3>
-            <p class="where">Économie et gestion, Management, Ingénierie des services et Numérique · IFIS, Université Gustave Eiffel, Serris</p>
-            <p class="lesson">Puis le Master MITIC, prévu de 2027 à 2029.</p>
-          </div>
-        </div>
-
-        <div class="grow is-next">
-          <span class="bud" aria-hidden="true"></span>
-          <div class="entry">
-            <span class="when">Dès le 9 novembre 2026<span class="season automne">Automne</span></span>
-            <h3>Votre entreprise ?</h3>
-            <p class="where">Stage ou alternance de 4 à 6 mois, une semaine sur deux</p>
-            <p class="lesson">La prochaine floraison se prépare avec vous.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="herbier" class="band">
+  <section id="parcours" class="tinted">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">L'herbier</span>
-        <h2>Mes compétences, <span class="script">et où je les ai cueillies</span></h2>
-        <p>Chaque compétence porte l'étiquette de l'endroit où je l'ai développée.</p>
+        <span class="eyebrow">Parcours</span>
+        <h2>Expériences et formation</h2>
+        <p>Du plus récent au plus ancien. Chaque poste m'a appris quelque chose d'utile pour un projet SI.</p>
       </div>
-      <div class="herbier" id="herbier-grid"></div>
+
+      <div class="path">
+        <div>
+          <h3 class="col-title">Expériences</h3>
+          <ol class="timeline" id="timeline">
+            <li>
+              <article class="card job next">
+                <div class="job-top"><h4>Votre entreprise ?</h4><span class="date">Dès nov. 2026</span></div>
+                <p class="role">Stage ou alternance · 4 à 6 mois · 1 semaine sur 2</p>
+                <p class="takeaway">AMOA, assistante chef de projet, business analyst junior ou qualité des données.</p>
+              </article>
+            </li>
+            <li>
+              <article class="card job">
+                <div class="job-top"><h4>PRO BTP</h4><span class="date">Avr. 2024 – avr. 2025</span></div>
+                <p class="role">Gestionnaire assurance prévoyance, via Tessi-Owliance</p>
+                <ul>
+                  <li>Traitement de 50 dossiers d'indemnités journalières par jour (maladie, accident du travail), dans le respect du contrat et de la loi.</li>
+                  <li>Contrôle de la conformité et de l'exactitude des données adhérents dans le logiciel Comète.</li>
+                  <li>Analyse des blocages et correction des erreurs pour débloquer le paiement des indemnités.</li>
+                  <li>Formation de 3 nouveaux collaborateurs à l'outil et aux prestations.</li>
+                </ul>
+                <div class="tags"><span>Qualité des données</span><span>Comète</span><span>Formation</span></div>
+                <p class="takeaway"><b>Ce que j'en retiens :</b> fiabiliser des données et former des utilisateurs, c'est le quotidien d'un projet SI.</p>
+              </article>
+            </li>
+            <li>
+              <article class="card job">
+                <div class="job-top"><h4>Groupama</h4><span class="date">Janv. – mars 2024</span></div>
+                <p class="role">Gestionnaire production et relation clients, Reims</p>
+                <ul>
+                  <li>Reprise d'un stock de dossiers touchés par une anomalie de calcul des prestations.</li>
+                  <li>Contrôle de la cohérence des données saisies dans le système d'information.</li>
+                  <li>Recensement des données géographiques et des coordonnées de différents sites.</li>
+                </ul>
+                <div class="tags"><span>Audit de données</span><span>Traitement d'incident</span></div>
+                <p class="takeaway"><b>Ce que j'en retiens :</b> remonter à l'origine d'une anomalie avant de la corriger.</p>
+              </article>
+            </li>
+            <li>
+              <article class="card job">
+                <div class="job-top"><h4>CCAS de Tinqueux</h4><span class="date">Janv. – mars 2023</span></div>
+                <p class="role">Stage de BTS · Assistante de responsable</p>
+                <ul>
+                  <li>Projet « Ville amie des aînés » avec le Conseil des seniors : analyse des besoins, recherches et propositions.</li>
+                  <li>Présentation de mes propositions au conseil des élus de la ville.</li>
+                  <li>Accueil des usagers, création et suivi de dossiers administratifs.</li>
+                </ul>
+                <p class="takeaway"><b>Ce que j'en retiens :</b> structurer des idées et les défendre devant des décideurs.</p>
+              </article>
+            </li>
+            <li>
+              <article class="card job">
+                <div class="job-top"><h4>Destia</h4><span class="date">Mai – juil. 2022</span></div>
+                <p class="role">Stage de BTS · Assistante coordinatrice d'agence, Reims</p>
+                <ul>
+                  <li>Visites à domicile pour évaluer les besoins des bénéficiaires.</li>
+                  <li>Gestion et mise à jour des plannings ; lien entre bénéficiaires, intervenants et agence.</li>
+                </ul>
+                <p class="takeaway"><b>Ce que j'en retiens :</b> recueillir un besoin là où il se trouve, chez l'usager.</p>
+              </article>
+            </li>
+          </ol>
+        </div>
+
+        <aside class="edu-side">
+          <h3 class="col-title">Formation</h3>
+          <div class="edu">
+            <div class="card item current"><span class="date">2026 – 2027 · En cours</span><b>Licence 3 MITIC</b><span>Économie et gestion, Management, Ingénierie des services et Numérique · IFIS, Université Gustave Eiffel, Serris</span></div>
+            <div class="card item"><span class="date">2027 – 2029 · Prévu</span><b>Master MITIC</b><span>IFIS, Université Gustave Eiffel, Serris</span></div>
+            <div class="card item"><span class="date">2021 – 2023</span><b>BTS SP3S</b><span>Services et prestations des secteurs sanitaire et social · Lycée Hugues Libergier, Reims</span></div>
+            <div class="card item"><span class="date">2017 – 2020</span><b>Baccalauréat littéraire, mention Bien</b><span>Lycée Jean-Baptiste Colbert, Reims</span></div>
+            <div class="card item"><span class="date">Déc. 2023 – janv. 2024</span><b>Animation périscolaire</b><span>École Anquetil, Reims · patience et attention avec tous les publics</span></div>
+          </div>
+        </aside>
+      </div>
     </div>
   </section>
 
-  <section id="pepiniere">
-    <div class="wrap nursery">
-      <div>
-        <span class="pill">En pépinière · L3 MITIC</span>
-        <h3>Repenser la livraison instantanée</h3>
-        <p>Dans le cours Design de service et expérience utilisateur, nous partons d'un problème réel pour imaginer un nouveau service. Mon groupe travaille sur la livraison en quelques minutes : un service qui allierait la rapidité d'une appli de livraison de repas au catalogue d'un grand site de vente en ligne.</p>
-      </div>
-      <ul class="seedlings" aria-label="Étapes du projet">
-        <li>
-          <svg viewBox="0 0 72 110" aria-hidden="true"><path class="sprout" d="M36 82 V70"/><path class="sprout-leaf" d="M36 72 q-8 -2 -10 -10 q8 0 10 10z"/><path class="pot" d="M18 82 h36 l-4 24 h-28z"/></svg>
-          <b>Choisir un problème</b><span>Partir d'un besoin du quotidien.</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 72 110" aria-hidden="true"><path class="sprout" d="M36 82 V48"/><path class="sprout-leaf" d="M36 64 q-14 -2 -18 -16 q14 2 18 16z"/><path class="sprout-leaf" d="M36 56 q14 -2 18 -16 q-14 2 -18 16z"/><path class="pot" d="M18 82 h36 l-4 24 h-28z"/></svg>
-          <b>Construire des personas</b><span>Donner un visage aux utilisateurs.</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 72 110" aria-hidden="true"><path class="sprout" d="M36 82 V26"/><path class="sprout-leaf" d="M36 66 q-14 -2 -18 -16 q14 2 18 16z"/><path class="sprout-leaf" d="M36 56 q14 -2 18 -16 q-14 2 -18 16z"/><g fill="var(--petal)"><circle cx="36" cy="14" r="7"/><circle cx="46" cy="21" r="7"/><circle cx="42" cy="32" r="7"/><circle cx="30" cy="32" r="7"/><circle cx="26" cy="21" r="7"/></g><circle cx="36" cy="24" r="5" fill="var(--stamen)"/><path class="pot" d="M18 82 h36 l-4 24 h-28z"/></svg>
-          <b>Imaginer le service</b><span>Proposer une solution qui leur répond.</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="perso" class="band">
+  <section id="competences">
     <div class="wrap">
-      <div class="sec-head center">
-        <span class="eyebrow">Hors du jardin</span>
-        <h2>Quand je ferme <span class="script">l'ordinateur</span></h2>
+      <div class="sec-head">
+        <span class="eyebrow">Compétences</span>
+        <h2>Ce que je sais faire, et où je l'ai appris</h2>
+      </div>
+      <div class="skills" id="skills"></div>
+    </div>
+  </section>
+
+  <section id="projet" class="tinted">
+    <div class="wrap project">
+      <div>
+        <span class="pill">Projet en cours · L3 MITIC</span>
+        <h3>Repenser la livraison instantanée</h3>
+        <p>Dans le cours Design de service et expérience utilisateur, nous partons d'un problème réel pour imaginer un nouveau service. Mon groupe travaille sur la livraison en quelques minutes : la rapidité d'une appli de livraison de repas, avec le catalogue d'un grand site de vente en ligne.</p>
+      </div>
+      <ol class="steps" aria-label="Étapes du projet">
+        <li class="card"><div><b>Choisir un problème</b><span>Partir d'un besoin du quotidien.</span></div></li>
+        <li class="card"><div><b>Construire des personas</b><span>Donner un visage aux utilisateurs.</span></div></li>
+        <li class="card"><div><b>Imaginer le service</b><span>Proposer une solution qui leur répond.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="perso">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">En dehors du travail</span>
+        <h2>Quand je ferme l'ordinateur</h2>
         <p>Ma saison préférée, c'est l'automne : les arbres qui virent à l'orange, Halloween, et un pumpkin spice bien chaud.</p>
       </div>
       <div class="side">
-        <article>
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 20h24v4a10 10 0 0 1-10 10h-4A10 10 0 0 1 8 24z"/><path d="M5 20h30M16 14c0-3 3-3 3-6M22 14c0-3 3-3 3-6"/></svg>
-          <h3>En cuisine</h3>
-          <p>Suivre une recette, ajuster, goûter : cuisiner aussi est une affaire de détails.</p>
+        <article class="card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v2a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z"/><path d="M2 12h20M9.5 8.5c0-1.8 1.8-1.8 1.8-3.6M13.5 8.5c0-1.8 1.8-1.8 1.8-3.6"/></svg>
+          <h3>Cuisine</h3>
+          <p>Suivre une recette, ajuster, goûter : une affaire de détails.</p>
         </article>
-        <article>
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="12" width="28" height="20" rx="2"/><path d="M6 12l4-6M14 12l4-6M22 12l4-6M30 12l4-6"/><path d="M17 18l7 4-7 4z"/></svg>
-          <h3>Au cinéma</h3>
+        <article class="card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="m3 7 3-4M9 7l3-4M15 7l3-4M10 11l5 2.5-5 2.5z"/></svg>
+          <h3>Cinéma</h3>
           <p>Une salle obscure, une bonne histoire, et je suis ailleurs pour deux heures.</p>
         </article>
-        <article>
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 26h16l-2 9H14z"/><path d="M20 26V14"/><path d="M20 18c-5 0-8-3-8-8 5 0 8 3 8 8zM20 15c0-5 3-8 8-8 0 5-3 8-8 8z"/></svg>
-          <h3>Mon futur potager</h3>
-          <p>Au printemps, je plante des aromates et des tomates cerises sur mon balcon.</p>
+        <article class="card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 15h10l-1.5 6h-7z"/><path d="M12 15V8M12 10.5c-3 0-5-2-5-5 3 0 5 2 5 5zM12 8.5c0-3 2-5 5-5 0 3-2 5-5 5z"/></svg>
+          <h3>Potager</h3>
+          <p>Au printemps, des aromates et des tomates cerises sur mon balcon.</p>
         </article>
-        <article>
-          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 8l5 7M31 8l-5 7"/><path d="M9 8v13a11 11 0 0 0 22 0V8"/><circle cx="16" cy="22" r="1.2" fill="currentColor"/><circle cx="24" cy="22" r="1.2" fill="currentColor"/><path d="M18 27l2 1.5 2-1.5"/></svg>
+        <article class="card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 4 3 4.5M19 4l-3 4.5"/><path d="M5 4v8a7 7 0 0 0 14 0V4"/><circle cx="9.5" cy="12.5" r=".8" fill="currentColor"/><circle cx="14.5" cy="12.5" r=".8" fill="currentColor"/><path d="m11 15.5 1 .8 1-.8"/></svg>
           <h3>Nala</h3>
-          <p>Ma chatte, et la preuve que j'aime les animaux. Elle surveille le futur potager.</p>
+          <p>Ma chatte, et la preuve que j'aime les animaux.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact-sec">
+  <section id="contact" style="padding-top:0">
     <div class="wrap">
-      <span class="script" style="font-size: 2.2rem">Et maintenant ?</span>
-      <h2>Plantons quelque chose ensemble.</h2>
-      <p class="lede">Vous cherchez une stagiaire ou une alternante en AMOA, en gestion de projet SI ou en qualité des données, à partir du 9 novembre ? Je serai ravie d'en parler.</p>
-      <div class="contact-cards">
+      <div class="card contact">
         <div>
-          <span class="eyebrow">Téléphone</span>
-          <span class="v" id="tel">07 69 33 37 61</span>
-          <button class="copy" type="button" data-copy="tel">Copier le numéro</button>
+          <span class="eyebrow">Contact</span>
+          <h2>Construisons la suite ensemble.</h2>
+          <p class="lede">Vous cherchez une stagiaire ou une alternante en AMOA, en gestion de projet SI ou en qualité des données, à partir du 9 novembre ? Je serai ravie d'en parler.</p>
+          <div class="cta">
+            <a class="btn" href="CV_Sonia_Derouiche.pdf" target="_blank" rel="noopener">Voir mon CV</a>
+            <a class="btn ghost" id="cv-download" href="CV_Sonia_Derouiche.pdf" download="CV_Sonia_Derouiche.pdf">Télécharger (PDF)</a>
+          </div>
         </div>
-        <div>
-          <span class="eyebrow">E-mail</span>
-          <span class="v" id="mail">soniaderouiche2902@gmail.com</span>
-          <button class="copy" type="button" data-copy="mail">Copier l'adresse</button>
-        </div>
-        <div>
-          <span class="eyebrow">LinkedIn</span>
-          <span class="v"><a href="https://www.linkedin.com/in/sonia-derouiche" target="_blank" rel="noopener">linkedin.com/in/sonia-derouiche</a></span>
-        </div>
+        <ul class="links">
+          <li><a href="tel:+33769333761">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            <span><small>Téléphone</small><b>07 69 33 37 61</b></span>
+            <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+          </a></li>
+          <li><a href="mailto:soniaderouiche2902@gmail.com">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span><small>E-mail</small><b>soniaderouiche2902@gmail.com</b></span>
+            <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/sonia-derouiche" target="_blank" rel="noopener">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2.5 2.5 0 0 1 5 0v4M12 10v7"/></svg>
+            <span><small>LinkedIn</small><b>sonia-derouiche</b></span>
+            <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a></li>
+        </ul>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="wrap foot">
-  <span>Sonia Derouiche · 2026</span>
-  <span>Cultivé avec soin, à Bussy-Saint-Georges</span>
+  <span>© 2026 Sonia Derouiche</span>
+  <span>Bussy-Saint-Georges, Seine-et-Marne</span>
 </footer>
-
-<aside class="tuner" id="tuner" aria-label="Essai des polices et des ambiances" data-collapsed="false">
-  <div class="tuner-top"><b>Essaie les styles</b><button type="button" id="tuner-toggle">Réduire</button></div>
-  <div class="tuner-body">
-    <div>
-      <span class="lbl">Police des titres</span>
-      <div class="chips" id="font-chips">
-        <button type="button" data-font="cormorant" aria-pressed="true"><span class="big" style="font-family: 'Cormorant Garamond', serif; font-weight: 500">Sonia</span><small>A · Classique chic</small></button>
-        <button type="button" data-font="italiana" aria-pressed="false"><span class="big" style="font-family: 'Italiana', serif">Sonia</span><small>B · Haute couture</small></button>
-        <button type="button" data-font="fraunces" aria-pressed="false"><span class="big" style="font-family: 'Fraunces', serif; font-weight: 380">Sonia</span><small>C · Doux et rond</small></button>
-        <button type="button" data-font="playfair" aria-pressed="false"><span class="big" style="font-family: 'Playfair Display', serif">Sonia</span><small>D · Magazine</small></button>
-      </div>
-    </div>
-    <div>
-      <span class="lbl">Ambiance</span>
-      <div class="chips" id="mood-chips">
-        <button type="button" data-mood="rose" aria-pressed="true"><span class="big" style="color: #D78591">●<span style="color: #9EB494">●</span><span style="color: #D9C7E3">●</span></span><small>Rose et sauge</small></button>
-        <button type="button" data-mood="automne" aria-pressed="false"><span class="big" style="color: #C2603C">●<span style="color: #E69B68">●</span><span style="color: #C98A3B">●</span></span><small>Automne cosy</small></button>
-      </div>
-    </div>
-    <p class="note">Ce panneau sert seulement à choisir. Il disparaîtra du site final.</p>
-  </div>
-</aside>
 
 <script>
 (function () {
@@ -684,127 +551,81 @@ section { padding-block: 96px; }
   function css(name) { return getComputedStyle(root).getPropertyValue(name).trim(); }
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
   function easeOutBack(x) { var c1 = 1.5, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); }
-  function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
-  function load(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 
-  /* ---------- Sélecteur de police et d'ambiance ---------- */
-  function pick(groupId, attr, value) {
-    var btns = document.querySelectorAll('#' + groupId + ' button');
-    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset[attr] === value)); });
-    if ((attr === 'font' && value === 'cormorant') || (attr === 'mood' && value === 'rose')) root.removeAttribute('data-' + attr);
-    else root.setAttribute('data-' + attr, value);
-    store('sd-' + attr, value);
+  /* ---------- Menu mobile et en-tête ---------- */
+  var nav = document.getElementById('nav'), menuBtn = document.getElementById('menu-btn'), topbar = document.getElementById('topbar');
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
   }
-  document.querySelectorAll('#font-chips button').forEach(function (b) { b.addEventListener('click', function () { pick('font-chips', 'font', b.dataset.font); }); });
-  document.querySelectorAll('#mood-chips button').forEach(function (b) { b.addEventListener('click', function () { pick('mood-chips', 'mood', b.dataset.mood); }); });
-  var savedFont = load('sd-font'), savedMood = load('sd-mood');
-  if (savedFont) pick('font-chips', 'font', savedFont);
-  if (savedMood) pick('mood-chips', 'mood', savedMood);
-  var tuner = document.getElementById('tuner'), tt = document.getElementById('tuner-toggle');
-  if (window.innerWidth < 760) { tuner.dataset.collapsed = 'true'; tt.textContent = 'Ouvrir'; }
-  tt.addEventListener('click', function () {
-    var c = tuner.dataset.collapsed !== 'true';
-    tuner.dataset.collapsed = String(c); tt.textContent = c ? 'Ouvrir' : 'Réduire';
+  menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+
+  /* ---------- Téléchargement du CV ---------- */
+  // Dans la visionneuse claude.ai, un lien « download » ne fait rien : on passe par la capacité downloads.
+  // Ailleurs (site hébergé normalement), le lien classique prend le relais.
+  var dl = null, dlBtn = document.getElementById('cv-download');
+  if (window.claude && typeof window.claude.use === 'function') {
+    window.claude.use('downloads').then(function (ns) { dl = ns; }, function () {});
+  }
+  dlBtn.addEventListener('click', function (e) {
+    if (!dl) return;
+    e.preventDefault();
+    var label = dlBtn.textContent;
+    fetch(dlBtn.getAttribute('href'))
+      .then(function (r) { if (!r.ok) throw new Error('fetch'); return r.blob(); })
+      .then(function (blob) { return dl.save({ filename: 'CV_Sonia_Derouiche.pdf', data: blob }); })
+      .catch(function (err) {
+        if (err && err.code === 'declined') return;
+        dlBtn.textContent = 'Ouvrez le CV pour l’enregistrer';
+        setTimeout(function () { dlBtn.textContent = label; }, 3000);
+      });
   });
 
-  /* ---------- Herbier ---------- */
-  var specimens = [
-    ['Recueil des besoins', 'Destia, CCAS de Tinqueux', 'Visites à domicile, écoute et qualification des attentes des usagers.'],
-    ['Qualité des données', 'PRO BTP, Groupama', 'Contrôle de conformité, de complétude et de cohérence des dossiers.'],
-    ['Résolution d’anomalies', 'PRO BTP, Groupama', 'Recherche des causes de blocage et correction des erreurs de calcul.'],
-    ['Formation des utilisateurs', 'PRO BTP', 'Trois nouveaux collaborateurs formés à l’outil et aux prestations.'],
-    ['Gestion de projet', 'CCAS de Tinqueux, L3 MITIC', 'Projet Conseil des seniors, puis méthodes de projet en licence.'],
-    ['Communication', 'CCAS, PRO BTP', 'Accueil des usagers, réponses aux adhérents, présentation aux élus.'],
-    ['Outils', 'Tous mes postes', 'Excel, Word, PowerPoint, Outlook, Teams et le logiciel métier Comète.'],
-    ['Langues', 'Toujours sur moi', 'Français langue maternelle, anglais niveau avancé.']
+  /* ---------- Compétences ---------- */
+  var icons = {
+    ear: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8 11h8M8 14h5"/>',
+    data: '<ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6M5 11.5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6"/>',
+    bug: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v3.5M11 14h.01"/>',
+    teach: '<path d="M3 9 12 5l9 4-9 4z"/><path d="M7 11v4c0 1.5 2.2 3 5 3s5-1.5 5-3v-4M21 9v5"/>',
+    plan: '<rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M7 13h4M7 17h7"/>',
+    talk: '<path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v3l-3-3h-3"/>',
+    tool: '<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9h4M7 12h7"/>',
+    lang: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>'
+  };
+  var skills = [
+    ['ear', 'Recueil des besoins', 'Destia, CCAS de Tinqueux', 'Visites à domicile, écoute et qualification des attentes des usagers.'],
+    ['data', 'Qualité des données', 'PRO BTP, Groupama', 'Contrôle de conformité, de complétude et de cohérence des dossiers.'],
+    ['bug', 'Résolution d’anomalies', 'PRO BTP, Groupama', 'Recherche des causes de blocage et correction des erreurs de calcul.'],
+    ['teach', 'Formation des utilisateurs', 'PRO BTP', 'Trois nouveaux collaborateurs formés à l’outil et aux prestations.'],
+    ['plan', 'Gestion de projet', 'CCAS de Tinqueux, L3 MITIC', 'Projet Conseil des seniors, puis méthodes de projet en licence.'],
+    ['talk', 'Communication', 'CCAS, PRO BTP', 'Accueil des usagers, réponses aux adhérents, présentation aux élus.'],
+    ['tool', 'Outils', 'Tous mes postes', 'Microsoft 365 (Excel, Word, PowerPoint, Outlook, Teams) et le logiciel métier Comète.'],
+    ['lang', 'Langues', 'Au quotidien', 'Français langue maternelle, anglais niveau B2.']
   ];
-  var hues = ['--petal', '--leaf', '--mauve', '--petal-deep', '--sage', '--rose', '--leaf-2', '--petal'];
-  var grid = document.getElementById('herbier-grid');
-  specimens.forEach(function (s, i) {
-    var a = document.createElement('article'); a.className = 'specimen';
-    var lean = (i % 2 ? 1 : -1) * (6 + (i * 7) % 10);
-    var flower = '<g fill="var(' + hues[i] + ')">' + [0, 72, 144, 216, 288].map(function (r) {
-      return '<ellipse cx="0" cy="-9" rx="6" ry="10" transform="rotate(' + r + ')"/>';
-    }).join('') + '</g><circle r="4" fill="var(--stamen)"/>';
-    a.innerHTML =
-      '<svg viewBox="0 0 120 110" aria-hidden="true">' +
-        '<g transform="rotate(' + lean + ' 60 104)">' +
-          '<path d="M60 104 C 58 80, 64 60, 60 30" fill="none" stroke="var(--leaf-2)" stroke-width="1.6"/>' +
-          '<path d="M60 78 q-18 -4 -24 -18 q18 2 24 18z" fill="var(--leaf)" opacity=".9"/>' +
-          '<path d="M61 62 q16 -6 22 -20 q-16 4 -22 20z" fill="var(--leaf)" opacity=".75"/>' +
-          '<g transform="translate(60 26)">' + flower + '</g>' +
-        '</g></svg>' +
-      '<span class="num">Spécimen n° ' + String(i + 1).padStart(2, '0') + '</span>' +
-      '<h3>' + s[0] + '</h3>' +
-      '<p><i>Cueillie : ' + s[1] + '</i><br>' + s[2] + '</p>';
+  var grid = document.getElementById('skills');
+  skills.forEach(function (s) {
+    var a = document.createElement('article'); a.className = 'card skill';
+    a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + icons[s[0]] + '</svg>' +
+      '<h3>' + s[1] + '</h3><span class="src">' + s[2] + '</span><p>' + s[3] + '</p>';
     grid.appendChild(a);
   });
 
-  /* ---------- Boutons copier ---------- */
-  document.querySelectorAll('.copy').forEach(function (btn) {
-    var label = btn.textContent;
-    btn.addEventListener('click', function () {
-      var el = document.getElementById(btn.dataset.copy);
-      var text = el.textContent.trim();
-      function selectIt() {
-        var r = document.createRange(); r.selectNodeContents(el);
-        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-        btn.textContent = 'Texte sélectionné';
-      }
-      try { navigator.clipboard.writeText(text).then(function () { btn.textContent = 'Copié'; }, selectIt); }
-      catch (e) { selectIt(); }
-      setTimeout(function () { btn.textContent = label; }, 2400);
-    });
-  });
-
-  /* ---------- Sachet qui s'incline ---------- */
-  var packet = document.getElementById('packet');
-  if (!reduce && window.matchMedia('(hover: hover)').matches) {
-    packet.addEventListener('pointermove', function (e) {
-      var r = packet.getBoundingClientRect();
-      packet.style.setProperty('--ry', ((e.clientX - r.left) / r.width - .5) * 10 + 'deg');
-      packet.style.setProperty('--rx', -((e.clientY - r.top) / r.height - .5) * 8 + 'deg');
-    });
-    packet.addEventListener('pointerleave', function () { packet.style.setProperty('--rx', '0deg'); packet.style.setProperty('--ry', '0deg'); });
+  /* ---------- Ligne du parcours qui se remplit ---------- */
+  var tl = document.getElementById('timeline');
+  var items = Array.prototype.slice.call(tl.querySelectorAll(':scope > li'));
+  function updateTimeline() {
+    var r = tl.getBoundingClientRect();
+    var reach = reduce ? r.height : window.innerHeight * 0.7 - r.top;
+    tl.style.setProperty('--fill', clamp(reach - 8, 0, r.height - 16) + 'px');
+    items.forEach(function (li) { li.classList.toggle('lit', li.offsetTop + 26 < reach); });
+    topbar.classList.toggle('scrolled', window.scrollY > 8);
   }
-
-  /* ---------- Boutons de fleur sur la tige ---------- */
-  var budSVG = '<svg viewBox="0 0 46 46"><g>' +
-    [0, 60, 120, 180, 240, 300].map(function (r) { return '<ellipse class="pt" cx="23" cy="11" rx="7" ry="11" transform="rotate(' + r + ' 23 23)"/>'; }).join('') +
-    [30, 90, 150, 210, 270, 330].map(function (r) { return '<ellipse class="pt2" cx="23" cy="15" rx="5" ry="8" transform="rotate(' + r + ' 23 23)"/>'; }).join('') +
-    '<circle class="core" cx="23" cy="23" r="5"/></g></svg>';
-  document.querySelectorAll('.bud').forEach(function (b) { b.innerHTML = budSVG; });
-
-  var garden = document.getElementById('garden');
-  var stemPath = document.getElementById('stem-path');
-  var stemSvg = garden.querySelector('.stem');
-  var grows = Array.prototype.slice.call(garden.querySelectorAll('.grow'));
-  var stemLen = 0;
-  root.classList.add('has-stem');
-  if (!reduce) root.classList.add('js-garden');
-
-  function layoutStem() {
-    var w = garden.offsetWidth, h = garden.offsetHeight;
-    var x = window.matchMedia('(max-width: 760px)').matches ? 23 : w / 2;
-    var d = 'M ' + x + ' 0';
-    for (var y = 12; y <= h; y += 12) d += ' L ' + (x + Math.sin(y / 70) * 5).toFixed(1) + ' ' + y;
-    stemSvg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
-    stemPath.setAttribute('d', d);
-    stemLen = stemPath.getTotalLength();
-    stemPath.style.strokeDasharray = stemLen;
-    updateStem();
-  }
-  function updateStem() {
-    var r = garden.getBoundingClientRect();
-    var reach = reduce ? r.height : window.innerHeight * 0.72 - r.top;
-    var p = clamp(reach / r.height, 0, 1);
-    stemPath.style.strokeDashoffset = stemLen * (1 - p);
-    grows.forEach(function (g) { g.classList.toggle('open', g.offsetTop + 30 < reach); });
-  }
-  window.addEventListener('scroll', updateStem, { passive: true });
-  window.addEventListener('resize', layoutStem);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutStem);
-  layoutStem();
+  window.addEventListener('scroll', updateTimeline, { passive: true });
+  window.addEventListener('resize', updateTimeline);
+  updateTimeline();
 
   /* ---------- La pivoine ---------- */
   var bloom = document.getElementById('bloom');
@@ -897,28 +718,27 @@ section { padding-block: 96px; }
   bloom.addEventListener('click', function (e) {
     if (reduce) return;
     bt0 = performance.now();
-    burst(e.clientX, e.clientY, 34);
+    burst(e.clientX, e.clientY, 28);
   });
 
-  /* ---------- Pétales qui tombent ---------- */
+  /* ---------- Quelques pétales, discrets ---------- */
   var pc = document.getElementById('petals');
   var pctx = pc.getContext('2d');
-  var parts = [], W = 0, H = 0, px = -999, py = -999;
+  var parts = [], W = 0, H = 0;
   function sizePetals() {
     W = window.innerWidth; H = window.innerHeight;
     pc.width = W * dpr; pc.height = H * dpr; pctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
-  function palette() { return [css('--petal'), css('--petal-light'), css('--petal-deep'), css('--mauve'), css('--leaf')]; }
+  function palette() { return [css('--petal'), css('--petal-light'), css('--petal-deep')]; }
   function makePart(x, y, vx, vy, burstFlag) {
     return {
-      x: x, y: y, vx: vx || 0, vy: vy || (0.25 + Math.random() * 0.45),
+      x: x, y: y, vx: vx || 0, vy: vy || (0.25 + Math.random() * 0.35),
       rot: Math.random() * Math.PI * 2, vr: (Math.random() - .5) * 0.03,
-      size: 6 + Math.random() * 8, ph: Math.random() * 10, ci: Math.floor(Math.random() * 5),
-      leafy: Math.random() < 0.3, burst: !!burstFlag, life: 0
+      size: 5 + Math.random() * 6, ph: Math.random() * 10, ci: Math.floor(Math.random() * 3), burst: !!burstFlag
     };
   }
   function seed() {
-    var n = W < 600 ? 10 : 20;
+    var n = W < 600 ? 5 : 9;
     parts = [];
     for (var i = 0; i < n; i++) parts.push(makePart(Math.random() * W, Math.random() * H));
   }
@@ -927,52 +747,38 @@ section { padding-block: 96px; }
       var a = Math.random() * Math.PI * 2, sp = 2 + Math.random() * 5;
       parts.push(makePart(x, y, Math.cos(a) * sp, Math.sin(a) * sp - 2, true));
     }
-    if (parts.length > 120) parts.splice(0, parts.length - 120);
+    if (parts.length > 80) parts.splice(0, parts.length - 80);
   }
-  function drawPart(p, cols, autumn) {
+  function drawPart(p, cols) {
     pctx.save(); pctx.translate(p.x, p.y); pctx.rotate(p.rot);
-    pctx.fillStyle = cols[p.ci]; pctx.globalAlpha = p.burst ? 0.9 : 0.55;
+    pctx.fillStyle = cols[p.ci]; pctx.globalAlpha = p.burst ? 0.85 : 0.4;
     var s = p.size;
     pctx.beginPath();
-    if (p.leafy && autumn) {
-      for (var k = 0; k < 5; k++) {
-        var a = -Math.PI / 2 + k * (Math.PI * 2 / 5);
-        pctx.lineTo(Math.cos(a) * s, Math.sin(a) * s);
-        pctx.lineTo(Math.cos(a + 0.6) * s * 0.45, Math.sin(a + 0.6) * s * 0.45);
-      }
-      pctx.closePath();
-    } else {
-      pctx.moveTo(0, -s);
-      pctx.bezierCurveTo(s * 0.9, -s * 0.6, s * 0.7, s * 0.7, 0, s);
-      pctx.bezierCurveTo(-s * 0.7, s * 0.7, -s * 0.9, -s * 0.6, 0, -s);
-    }
+    pctx.moveTo(0, -s);
+    pctx.bezierCurveTo(s * 0.9, -s * 0.6, s * 0.7, s * 0.7, 0, s);
+    pctx.bezierCurveTo(-s * 0.7, s * 0.7, -s * 0.9, -s * 0.6, 0, -s);
     pctx.fill();
     pctx.restore();
   }
-  var lastCols = palette(), colTick = 0;
+  var cols = palette(), colTick = 0;
   function stepPetals(now) {
     pctx.clearRect(0, 0, W, H);
-    if (++colTick % 30 === 0) lastCols = palette();
-    var autumn = root.getAttribute('data-mood') === 'automne';
+    if (++colTick % 60 === 0) cols = palette();
     var t = now / 1000;
     for (var i = parts.length - 1; i >= 0; i--) {
       var p = parts[i];
-      p.life++;
       if (p.burst) { p.vx *= 0.96; p.vy = p.vy * 0.96 + 0.06; }
-      var dx = p.x - px, dy = p.y - py, d2 = dx * dx + dy * dy;
-      if (d2 < 9000) { var f = (9000 - d2) / 9000 * 1.6; var d = Math.sqrt(d2) || 1; p.x += dx / d * f; p.y += dy / d * f; }
-      p.x += p.vx + Math.sin(t * 0.9 + p.ph) * 0.45;
-      p.y += p.burst ? p.vy : p.vy;
+      p.x += p.vx + Math.sin(t * 0.9 + p.ph) * 0.4;
+      p.y += p.vy;
       p.rot += p.vr + Math.sin(t + p.ph) * 0.01;
       if (p.y > H + 20) {
         if (p.burst) { parts.splice(i, 1); continue; }
         p.y = -20; p.x = Math.random() * W;
       }
       if (p.x < -30) p.x = W + 20; else if (p.x > W + 30) p.x = -20;
-      drawPart(p, lastCols, autumn);
+      drawPart(p, cols);
     }
   }
-  window.addEventListener('pointermove', function (e) { px = e.clientX; py = e.clientY; }, { passive: true });
 
   /* ---------- Boucle ---------- */
   function resizeAll() { sizeBloom(); sizePetals(); }
@@ -980,7 +786,6 @@ section { padding-block: 96px; }
   resizeAll();
   if (reduce) {
     drawBloom(performance.now());
-    new MutationObserver(function () { drawBloom(performance.now()); }).observe(root, { attributes: true });
   } else {
     seed();
     (function loop(now) {
@@ -990,5 +795,5 @@ section { padding-block: 96px; }
   }
 })();
 </script>
-
+</body>
 </html>
